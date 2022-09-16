@@ -5,6 +5,13 @@ import team1 from '../public/assets/img/team1.png'
 import team2 from '../public/assets/img/team2.png'
 import team3 from '../public/assets/img/team3.png'
 import team4 from '../public/assets/img/team4.png'
+import product1 from '../public/assets/img/product1.svg'
+import product2 from '../public/assets/img/product2.svg'
+import product3 from '../public/assets/img/product3.svg'
+import tab1 from '../public/assets/img/tab1.png'
+import tab2 from '../public/assets/img/tab2.png'
+import tab3 from '../public/assets/img/tab3.png'
+import tab4 from '../public/assets/img/tab4.png'
 
 
 export const products = [
@@ -168,4 +175,57 @@ export const menuList = [
       },
     ]
   }
+]
+
+export const productList = [
+  {
+    icon: product1,
+    title: '潮汐·攻击面管理平台',
+    content: '智能自动高效发现企业资产攻击面'
+  },
+  {
+    icon: product2,
+    title: '潮汐·模拟攻击系统',
+    content: '全链条攻击向量覆盖多种类型企业资产'
+  },
+  {
+    icon: product3,
+    title: '谜团·网络攻防靶场',
+    content: '打造现实网络系统的平行仿真系统'
+  },
+]
+
+export const tabList = [
+  {
+    category: '新形态的安全产品',
+    title: '新形态的安全产品',
+    content: '螣龙安科从“主动安全”的视角出发，产品矩阵强调“安全左移”，辅助企业在安全事件发生前完成网络安全建设。',
+    button: '了解更多',
+    link: '',
+    img: tab1,
+  },
+  {
+    category: '我们服务的客户',
+    title: '我们服务的客户',
+    content: '公司现有客户的行业覆盖面极广，涉及政府、金融、运营商、能源等，典型头部客户包括中国电信集团、复星集团、中远集团等大型国企央企以及世界500强企业。',
+    button: '了解更多',
+    link: '',
+    img: tab2,
+  },
+  {
+    category: '深厚的技术背景',
+    title: '深厚的技术背景',
+    content: '公司拥有强大的科技研发实力，研发人员占比超过70%，且团队核心均为信息安全资深专家，拥有丰富的实战经验和研究成果。',
+    button: '了解更多',
+    link: '',
+    img: tab3,
+  },
+  {
+    category: '强大的资本支持',
+    title: '强大的资本支持',
+    content: '公司成立至今已完成两轮融资，共获得了知名投资机构数千万元的风险投资，估值过亿。',
+    button: '了解更多',
+    link: '',
+    img: tab4,
+  },
 ]

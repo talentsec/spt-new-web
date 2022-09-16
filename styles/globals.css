@@ -1,8 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* import './antd.css' */
 @import './antd.css';
+@import 'swiper/css';
+@import "swiper/css/pagination";
+
+@layer components {
+  .bc-linner {
+    background: linear-gradient(180deg, #F4F7FE 0%, #FFFFFF 100%);
+  }
+}
+
+@layer components {
+  .min-width {
+    min-width: 1280px;
+  }
+}
 
 * {
   font-family: "PingFang SC";

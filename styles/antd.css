@@ -10,3 +10,20 @@
 .navbar_dropdown__box {
   border: 2px solid #fff;
 }
+
+.ant-btn-primary {
+  background: #165DFF !important;
+  border-radius: 4px !important;
+}
+
+.ant-btn {
+  border-radius: 4px !important;
+}
+
+.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: rgba(0,0,0,0.6) !important;
+}
+
+.ant-tabs-tab:hover {
+  color: rgba(0,0,0,0.8) !important;
+}
