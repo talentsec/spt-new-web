@@ -3,14 +3,12 @@ import Link from 'next/link'
 import { DownOutlined, SmileOutlined, MenuOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space, Collapse, Button } from 'antd';
 import { menuList } from '../constant/info';
-import logo from '../public/assets/img/logo.png'
+import logo from '../assets/img/home/logo.png'
 import Image from 'next/image';
-import downArrow from '../public/assets/img/downArrow.png'
-import productIcon from '../public/assets/img/productIcon.svg'
+import downArrow from '../assets/img/home/downArrow.png'
+import productIcon from '../assets/img/home/productIcon.svg'
 import { motion } from "framer-motion";
 const { Panel } = Collapse;
-
-
 
 const DropdownMenu = ({ list }) => {
   return (
@@ -69,8 +67,8 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div>
-      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 bg-white'>
+    <div className='sm:min-w-main-width'>
+      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 bg-white sm:min-w-main-width'>
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 h12 align-middle'>
           <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={()=>setProductMenuDisplay(!productMenuDisplay)}>
             <Image src={productIcon} alt=''></Image>
@@ -101,7 +99,7 @@ export default function Layout({ children }) {
           </div>
         </div>
       </section>
-      <div className='pt-14'>
+      <div className='pt-14' style={{minHeight: 'calc(100vh - 360px)'}}>
         {
           productMenuDisplay ? <motion.div
           initial={{ opacity: 1, height: 0 }}

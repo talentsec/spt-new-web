@@ -40,17 +40,17 @@ export default function Home() {
       <section className='w-screen relative sm:min-width '>
           {/* <img src={backImg} alt=''></img> */}
           {/* <Image src={backImg} alt='' ></Image> */}
-          <img src='./assets/img/main.png' className="w-full hidden sm:block"></img>
-          <img src='./assets/img/phoneMain.png' className="w-full sm:hidden"></img>
+          <img src='./assets/img/home/main.png' className="w-full hidden sm:block"></img>
+          <img src='./assets/img/home/phoneMain.png' className="w-full sm:hidden"></img>
           <div className='w-full absolute top-16 sm:top-1/4 left-0 '>
             <div className='sm:max-w-7xl sm:mx-auto sm:w-full mx-8  h-full z-2'>
               <div className='text-xl text-center sm:text-left sm:text-4xl'>螣龙安科·中国·上海</div>
               <div className='text-2xl text-center sm:text-left  sm:text-5xl font-extrabold my-3' style={{
                 background: 'linear-gradient(270deg, #346BFF 0%, #4BAAFF 100%)',
-                '-webkit-background-clip': 'text',
-                '-webkit-text-fill-color': 'transparent',
-                'background-clip': 'text',
-                'text-fill-color': 'transparent'
+                'WebkitBackgroundClip': 'text',
+                'WebkitTextFillColor': 'transparent',
+                'backgroundClip': 'text',
+                'textFillColor': 'transparent'
               }}>让世界安全互联</div>
               <div className='text-center sm:text-left sm:text-sm my-6' style={{'letterSpacing?': "0.1em"}}>从“主动安全”视角构建企业网络安全壁垒</div>
               <div className='sm:pt-14 flex justify-around sm:justify-start'>

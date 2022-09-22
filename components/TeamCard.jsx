@@ -6,7 +6,6 @@ import { motion, useScroll, useTransform } from "framer-motion";
 export default function TeamCard({data, index}) {
   const { scrollYProgress } = useScroll();
   const isWeb = global.screen?.width > 640
-  console.log(global.screen?.width)
   const scale = useTransform(scrollYProgress, [isWeb ? 0.6 : 0.5 + (isWeb ? 0 :index * 0.1), isWeb ? 0.8 : 0.64 + (isWeb ? 0 :index * 0.1) ], [0.7, 1]);
 
   return (

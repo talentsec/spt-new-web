@@ -1,18 +1,34 @@
-import card1 from '../public/assets/img/card1.svg'
-import card2 from '../public/assets/img/card2.svg'
-import card3 from '../public/assets/img/card3.svg'
-import team1 from '../public/assets/img/team1.png'
-import team2 from '../public/assets/img/team2.png'
-import team3 from '../public/assets/img/team3.png'
-import team4 from '../public/assets/img/team4.png'
-import product1 from '../public/assets/img/product1.svg'
-import product2 from '../public/assets/img/product2.svg'
-import product3 from '../public/assets/img/product3.svg'
-import tab1 from '../public/assets/img/tab1.png'
-import tab2 from '../public/assets/img/tab2.png'
-import tab3 from '../public/assets/img/tab3.png'
-import tab4 from '../public/assets/img/tab4.png'
-
+import card1 from '../assets/img/home/card1.svg'
+import card2 from '../assets/img/home/card2.svg'
+import card3 from '../assets/img/home/card3.svg'
+import team1 from '../assets/img/home/team1.png'
+import team2 from '../assets/img/home/team2.png'
+import team3 from '../assets/img/home/team3.png'
+import team4 from '../assets/img/home/team4.png'
+import product1 from '../assets/img/home/product1.svg'
+import product2 from '../assets/img/home/product2.svg'
+import product3 from '../assets/img/home/product3.svg'
+import tab1 from '../assets/img/home/tab1.png'
+import tab2 from '../assets/img/home/tab2.png'
+import tab3 from '../assets/img/home/tab3.png'
+import tab4 from '../assets/img/home/tab4.png'
+import mituanCard1 from '../assets/img/product/mituanCard1.svg'
+import mituanCard2 from '../assets/img/product/mituanCard2.svg'
+import mituanCard3 from '../assets/img/product/mituanCard3.svg'
+import risk1 from '../assets/img/product/risk1.svg'
+import risk2 from '../assets/img/product/risk2.svg'
+import risk3 from '../assets/img/product/risk3.svg'
+import risk4 from '../assets/img/product/risk4.svg'
+import risk5 from '../assets/img/product/risk5.svg'
+import risk6 from '../assets/img/product/risk6.svg'
+import risk7 from '../assets/img/product/risk7.svg'
+import risk8 from '../assets/img/product/risk8.svg'
+import risk9 from '../assets/img/product/risk9.svg'
+import mituanFunction1 from '../assets/img/product/function1.svg'
+import mituanFunction2 from '../assets/img/product/function2.svg'
+import webPage1 from '../assets/img/product/webPage1.png'
+import webPage2 from '../assets/img/product/webPage2.png'
+import webPage3 from '../assets/img/product/webPage3.png'
 
 export const products = [
   {
@@ -228,4 +244,102 @@ export const tabList = [
     link: '',
     img: tab4,
   },
+]
+
+export const mituanApplication = [
+  {
+    icon: mituanCard1,
+    title: '信息系统安全测试',
+    content: '为在线信息系统提供有效且便捷的持久化安全测试环境，有效解决生产系统无法实时针对新的安全事件进行测试的问题'
+  },
+  {
+    icon: mituanCard2,
+    title: '网络攻防新技术验证',
+    content: '将各种攻防工具和方法放入网络靶场高仿真网络环境，反复多次试验，优化攻防工具和方法，进而实现对新攻防技术的验证和优化'
+  },
+  {
+    icon: mituanCard3,
+    title: '网安人才培养',
+    content: '为网络安全人员提供自主学习、综合演练和技能竞赛支撑，便于受训人员快速有效掌握各类新型网络攻防工具'
+  },
+]
+
+export const riskCoverList = [
+  {
+    icon: risk1,
+    title: '跨站脚本攻击'
+  },
+  {
+    icon: risk2,
+    title: 'SQL注入'
+  },
+  {
+    icon: risk3,
+    title: '反序列化'
+  },
+  {
+    icon: risk4,
+    title: '逆向工程'
+  },
+  {
+    icon: risk5,
+    title: '上传漏洞'
+  },
+  {
+    icon: risk6,
+    title: '代码审计'
+  },
+  {
+    icon: risk7,
+    title: '缓冲区溢出'
+  },
+  {
+    icon: risk8,
+    title: '内网安全'
+  },
+  {
+    icon: risk9,
+    title: '安全开发'
+  },
+] 
+
+export const mituanfunctionList = [
+  {
+    icon: mituanFunction1,
+    title: '安全专题',
+    content: '提供众多网络安全题目和专题知识（适用于高校学生以及希望提升专业能力的安全从业人员）'
+  },
+  {
+    icon: mituanFunction1,
+    title: 'ExpDB',
+    content: '提供真实攻击者和勒索病毒攻击事件中实际会用到的漏洞和POC（适用于高校以及网络安全研究型人员）'
+  },
+  {
+    icon: mituanFunction2,
+    title: '独立靶机',
+    content: '提供复杂的攻防应用场景和漏洞（与全球顶尖白帽黑客社区进行合作）'
+  },
+  {
+    icon: mituanFunction1,
+    title: '蓝队/攻防模拟',
+    content: '支持多系统虚拟化、内网环境虚拟化以及安全产品虚拟化，供用户针对不同的攻击方式进行全方位系统防御实操（适用于企业以及攻防演练行动）'
+  },
+]
+
+export const mituanTabList = [
+  {
+    category: 'ExpDB靶机',
+    content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
+    img: webPage1,
+  },
+  {
+    category: '独家防御类型靶机',
+    content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
+    img: webPage2,
+  },
+  {
+    category: '靶场教程',
+    content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
+    img: webPage3,
+  }
 ]
