@@ -29,6 +29,10 @@ import mituanFunction2 from '../assets/img/product/function2.svg'
 import webPage1 from '../assets/img/product/webPage1.png'
 import webPage2 from '../assets/img/product/webPage2.png'
 import webPage3 from '../assets/img/product/webPage3.png'
+import tideFunciton1 from '../assets/img/product/icon1.svg'
+import tideFunciton2 from '../assets/img/product/icon2.svg'
+import tideFunciton3 from '../assets/img/product/icon3.svg'
+import tideFunciton4 from '../assets/img/product/icon4.svg'
 
 export const products = [
   {
@@ -342,4 +346,27 @@ export const mituanTabList = [
     content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
     img: webPage3,
   }
+]
+
+export const tideFunctionList = [
+  {
+    icon: tideFunciton4,
+    title: '100+安全攻防工具',
+    content: '潮汐是一个安全攻防工具的在线使用平台，不论是广为人知的大众款、小而美的垂直类工具或是社区贡献者独立/二次开发的实用类工具，您都可以尽情探索!'
+  },
+  {
+    icon: tideFunciton3,
+    title: '在线一键快速检测',
+    content: '使用潮汐时，您无需进行工具的安装或环境的配置，即可一键开启使用，对安全资产进行在线检测，快速开启主动安全学习之旅。'
+  },
+  {
+    icon: tideFunciton1,
+    title: '自动化攻击编排',
+    content: '在潮汐，您可以根据接口，调用不同的安全工具，创建自动化的攻击检测编排，也可以直接使用其他小伙伴贡献的自动化编排，体验自动化主动安全检测的魅力!'
+  },
+  {
+    icon: tideFunciton2,
+    title: '社区共享前沿技术',
+    content: '潮汐开放了上传工具以及编排的API接口，欢迎并鼓励优秀的开发者们贡献精妙的开源工具或自己创作/改编的工具以及编排，大家共建社区，共同成长!'
+  },
 ]

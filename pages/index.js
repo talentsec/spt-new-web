@@ -13,6 +13,9 @@ import HomeTab from '../components/HomeTab.jsx'
 import 'antd/dist/antd.css'
 import Link from 'next/link.js'
 import { motion } from "framer-motion";
+import webMianImg from '../assets/img/home/main.png'
+import phoneMianImg from '../assets/img/home/phoneMain.png'
+
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -40,8 +43,8 @@ export default function Home() {
       <section className='w-screen relative sm:min-width '>
           {/* <img src={backImg} alt=''></img> */}
           {/* <Image src={backImg} alt='' ></Image> */}
-          <img src='./assets/img/home/main.png' className="w-full hidden sm:block"></img>
-          <img src='./assets/img/home/phoneMain.png' className="w-full sm:hidden"></img>
+          <img src='./assets/img/main.png' className="w-full hidden sm:block"></img>
+          <img src='./assets/img/phoneMain.png' className="w-full sm:hidden"></img>
           <div className='w-full absolute top-16 sm:top-1/4 left-0 '>
             <div className='sm:max-w-7xl sm:mx-auto sm:w-full mx-8  h-full z-2'>
               <div className='text-xl text-center sm:text-left sm:text-4xl'>螣龙安科·中国·上海</div>

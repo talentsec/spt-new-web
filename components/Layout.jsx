@@ -68,7 +68,7 @@ export default function Layout({ children }) {
 
   return (
     <div className='sm:min-w-main-width'>
-      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 bg-white sm:min-w-main-width'>
+      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism  sm:min-w-main-width'>
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 h12 align-middle'>
           <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={()=>setProductMenuDisplay(!productMenuDisplay)}>
             <Image src={productIcon} alt=''></Image>
@@ -82,7 +82,7 @@ export default function Layout({ children }) {
               menuList.map((item, key) => {
                 return (
                   <span className='mr-10 cursor-pointer hover:text-blue-600' key={key}>
-                    <Dropdown overlay={<DropdownMenu list={item.list} />} overlayClassName="navbar_dropdown__box">
+                    <Dropdown overlay={<DropdownMenu list={item.list} />} >
                       <Space>
                         {item.title}
                         <Image src={downArrow} alt=""></Image>
