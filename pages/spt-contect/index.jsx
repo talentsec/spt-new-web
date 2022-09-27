@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react'
-import Layout from '../../../components/Layout'
+import Layout from '@/components/common/Layout'
 import Image from 'next/image'
-import Title from '../../../components/Title'
-import mainImg from '../../../assets/img/about/contectMain.png'
-import icon1 from '../../../assets/img/about/contectIcon1.svg'
-import icon2 from '../../../assets/img/about/contectIcon2.svg'
-import icon3 from '../../../assets/img/about/contectIcon3.svg'
-import location from '../../../assets/img/about/location.svg'
-import joinImg from '../../../assets/img/about/join.svg'
+import Title from '@/components/common/Title'
+import mainImg from '@/assets/img/about/contectMain.png'
+import icon1 from '@/assets/img/about/contectIcon1.svg'
+import icon2 from '@/assets/img/about/contectIcon2.svg'
+import icon3 from '@/assets/img/about/contectIcon3.svg'
+import location from '@/assets/img/about/location.svg'
+import joinImg from '@/assets/img/about/join.svg'
 import { Button } from 'antd'
+import Footer from '@/components/common/Footer'
 
 const list = [
   {
@@ -123,13 +124,7 @@ export default function Contect() {
             </div>
           </section>
         </section>
-        <section className='w-screen sm:min-w-main-width relative'>
-          <Image src={joinImg} alt='' layout='responsive'></Image>
-          <section className='text-white absolute top-10 text-center w-full text-3xl tracking-new-widest'>联系我们，为您的企业网络安全保驾护航</section>
-          <section className='absolute top-24 w-full flex justify-center'>
-            <Button size='large'  shape="round" onClick={() => window.location = '/about/contect'}>立即联系我们</Button>
-          </section>
-        </section>
+         <Footer></Footer>
       </div>
     </Layout>
   )

@@ -24,3 +24,17 @@
 .ant-tabs-tab:hover {
   color: rgba(0,0,0,0.8) !important;
 }
+
+.tide-collapse-custom-panel {
+  border: 1px solid #E5E6EB !important;
+  border-radius: 8px !important;
+  margin-bottom: 18px !important;
+  padding: 16px !important;
+}
+.tide-collapse-custom-panel .ant-collapse-header {
+  /* color: #165DFF !important; */
+  font-size: 18px;
+}
+.tide-collapse-custom-panel .ant-collapse-header:hover {
+  color: #165DFF !important;
+}

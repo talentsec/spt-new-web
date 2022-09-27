@@ -2,14 +2,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper";
-import Card from '../components/Card.jsx'
-import TeamCard from '../components/TeamCard'
-import Layout from '../components/Layout'
+import Card from '../components/common/Card.jsx'
+import TeamCard from '../components/common/TeamCard'
+import Layout from '../components/common/Layout'
 import { products, teams, productList, tabList} from '../constant/info'
 import { Button, Tabs, Tab } from 'antd'
-import ProductCard from '../components/ProductCard.jsx'
+import ProductCard from '../components/common/ProductCard.jsx'
 // import 'swiper/css';
-import HomeTab from '../components/HomeTab.jsx'
+import HomeTab from '../components/common/HomeTab.jsx'
 import 'antd/dist/antd.css'
 import Link from 'next/link.js'
 import { motion } from "framer-motion";

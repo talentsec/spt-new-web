@@ -1,13 +1,13 @@
 import React from 'react'
 import Image from 'next/Image'
-import line1 from '../../../assets/img/product/line1.svg'
-import line2 from '../../../assets/img/product/line2.svg'
-import icon1 from '../../../assets/img/product/training-1.svg'
-import icon2 from '../../../assets/img/product/training-2.svg'
-import icon3 from '../../../assets/img/product/training-3.svg'
-import icon4 from '../../../assets/img/product/training-4.svg'
-import icon5 from '../../../assets/img/product/training-5.svg'
-import icon6 from '../../../assets/img/product/training-6.svg'
+import line1 from '@/assets/img/product/line1.svg'
+import line2 from '@/assets/img/product/line2.svg'
+import icon1 from '@/assets/img/product/training-1.svg'
+import icon2 from '@/assets/img/product/training-2.svg'
+import icon3 from '@/assets/img/product/training-3.svg'
+import icon4 from '@/assets/img/product/training-4.svg'
+import icon5 from '@/assets/img/product/training-5.svg'
+import icon6 from '@/assets/img/product/training-6.svg'
 
 const infoList = [
   {

@@ -1,0 +1,46 @@
+import React from 'react'
+import { Collapse, Space } from 'antd';
+import { PlusOutlined, MinusOutlined } from '@ant-design/icons'
+const { Panel } = Collapse;
+
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+
+
+export default function Problem() {
+  return (
+    <div className='mb-16'>
+      <Collapse 
+        defaultActiveKey={['1']} 
+        expandIconPosition='end'
+        expandIcon={({ isActive }) => !isActive ? <PlusOutlined /> : <MinusOutlined />}
+        className="tide-collapse-custom-panel"
+        ghost>
+        <Panel header="潮汐开源社区是什么？" key="1">
+          <p className='text-gray-500 leading-6'>潮汐开源社区是一个构建于网络安全领域的相关社区，该社区秉持开源共享的精神，致力于将网络安全检测及渗透测试任务专业化、在线化、自动化与一体化。潮汐开源社区为广大安全从业人员提供了一个网络安全工具及基础测试任务的聚合平台，任何人或者组织都可以使用潮汐开源平台，直观地调用一些工具直接在线对安全资产进行探测，或者加入社区作为安全工具的开发者，上传自己创建的工具与编排供其他社区用户使用，潮汐开源社区的用户甚至可以将自己整套的网络渗透任务全部基于潮汐开源社区的平台实现。</p>
+        </Panel>
+      </Collapse>
+      <Collapse 
+        expandIconPosition='end'
+        expandIcon={({ isActive }) => !isActive ? <PlusOutlined /> : <MinusOutlined />}
+        className="tide-collapse-custom-panel"
+        ghost>
+        <Panel header="潮汐开源社区能为网络安全从业人员带来什么？" key="1">
+          <p className='text-gray-500 leading-6'>对于使用者而言，可以通过潮汐平台组件&AI引擎、工具开源市场和订阅式安全应用告别重复的服务属性工作，大幅度提高工作效率；对于开发者而言，能直接调用平台的自动化安全能力，创造属于自己的安全工具或编排。</p>
+        </Panel>
+      </Collapse>
+      <Collapse 
+        expandIconPosition='end'
+        expandIcon={({ isActive }) => !isActive ? <PlusOutlined /> : <MinusOutlined />}
+        className="tide-collapse-custom-panel"
+        ghost>
+        <Panel header="潮汐开源社区是什么？" key="1">
+          <p className='text-gray-500 leading-6'>安全，潮汐平台将底层的存储引擎设计为 NoSQL，即非关系型数据库，技术选型是 MongoDB。潮汐平台基于 MongoDB 的 命名空间 设计了一个针对性的存储协议，基于这个协议，每个任务的数据存储相互之间都是独立的，并且可以根据协议被停止。</p>
+        </Panel>
+      </Collapse>
+    </div>
+  )
+}

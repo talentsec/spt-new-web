@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import { DownOutlined, SmileOutlined, MenuOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space, Collapse, Button } from 'antd';
-import { menuList } from '../constant/info';
-import logo from '../assets/img/home/logo.png'
+import { menuList } from '@/constant/info';
+import logo from '@/assets/img/home/logo.png'
 import Image from 'next/image';
-import downArrow from '../assets/img/home/downArrow.png'
-import productIcon from '../assets/img/home/productIcon.svg'
+import downArrow from '@/assets/img/home/downArrow.png'
+import productIcon from '@/assets/img/home/productIcon.svg'
 import { motion } from "framer-motion";
 const { Panel } = Collapse;
 

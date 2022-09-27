@@ -1,15 +1,15 @@
 import React from 'react'
 import Image from 'next/image'
 import { Button, Tabs } from 'antd'
-import Layout from '../../../components/Layout'
-import MainImg from '../../../assets/img/product/mituanMain.png'
-import Title from '../../../components/Title'
-import AdvantageImg from '../../../assets/img/product/advantage.svg'
-import {mituanApplication, riskCoverList, mituanfunctionList, mituanTabList} from '../../../constant/info.js'
-import ApplicationCard from './ApplicationCard'
-import RiskPannel from './RiskPannel'
-import FunctionPannel from './FunctionPannel'
-import Training from './Training'
+import Layout from '@/components/common/Layout'
+import MainImg from '@/assets/img/product/mituanMain.png'
+import Title from '@/components/common/Title'
+import AdvantageImg from '@/assets/img/product/advantage.svg'
+import {mituanApplication, riskCoverList, mituanfunctionList, mituanTabList} from '@/constant/info.js'
+import ApplicationCard from '@/components/product/mituan/ApplicationCard.jsx'
+import RiskPannel from '@/components/product/mituan/RiskPannel.jsx'
+import FunctionPannel from '@/components/product/mituan/FunctionPannel.jsx'
+import Training from '@/components/product/mituan/Training.jsx'
 
 export default function index() {
   return (
@@ -22,7 +22,7 @@ export default function index() {
             <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest'>谜团网络靶场平台是对实网靶场的有效补充与拓展，在螣龙安全大脑的极智赋能下，结合云平台、虚拟化、攻防技术等手段，打造现实网络系统的平行仿真系统，用于学习与培训、测试与验证、评估与演练</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center'>
-            <Button size='large' type='primary'>免费试用谜团靶场</Button>
+            <Button size='large' type='primary' onClick={() => location.href = 'https://mituan.zone'}>免费试用谜团靶场</Button>
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-20'>
@@ -109,7 +109,6 @@ export default function index() {
                 />
             </div>
           </section>
-
         </section>
       </div>
     </Layout>

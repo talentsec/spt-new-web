@@ -33,6 +33,9 @@ import tideFunciton1 from '../assets/img/product/icon1.svg'
 import tideFunciton2 from '../assets/img/product/icon2.svg'
 import tideFunciton3 from '../assets/img/product/icon3.svg'
 import tideFunciton4 from '../assets/img/product/icon4.svg'
+import redBlueSupportIcon1 from '@/assets/img/service/supportIcon3.svg'
+import redBlueSupportIcon2 from '@/assets/img/service/supportIcon1.svg'
+import redBlueSupportIcon3 from '@/assets/img/service/supportIcon2.svg'
 
 export const products = [
   {
@@ -368,5 +371,37 @@ export const tideFunctionList = [
     icon: tideFunciton2,
     title: '社区共享前沿技术',
     content: '潮汐开放了上传工具以及编排的API接口，欢迎并鼓励优秀的开发者们贡献精妙的开源工具或自己创作/改编的工具以及编排，大家共建社区，共同成长!'
+  },
+]
+
+export const redBlueSupportList = [
+  {
+    icon: redBlueSupportIcon1,
+    title: '红队攻击模拟',
+    color: '#F53F3F',
+    list: [
+      '攻击方模拟真实攻击者，目的是获取核心资产权限、客户敏感数据、业务管理权限',
+      '利用社会工程学、网络入侵、内网横向等多种攻击技术，尝试攻击入侵客户资产',
+      '挖掘客户的网络安全漏洞，发现安全制度缺陷，评测员工安全意识并输出整改建议'
+    ]
+  },
+  {
+    icon: redBlueSupportIcon2,
+    title: '蓝队攻击模拟',
+    color: '#165DFF',
+    list: [
+      '防守方利用配套的安全设备入WAF、IPS、TAC、ESPC、TAM等进行防守',
+      '依托防守人员丰富的实战及应急经验，发现并分析入侵行为，处置应急事件',
+      '协助客户抵御网络入侵，传递网络防护经验，发现客户防护体系问题，并输出整改建议'
+    ]
+  },
+  {
+    icon: redBlueSupportIcon3,
+    color: '#8283FF',
+    title: '演练组织方',
+    list: [
+      '协调红蓝双方队伍、制定对抗规则、评估红蓝队的成果，以组织网络对抗活动',
+      '协助客户发现企业安全问题，锻炼客户安全人员能力，并输出整改建议及演练报告',
+    ]
   },
 ]
