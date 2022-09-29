@@ -37,7 +37,7 @@ export default function Problem() {
         expandIcon={({ isActive }) => !isActive ? <PlusOutlined /> : <MinusOutlined />}
         className="tide-collapse-custom-panel"
         ghost>
-        <Panel header="潮汐开源社区是什么？" key="1">
+        <Panel header="我的数据安全吗？它们被保存在哪里？" key="1">
           <p className='text-gray-500 leading-6'>安全，潮汐平台将底层的存储引擎设计为 NoSQL，即非关系型数据库，技术选型是 MongoDB。潮汐平台基于 MongoDB 的 命名空间 设计了一个针对性的存储协议，基于这个协议，每个任务的数据存储相互之间都是独立的，并且可以根据协议被停止。</p>
         </Panel>
       </Collapse>

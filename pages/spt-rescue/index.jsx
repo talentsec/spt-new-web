@@ -82,7 +82,7 @@ export default function Rescue() {
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>勒索病毒解密救援</div>
-            <div className='absolute top-1/2 w-3/5'>
+            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
               <div className='text-xl text-white w-full leading-8 tracking-new-widest'>处理勒索病毒，破解加密文件，协助客户摆脱黑客控制</div>
             </div>
             <div className='absolute top-3/4 px-auto gap-6'>

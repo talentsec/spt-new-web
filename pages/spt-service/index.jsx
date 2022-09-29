@@ -3,12 +3,8 @@ import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
 import { Button, Tabs } from 'antd'
-import introImg from '@/assets/img/service/redBlueIntro.png'
 import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
 import MainImg from '@/assets/img/service/serviceMain.png'
-import blueImg from '@/assets/img/service/bluePart.png'
-import redImg from '@/assets/img/service/redPart.png'
-import redIcon from '@/assets/img/service/redPartIcon.svg'
 import icon1 from '@/assets/img/about/contectIcon1.svg'
 import icon2 from '@/assets/img/about/contectIcon2.svg'
 import icon3 from '@/assets/img/about/contectIcon3.svg'
@@ -18,12 +14,12 @@ import targetIcon3 from '@/assets/img/service/serviceTargetIcon3.svg'
 import targetIcon4 from '@/assets/img/service/serviceTargetIcon4.svg'
 import targetIcon5 from '@/assets/img/service/serviceTargetIcon5.svg'
 import targetIcon6 from '@/assets/img/service/serviceTargetIcon6.svg'
-import meaningImg from '@/assets/img/service/meaning.png'
+import webIcon from '@/assets/img/service/serviceWeb.svg'
+import meaningImg from '@/assets/img/service/meaning.svg'
 import contentImg from '@/assets/img/service/serviceContent.png'
 import Footer from '@/components/common/Footer'
-import SupportCard from '@/components/service/redBlue/SupportCard'
 import TestCard from '@/components/service/service/TestCard'
-import { redBlueSupportList } from '@/constant/info'
+import ProgressScrollCard from '@/components/service/service/ProgressScrollCard'
 
 const list = [
   {
@@ -116,10 +112,17 @@ const targetList = [
   },
 ]
 
-const progressList = [
-  {
-    
-  }
+const webList = [
+  '输入合法性测试',
+  '配置管理测试',
+  '身份管理测试',
+  '认证测试',
+  '权限测试',
+  '会话管理测试',
+  '错误处理测试',
+  '弱加密测试',
+  '业务逻辑测试',
+  '客户端侧测试',
 ]
 
 export default function Rescue() {
@@ -141,13 +144,13 @@ export default function Rescue() {
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>渗透测试</div>
-            <div className='absolute top-1/2 w-3/5'>
-              <div className='text-xl text-white w-full leading-8 tracking-new-widest'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等
+            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
+              <div className='text-xl text-white w-full leading-8 tracking-new-widest'>
                 渗透测试是通过模拟黑客攻击的方式对业务系统进行安全性测试，是一种评估计算机网络系统安全性的方法。
               </div>
             </div>
             <div className='absolute top-3/4 gap-6'>
-              <Button size='large' type='primary' shape="round" onClick={() => window.open('https://shang.qq.com//email/stop/email_stop.html', '_black')}>立即体验</Button>
+              <Button size='large' type='primary' shape="round">立即体验</Button>
             </div>
           </div>
         </section>
@@ -273,11 +276,11 @@ export default function Rescue() {
         </section>
         <section className='py-8 sm:min-w-max' id="progress">
           <Title title="服务对象" subTitle='service object'></Title>
-          <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
+          <section className='w-3/4 flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-x-10 gap-y-6 mb-20'>
             {
               targetList.map((item, key) => {
                 return (
-                  <div key={key} className='w-1/5 shadow-card flex p-5 items-center gap-4 rounded-2xl'>
+                  <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0'>
                     <section>
                       <Image src={item.icon} alt=''></Image>
                     </section>
@@ -291,14 +294,23 @@ export default function Rescue() {
         <section className='py-8 sm:min-w-max' id="progress">
           <Title title="渗透测试流程" subTitle='Penetration test process'></Title>
           <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
+            <ProgressScrollCard></ProgressScrollCard>
+          </section>
+        </section>
+        <section className='py-8 sm:min-w-max' id="progress">
+          <Title title="WEB测试检测项" subTitle='Penetrant test items'></Title>
+          <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个纬度：</div>
+          <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
             {
-              targetList.map((item, key) => {
+              webList.map((item,index) => {
                 return (
-                  <div key={key} className='w-1/5 shadow-card flex p-5 items-center gap-4 rounded-2xl'>
-                    <section>
-                      <Image src={item.icon} alt=''></Image>
+                  <div key={index} className="w-56 h-56 bg-gray-100 rounded-2xl pt-16 ">
+                    <section className='flex justify-center mb-3'>
+                      <Image src={webIcon} alt=''></Image>
                     </section>
-                    <span className='text-xl font-medium'>{item.text}</span>
+                    <section className='text-center text-gray-400'>
+                      {item}
+                    </section>
                   </div>
                 )
               })

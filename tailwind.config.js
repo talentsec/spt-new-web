@@ -14,7 +14,10 @@ module.exports = {
       },
       minWidth: {
         'main-width': '1280px'
-      }
+      },
+      fontFamily: {
+        'din-bold': ['"DINPro-Bold"']
+      },
     },
   },
   plugins: [],

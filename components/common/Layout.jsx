@@ -3,11 +3,12 @@ import Link from 'next/link'
 import { DownOutlined, SmileOutlined, MenuOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space, Collapse, Button } from 'antd';
 import { menuList } from '@/constant/info';
-import logo from '@/assets/img/home/logo.png'
+import logo from '@/assets/img/home/logo.svg'
 import Image from 'next/image';
 import downArrow from '@/assets/img/home/downArrow.png'
 import productIcon from '@/assets/img/home/productIcon.svg'
 import { motion } from "framer-motion";
+import Head from 'next/head';
 const { Panel } = Collapse;
 
 const DropdownMenu = ({ list }) => {
@@ -68,21 +69,43 @@ export default function Layout({ children }) {
 
   return (
     <div className='sm:min-w-main-width'>
-      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism  sm:min-w-main-width'>
+      <Head>
+        <title>螣龙安科</title>
+        <meta name="description" content="螣龙安科官方网站" />
+        <link rel="icon" href="/app-icon.svg" />
+      </Head>
+      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism sm:bg-white sm:shadow-sm sm:min-w-main-width'>
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 h12 align-middle'>
           <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={()=>setProductMenuDisplay(!productMenuDisplay)}>
             <Image src={productIcon} alt=''></Image>
           </div>
-          <div className='w-28 sm:w-48 pt-1.5 sm:pt-0'>
-            <Image src={logo} alt=""></Image>
-          </div>
+          <Link href='/'>
+            <div className='w-28 sm:w-48 pt-1.5 sm:pt-1 cursor-pointer'>
+              <Image src={logo} alt=""></Image>
+            </div>
+          </Link>
           <div className='hidden sm:block first:sm:block sm:pt-1 '>
-            <span className='mr-10 cursor-pointer hover:text-blue-600'>首页</span>
+            <Link href='/'>
+              <span className='mr-10 cursor-pointer hover:text-blue-600 text-gray-900'>
+                首页
+              </span>
+            </Link>
             {
               menuList.map((item, key) => {
                 return (
                   <span className='mr-10 cursor-pointer hover:text-blue-600' key={key}>
-                    <Dropdown overlay={<DropdownMenu list={item.list} />} >
+                    <Dropdown overlay={<Menu items={item.list.map((element,key) => {
+                      return {
+                        key: String(key),
+                        label: (
+                          <Link href={element.link}>
+                            <div className='hover:text-blue-700'>
+                              {element.title}
+                            </div>
+                          </Link>
+                        ),
+                      }
+                    })} />} >
                       <Space>
                         {item.title}
                         <Image src={downArrow} alt=""></Image>
@@ -121,14 +144,16 @@ export default function Layout({ children }) {
         {children}
       </div>
       <section className='w-full  py-10 bg-gray-100 sm:block hidden'>
-        <div className='sm:max-w-7xl sm:mx-auto flex justify-between align-middle pb-8'>
+        <div className='sm:max-w-7xl sm:mx-auto flex justify-between align-middle pb-8 h-80'>
           <div className='flex flex-col h-auto justify-between'>
             <div className='text-xs  text-gray-500  leading-6'>
               <section className='font-normal text-sm mb-3 text-black'>关注或联系我们</section>
               <section>邮箱：contact@talentsec.cn</section>
               <section>联系地址：上海市闵行区东川路556号乙楼1层1001室</section>
               <section className='mb-1'>联系电话：021-62241157</section>
-              <Button type="primary" >联系我们</Button>
+              <Link href='/spt-contact'>
+                <Button type="primary" >联系我们</Button>
+              </Link>
             </div>
             <span>
               <Image src={logo} alt=''></Image>
@@ -165,7 +190,7 @@ export default function Layout({ children }) {
           <span><Image src={logo} alt=''></Image></span>
           <section className='font-normal text-sm mb-3 text-black'>关注或联系我们</section>
           <section>邮箱：contact@talentsec.cn</section>
-          <section>联系地址：上海市闵行区东川路556号乙楼1层1001室</section>
+          <section>联系地址：上海市闵行区东川路555号乙楼1层1001室</section>
           <section className='mb-1'>联系电话：021-62241157</section>
           <span><Button type="primary" >联系我们</Button></span>
         </div>

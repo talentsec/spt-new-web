@@ -18,8 +18,8 @@ export default function index() {
         <section className='w-screen sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='absolute top-1/4 text-center text-5xl text-white w-full'>谜团·网络攻防靶场</div>
-          <div className='absolute top-1/2 w-full px-auto'>
-            <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest'>谜团网络靶场平台是对实网靶场的有效补充与拓展，在螣龙安全大脑的极智赋能下，结合云平台、虚拟化、攻防技术等手段，打造现实网络系统的平行仿真系统，用于学习与培训、测试与验证、评估与演练</div>
+          <div className='absolute top-1/2 w-full px-auto -mt-5'>
+            <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest font-light'>谜团网络靶场平台是对实网靶场的有效补充与拓展，在螣龙安全大脑的极智赋能下，结合云平台、虚拟化、攻防技术等手段，打造现实网络系统的平行仿真系统，用于学习与培训、测试与验证、评估与演练。</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center'>
             <Button size='large' type='primary' onClick={() => location.href = 'https://mituan.zone'}>免费试用谜团靶场</Button>
@@ -57,7 +57,7 @@ export default function index() {
             </div>
           </section>
           <section>
-            <Title title="靶场配套安全培训" subTitle='Application scenarios'></Title>
+            <Title title="靶场配套安全培训" subTitle='Safety Training'></Title>
             <div className='mb-20'>
               <Training></Training>
             </div>

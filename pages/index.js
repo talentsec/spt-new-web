@@ -1,20 +1,15 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from "swiper";
 import Card from '../components/common/Card.jsx'
 import TeamCard from '../components/common/TeamCard'
 import Layout from '../components/common/Layout'
 import { products, teams, productList, tabList} from '../constant/info'
-import { Button, Tabs, Tab } from 'antd'
+import { Button, Tabs } from 'antd'
 import ProductCard from '../components/common/ProductCard.jsx'
-// import 'swiper/css';
 import HomeTab from '../components/common/HomeTab.jsx'
 import 'antd/dist/antd.css'
 import Link from 'next/link.js'
 import { motion } from "framer-motion";
-import webMianImg from '../assets/img/home/main.png'
-import phoneMianImg from '../assets/img/home/phoneMain.png'
 
 
 const container = {
@@ -43,7 +38,7 @@ export default function Home() {
       <section className='w-screen relative sm:min-width '>
           {/* <img src={backImg} alt=''></img> */}
           {/* <Image src={backImg} alt='' ></Image> */}
-          <img src='./assets/img/main.png' className="w-full hidden sm:block"></img>
+          <img src='./assets/img/main.svg' className="w-full hidden sm:block"></img>
           <img src='./assets/img/phoneMain.png' className="w-full sm:hidden"></img>
           <div className='w-full absolute top-16 sm:top-1/4 left-0 '>
             <div className='sm:max-w-7xl sm:mx-auto sm:w-full mx-8  h-full z-2'>

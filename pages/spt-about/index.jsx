@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
+import { Slider } from 'antd';
 import Title from '@/components/common/Title'
 import mainImg from '@/assets/img/about/usMain.svg'
 import icon1 from '@/assets/img/about/contectIcon1.svg'
@@ -35,7 +36,112 @@ const list = [
   },
 ]
 
+const awardList = [
+  {
+    year: '2021',
+    text: '上海市科技型中小企业',
+  },
+  {
+    year: '2021',
+    text: 'ISO9001质量体系认证',
+  },
+  {
+    year: '2022',
+    text: 'ISO20000服务管理体系认证',
+  },
+  {
+    year: '2022',
+    text: 'ISO27001信息安全管理体系认证',
+  },
+  {
+    year: '2022',
+    text: '企业信用等级AAA证书',
+  },
+  {
+    year: '2022',
+    text: '上海市信息网络安全管理协会会员单位',
+  },
+  {
+    year: '2022',
+    text: '上海市信息安全行业协会会员单位',
+  },
+  {
+    year: '2022',
+    text: '上海市打击治理新型网络犯罪“玄武”实验室会员单位',
+  },
+]
+
+const marks = {
+  0: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2022.05</div>,
+  },
+  1: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2020.10</div>,
+  },
+  2: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2021.08</div>,
+  },
+  3: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2021.10</div>,
+  },
+  4: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2022.05</div>,
+  },
+  5: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2022.06</div>,
+  },
+  6: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2022.08</div>,
+  },
+  7: {
+    style: {
+      color: '#FFF',
+    },
+    label: <div className='text-xl font-light -translate-y-14'>2022.09</div>,
+  }
+};
+
+const slideInfoList = [
+  ['公司成立'],
+  ['种子轮数百万融资'],
+  ['BAS应用demo版发布'],
+  ['BAS应用商用版发布'],
+  ['天使轮数千万融资'],
+  ['潮汐平台发布'],
+  ['首届潮汐安全应用开发大赛'],
+  [
+    '8月 - ASM应用商业版',
+    '8月 - BAS应用商业版v3',
+    '9月 - 潮汐社区招募令',
+  ]
+]
+
 export default function Contect() {
+  const [selectedSlide, setSelectedSlide] = useState(2)
+  const handleSlide = (val) => {
+    setSelectedSlide(val)
+  }
   return (
     <Layout>
       <div className='min-w-max'>
@@ -84,14 +190,37 @@ export default function Contect() {
             </section>
           </section> 
           <section className='bg-blue-700 -translate-y-2 relative'>
+            {/* <Title title='发展历程' subTitle='Development History'></Title> */}
             <h1 className='text-4xl text-center text-white font-normal py-9'>发展历程</h1>
-            <section className='flex justify-center pb-28'>
-              <Image src={timeLine} alt=''></Image>
+
+            <section className='flex justify-center pb-28 px-20'>
+              {/* <Image src={timeLine} alt=''></Image> */}
+              <div className='w-full'>
+                <Slider 
+                  defaultValue={selectedSlide} 
+                  max={7} 
+                  min={0} 
+                  step={1} 
+                  marks={marks}     
+                  tooltip={{
+                    open: false,
+                  }}
+                  onChange={handleSlide}/>
+              </div>
             </section>
             <section className='absolute top-56 flex justify-center w-full'>
-              <div className='bg-white p-10 rounded-xl shadow-card sm:w-4/5'>
-                <span className=''></span>
-                BAS饮用商用版发布
+              <div className='bg-white px-10 py-4 h-40 rounded-xl shadow-card sm:w-4/5 flex items-center flex-wrap'>
+                {
+                  slideInfoList[selectedSlide].map((item, key) => {
+                    return (
+                      <div key={key} className="w-full flex-shrink-0">
+                        <section key={key} className='text-base leading-6 '>
+                          {item}
+                        </section>
+                      </div>
+                    )
+                  })
+                }
               </div>
             </section>
           </section>
@@ -114,8 +243,20 @@ export default function Contect() {
           <section>
             <Title title="荣誉资质" subTitle='honorary award'></Title>
             <div className='sm:flex justify-center mb-20 gap-20 items-center px-40'>
-              <section className='w-1/2 h-80 rounded-md overflow-hidden' id='container'>
-                <Image src={timeLine2} alt=''></Image>
+              <section className='w-1/2 h-80 rounded-md overflow-hidden relative' id='container'>
+                {/* <Image src={timeLine2} alt=''></Image> */}
+                {
+                  awardList.map((item, key) => {
+                    return (
+                      <div key={key} className="flex gap-4 font-light justify-start items-center h-9 hover:text-blue-600 cursor-pointer hover:font-normal">
+                        <span className=' w-8 inline-block'>{item.year}</span>
+                        <span className='inline-block rounded-lg bg-blue-600 w-2 h-2'></span>
+                        <span className=''>{item.text}</span>
+                      </div>
+                    )
+                  })
+                }
+                <div className='absolute h-72 -top-1 left-12 border-x border-blue-600 ml-1'></div>
               </section>
               <section className='w-1/2'>
                 <Image src={award} alt=''></Image>

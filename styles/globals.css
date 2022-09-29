@@ -1,9 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import './antd.css';
 @import 'swiper/css';
 @import "swiper/css/pagination";
+@import "./font.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer components {
   .bc-linner {

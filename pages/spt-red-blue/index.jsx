@@ -3,18 +3,16 @@ import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
 import { Button, Tabs } from 'antd'
-import introImg from '@/assets/img/service/redBlueIntro.png'
+import introImg from '@/assets/img/service/redBlueIntro.svg'
 import valueIcon from '@/assets/img/service/redBlueValueIcon.svg'
-import solutionIcon from '@/assets/img/service/solutionIcon.svg'
 import MainImg from '@/assets/img/service/redBlueMain.png'
 import blueImg from '@/assets/img/service/bluePart.png'
 import redImg from '@/assets/img/service/redPart.png'
 import redIcon from '@/assets/img/service/redPartIcon.svg'
-import blueIcon from '@/assets/img/service/bluePartIcon.svg'
-import Progress from '@/components/service/rescue/Progress'
 import Footer from '@/components/common/Footer'
 import SupportCard from '@/components/service/redBlue/SupportCard'
 import { redBlueSupportList } from '@/constant/info'
+import Link from 'next/link'
 
 const list = [
   {
@@ -123,13 +121,15 @@ export default function Rescue() {
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>攻防演练</div>
-            <div className='absolute top-1/2 w-3/5'>
-              <div className='text-xl text-white leading-8 tracking-new-widest'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等
+            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
+              <div className='text-xl text-white leading-8 tracking-new-widest'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等<br/>
                 攻方服务:可控无限渗透测试，内网漫游，社交攻击尝试，物理尝试等
               </div>
             </div>
             <div className='absolute top-3/4 px-auto gap-6'>
-              <Button size='large' type='primary' shape="round" onClick={() => window.open('https://shang.qq.com//email/stop/email_stop.html', '_black')}>立即咨询</Button>
+              <Link href='/spt-contact'>
+                <Button size='large' type='primary' shape="round">立即咨询</Button>
+              </Link>
             </div>
           </div>
         </section>

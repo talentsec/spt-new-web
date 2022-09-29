@@ -38,3 +38,16 @@
 .tide-collapse-custom-panel .ant-collapse-header:hover {
   color: #165DFF !important;
 }
+
+.asm_carousel__dots {
+  bottom: -50px !important;
+}
+.asm_carousel__dots > li {
+  height: 6px !important;
+  width: 4px !important;
+  border-radius: 50% !important;
+  display: inline-block !important;
+}
+.asm_carousel__dots > .slick-active {
+  width: 16px !important;
+}
