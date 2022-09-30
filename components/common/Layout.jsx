@@ -74,7 +74,9 @@ export default function Layout({ children }) {
         <meta name="description" content="螣龙安科官方网站" />
         <link rel="icon" href="/app-icon.svg" />
       </Head>
-      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism sm:bg-white sm:shadow-sm sm:min-w-main-width'>
+      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
+          zIndex: '161'
+        }}>
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 h12 align-middle'>
           <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={()=>setProductMenuDisplay(!productMenuDisplay)}>
             <Image src={productIcon} alt=''></Image>

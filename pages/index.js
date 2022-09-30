@@ -43,7 +43,7 @@ export default function Home() {
           <div className='w-full absolute top-16 sm:top-1/4 left-0 '>
             <div className='sm:max-w-7xl sm:mx-auto sm:w-full mx-8  h-full z-2'>
               <div className='text-xl text-center sm:text-left sm:text-4xl'>螣龙安科·中国·上海</div>
-              <div className='text-2xl text-center sm:text-left  sm:text-5xl font-extrabold my-3' style={{
+              <div className='inline-block file:text-2xl text-center sm:text-left  sm:text-5xl font-extrabold my-3' style={{
                 background: 'linear-gradient(270deg, #346BFF 0%, #4BAAFF 100%)',
                 'WebkitBackgroundClip': 'text',
                 'WebkitTextFillColor': 'transparent',
