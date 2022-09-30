@@ -69,7 +69,8 @@ export default function index() {
                 <h3 className='text-3xl'>我们的优势与亮点</h3>
                 <h4 className='text-xl font-normal'>
                   <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3'></span>
-                  超逼真模拟技术</h4>
+                  超逼真模拟技术
+                </h4>
                 <section className='font-light text-gray-400 leading-6 pl-4 mb-5'>谜团靶场模拟了一个真实的 SOC，包括一个虚拟企业网络。它可以准确地模拟攻击场景，提供身临其境的体验，帮助学员们有效应对攻击。</section>
                 <h4 className='text-xl font-normal'>
                   <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3'></span>

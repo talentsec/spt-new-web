@@ -15,7 +15,7 @@ export default function Card({ data }) {
         scale
       }}
     >
-      <div className='sm:w-96 flex-grow-0 flex-shrink-0 rounded-lg shadow-card mb-5 cursor-pointer pb-1'>
+      <div className='sm:w-96 flex-grow-0 flex-shrink-0 rounded-lg shadow-card mb-5 cursor-pointer pb-1 sm:hover:scale-105 transition-all'>
         <div className='p-9'>
           <div className='flex justify-center mb-2'>
             <Image src={data.icon} alt="" />

@@ -68,7 +68,7 @@ export default function Home() {
           </div>
           <div className='sm:-translate-y-1/3 sm:mx-auto sm:max-w-7xl'>
             <motion.ul 
-              className=' sm:flex gap-3 px-8 sm:px-0 ' 
+              className='sm:flex gap-3 px-8 sm:px-0 ' 
               variants={container}
               initial="hidden"
               animate="visible">

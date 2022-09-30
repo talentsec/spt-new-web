@@ -48,13 +48,7 @@ export default function Contect() {
   //   });
   // }, [])
   useEffect(() => {
-    if (window.AMap) return
-    const mapScript = document.createElement('script')
-    mapScript.src = "https://webapi.amap.com/maps?v=1.4.15&key=96574f54a03b6e54ecec16c404a52fb4"
-    mapScript
-    document.head.appendChild(mapScript)
-    mapScript.onload =() => {
-      console.log(window.AMap)
+    const initMap = () => {
       const map = new AMap.Map('container', {
         resizeEnable: true, //是否监控地图容器尺寸变化
         zoom: 18, //初始地图级别
@@ -68,7 +62,15 @@ export default function Contect() {
       });
       marker.setMap(map);
     }
-  })
+    if (!window.AMap) {
+      const mapScript = document.createElement('script')
+      mapScript.src = "https://webapi.amap.com/maps?v=1.4.15&key=96574f54a03b6e54ecec16c404a52fb4"
+      document.head.appendChild(mapScript)
+      mapScript.onload = initMap
+    } else {
+      initMap()
+    }
+  }, [])
 
   return (
     <Layout>

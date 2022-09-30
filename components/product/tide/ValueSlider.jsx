@@ -28,7 +28,7 @@ const infoList = [
 const Item = ({data}) => {
   return (
     <div
-      className="w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg" 
+      className="w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all" 
       >
       <div className='overflow-hidden h-full mb-6'>
         <h1 className='text-xl h-12'>{data.title}</h1>

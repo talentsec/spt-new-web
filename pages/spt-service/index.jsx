@@ -20,6 +20,7 @@ import contentImg from '@/assets/img/service/serviceContent.png'
 import Footer from '@/components/common/Footer'
 import TestCard from '@/components/service/service/TestCard'
 import ProgressScrollCard from '@/components/service/service/ProgressScrollCard'
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const list = [
   {
@@ -128,6 +129,8 @@ const webList = [
 export default function Rescue() {
   const [selectedRedItem, setSelectedRedItem] = useState(redPartList[0])
   const [selectedBlueItem, setSelectedBlueItem] = useState(bluePartList[0])
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0.3, 0.4], [0.8, 1]);
 
   const handleTabChange = (key) => {
     const target = list[Number(key)]
@@ -219,59 +222,64 @@ export default function Rescue() {
           </section>
           <section id='content'>
             <Title title="服务内容" subTitle='Service Content'></Title>
-            <section className='flex gap-5 w-full justify-center mb-8'>
-              <section className='w-64 relative text-right'>
-                <div>
-                  <section>
-                    <Image src={contentIcon} alt=''></Image>
-                  </section>
-                  <section className='my-3 text-xl'>
-                    黑盒+灰盒结合
-                  </section>
-                  <section className='text-xs text-gray-500 leading-5'>
-                    通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，全方位检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出最佳安全解决方案。
-                  </section>
-                </div>
-                <div className='absolute bottom-0'>
-                  <section>
-                    <Image src={contentIcon} alt=''></Image>
-                  </section>
-                  <section className='my-3 text-xl'>
-                    安全修复建议
-                  </section>
-                  <section className='text-xs text-gray-500 leading-5'>
-                    渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。
-                  </section>
-                </div>
+            <motion.div
+              style={{
+                scale,
+              }}>
+              <section className='flex gap-5 w-full justify-center mb-8'>
+                <section className='w-64 relative text-right'>
+                  <div>
+                    <section>
+                      <Image src={contentIcon} alt=''></Image>
+                    </section>
+                    <section className='my-3 text-xl'>
+                      黑盒+灰盒结合
+                    </section>
+                    <section className='text-xs text-gray-500 leading-5'>
+                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，全方位检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出最佳安全解决方案。
+                    </section>
+                  </div>
+                  <div className='absolute bottom-0'>
+                    <section>
+                      <Image src={contentIcon} alt=''></Image>
+                    </section>
+                    <section className='my-3 text-xl'>
+                      安全修复建议
+                    </section>
+                    <section className='text-xs text-gray-500 leading-5'>
+                      渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。
+                    </section>
+                  </div>
+                </section>
+                <section className='flex-shrink-0'>
+                  <Image src={contentImg} alt=''></Image>
+                </section>
+                <section className='w-64 relative'>
+                  <div>
+                    <section>
+                      <Image src={contentIcon} alt=''></Image>
+                    </section>
+                    <section className='my-3 text-xl'>
+                      黑盒+灰盒结合
+                    </section>
+                    <section className='text-xs text-gray-500 leading-5'>
+                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，全方位检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出最佳安全解决方案。
+                    </section>
+                  </div>
+                  <div className='absolute bottom-0'>
+                    <section>
+                      <Image src={contentIcon} alt=''></Image>
+                    </section>
+                    <section className='my-3 text-xl'>
+                      安全修复建议
+                    </section>
+                    <section className='text-xs text-gray-500 leading-5'>
+                      渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。
+                    </section>
+                  </div>
+                </section>
               </section>
-              <section className='flex-shrink-0'>
-                <Image src={contentImg} alt=''></Image>
-              </section>
-              <section className='w-64 relative'>
-                <div>
-                  <section>
-                    <Image src={contentIcon} alt=''></Image>
-                  </section>
-                  <section className='my-3 text-xl'>
-                    黑盒+灰盒结合
-                  </section>
-                  <section className='text-xs text-gray-500 leading-5'>
-                    通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，全方位检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出最佳安全解决方案。
-                  </section>
-                </div>
-                <div className='absolute bottom-0'>
-                  <section>
-                    <Image src={contentIcon} alt=''></Image>
-                  </section>
-                  <section className='my-3 text-xl'>
-                    安全修复建议
-                  </section>
-                  <section className='text-xs text-gray-500 leading-5'>
-                    渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。
-                  </section>
-                </div>
-              </section>
-            </section>
+            </motion.div>
           </section>
         </section>
         <section className='py-8 sm:min-w-max' id="progress">
@@ -280,7 +288,7 @@ export default function Rescue() {
             {
               targetList.map((item, key) => {
                 return (
-                  <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0'>
+                  <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0 sm:hover:scale-105 transition-all'>
                     <section>
                       <Image src={item.icon} alt=''></Image>
                     </section>
@@ -304,7 +312,7 @@ export default function Rescue() {
             {
               webList.map((item,index) => {
                 return (
-                  <div key={index} className="w-56 h-56 bg-gray-100 rounded-2xl pt-16 ">
+                  <div key={index} className="w-56 h-56 bg-gray-100 rounded-2xl pt-16 sm:hover:scale-105 transition-all">
                     <section className='flex justify-center mb-3'>
                       <Image src={webIcon} alt=''></Image>
                     </section>

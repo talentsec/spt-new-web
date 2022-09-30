@@ -42,7 +42,7 @@ export default function Occasion() {
       {
         infoList.map((item, key) => {
           return (
-            <div key={key} className="rounded-t-3xl w-96 p-8 shadow-card sm:hover:scale-105 transition-all">
+            <div key={key} className="rounded-t-3xl w-96 p-8 shadow-card">
               <section>
                 <Image src={item.icon} alt=''></Image>
               </section>

@@ -229,13 +229,13 @@ export default function Contect() {
           <section>
             <Title title="投资者" subTitle='investor'></Title>
             <div className='sm:flex justify-center gap-8 mb-40'>
-              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-10 pt-8 border-slate-100'>
+              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-10 pt-8 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor1} alt=''></Image>
               </div>
-              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-11 pt-11 border-slate-100'>
+              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-11 pt-11 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor2} alt=''></Image>
               </div>
-              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-10 pt-7 border-slate-100'>
+              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-10 pt-7 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor3} alt=''></Image>
               </div>
             </div>
@@ -256,7 +256,7 @@ export default function Contect() {
                     )
                   })
                 }
-                <div className='absolute h-72 -top-1 left-12 border-x border-blue-600 ml-1'></div>
+                <div className='absolute h-72 -top-1 left-12 border-x border-blue-600 ml-1' style={{transform: 'translateX(-1px)'}}></div>
               </section>
               <section className='w-1/2'>
                 <Image src={award} alt=''></Image>

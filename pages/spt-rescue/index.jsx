@@ -13,6 +13,7 @@ import arrow from '@/assets/img/service/arrow.svg'
 import ServiceCard from '@/components/service/rescue/ServiceCard'
 import Progress from '@/components/service/rescue/Progress'
 import Footer from '@/components/common/Footer'
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const list = [
   {
@@ -67,6 +68,9 @@ const solutionList = [
 ]
 
 export default function Rescue() {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0.04, 0.16], [0.8, 1]);
+
   const handleTabChange = (key) => {
     const target = list[Number(key)]
     const element = document.querySelector(target.herf)
@@ -107,32 +111,38 @@ export default function Rescue() {
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
           <section >
             <Title title="应急处理办法" subTitle='Emergency response measures'></Title>
-            <div className='sm:flex justify-center gap-16 mb-20'>
-              <section>
-                <h1 className='text-3xl'>我们面对的勒索病毒的威胁</h1>
-                <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全最大威胁之一</section>
-                <div className='flex gap-6'>
-                  {
-                    solutionTabList.map((item, key) => {
-                      return (
-                        <div key={key} className="w-36">
-                          <Image src={item.icon} alt=''></Image>
-                          <section className='font-light text-gray-600 mt-2'>
-                            {item.text}
-                          </section>
-                        </div>
-                      )
-                    })
-                  }
-                </div>
-                <section className='mt-6'>
-                  <Button type='primary'>服务咨询</Button>
+            <motion.div
+              style={{
+                scale,
+              }}>
+              <div className='sm:flex justify-center gap-16 mb-20'>
+                <section>
+                  <h1 className='text-3xl'>我们面对的勒索病毒的威胁</h1>
+                  <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全最大威胁之一</section>
+                  <div className='flex gap-6'>
+                    {
+                      solutionTabList.map((item, key) => {
+                        return (
+                          <div key={key} className="w-36">
+                            <Image src={item.icon} alt=''></Image>
+                            <section className='font-light text-gray-600 mt-2'>
+                              {item.text}
+                            </section>
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                  <section className='mt-6'>
+                    <Button type='primary'>服务咨询</Button>
+                  </section>
                 </section>
-              </section>
-              <section>
-                <Image src={solution} alt=''></Image>
-              </section>
-            </div>
+                <section>
+                  <Image src={solution} alt=''></Image>
+                </section>
+              </div>
+            </motion.div>
+
           </section>
           <section id="company">
             <Title title="企业应急处理办法" subTitle='Enterprise emergency response measures'></Title>
@@ -141,7 +151,7 @@ export default function Rescue() {
                 solutionList.map((item, key) => {
                   return (
                     <React.Fragment key={key}>
-                      <div className='w-96 p-6 shadow-card rounded-lg'>
+                      <div className='w-96 p-6 shadow-card rounded-lg sm:hover:-translate-y-1 transition-all'>
                         <Image src={item.icon} alt=''></Image>
                         <div className='text-xl font-medium my-4'>{item.title}</div>
                         <div className='text-gray-400 text-sm mb-6'>{item.text}</div>

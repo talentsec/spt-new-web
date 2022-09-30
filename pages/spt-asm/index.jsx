@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Layout from '@/components/common/Layout'
 import MainImg from '@/assets/img/product/asmMain.png'
 import backImg from '@/assets/img/product/asmBack.svg'
@@ -12,8 +12,14 @@ import AsmTop from '@/components/product/asm/AsmTop'
 import AsmCarousel from '@/components/product/asm/AsmCarousel'
 import ValueSlider from '@/components/product/asm/ValueSlider'
 import Footer from '@/components/common/Footer'
+import { motion, useScroll, useTransform } from "framer-motion";
+
 
 export default function Tide() {
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0.04, 0.2], [0.8, 1]);
+  const bottomScale = useTransform(scrollYProgress, [0.9, 1], [0.6, 0.8]);
+
   return (
     <Layout>
       <div className='min-w-max'>
@@ -34,13 +40,18 @@ export default function Tide() {
         <section className='sm:max-w-7xl sm:mx-auto mt-20'>
           <section>
             <Title title="企业安全现状" subTitle='Enterprise security status'></Title>
-            <div className='sm:flex justify-between gap-6 mb-20 '>
-              {
-                nowInfoList.map((item, key) => {
-                  return <ApplicationCard key={key} data={item}></ApplicationCard>
-                })
-              }
-            </div>
+            <motion.div
+              style={{
+                scale,
+              }}>
+              <div className='sm:flex justify-between gap-6 mb-20 '>
+                {
+                  nowInfoList.map((item, key) => {
+                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                  })
+                }
+              </div>
+            </motion.div>
           </section>
           {/* <section>
             <Title title="对于开发者" subTitle='For users'></Title>
@@ -63,7 +74,12 @@ export default function Tide() {
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-20 mb-4'>
           <Title title="应用价值" subTitle='Application value'></Title>
-          <ValueSlider></ValueSlider>
+          <motion.div
+            style={{
+              bottomScale
+            }}>
+            <ValueSlider></ValueSlider>
+          </motion.div>
         </section>
         <Footer></Footer>
       </div>

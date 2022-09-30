@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function SupportCard({data}) {
   return (
-    <div className='p-8 sm:shadow-card rounded-lg'>
+    <div className='p-8 sm:shadow-card rounded-lg sm:hover:scale-105 transition-all'>
       <section className='flex justify-center'>
         <Image src={data.icon} alt=''></Image>
       </section>
