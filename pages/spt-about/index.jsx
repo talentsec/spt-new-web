@@ -172,7 +172,7 @@ export default function Contect() {
                 <Image src={companyImg} alt=''></Image>
               </section>
             </div>
-          </section> 
+          </section>
         </section>
         <section className='w-screen sm:min-w-main-width py-20'>
           <Title title="创始人介绍" subTitle='Founder introduction'></Title>
@@ -184,11 +184,11 @@ export default function Contect() {
               <h1 className='text-blue-600 text-3xl'>王昊天</h1>
               <h1 className='text-xl'>开源文化爱好者/白帽子/螣龙安科创始人</h1>
               <article className='text-gray-400 leading-7'>
-              上海交通大学信息安全学士，信息安全领域资深专家，上海信息安全行业协会理事。
-              在网络安全领域工作超过10年，为两项数据安全技术的专利发明人，曾承担多个超大型网络安全事件项目并担任安全团队负责人，在信息安全领域拥有丰富的实战经验和研究成果。
+                上海交通大学信息安全学士，信息安全领域资深专家，上海信息安全行业协会理事。
+                在网络安全领域工作超过10年，为两项数据安全技术的专利发明人，曾承担多个超大型网络安全事件项目并担任安全团队负责人，在信息安全领域拥有丰富的实战经验和研究成果。
               </article>
             </section>
-          </section> 
+          </section>
           <section className='bg-blue-700 -translate-y-2 relative'>
             {/* <Title title='发展历程' subTitle='Development History'></Title> */}
             <h1 className='text-4xl text-center text-white font-normal py-9'>发展历程</h1>
@@ -196,16 +196,16 @@ export default function Contect() {
             <section className='flex justify-center pb-28 px-20'>
               {/* <Image src={timeLine} alt=''></Image> */}
               <div className='w-full'>
-                <Slider 
-                  defaultValue={selectedSlide} 
-                  max={7} 
-                  min={0} 
-                  step={1} 
-                  marks={marks}     
+                <Slider
+                  defaultValue={selectedSlide}
+                  max={7}
+                  min={0}
+                  step={1}
+                  marks={marks}
                   tooltip={{
                     open: false,
                   }}
-                  onChange={handleSlide}/>
+                  onChange={handleSlide} />
               </div>
             </section>
             <section className='absolute top-56 flex justify-center w-full'>
@@ -256,7 +256,7 @@ export default function Contect() {
                     )
                   })
                 }
-                <div className='absolute h-72 -top-1 left-12 border-x border-blue-600 ml-1' style={{transform: 'translateX(-1px)'}}></div>
+                <div className='absolute h-72 -top-1 left-12 border-x border-blue-600 ml-1' style={{ transform: 'translateX(-1px)' }}></div>
               </section>
               <section className='w-1/2'>
                 <Image src={award} alt=''></Image>

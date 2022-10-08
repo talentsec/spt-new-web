@@ -95,18 +95,18 @@ export default function Rescue() {
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-14'>
-        <Tabs
-          centered
-          defaultActiveKey='0'
-          tabBarGutter={80}
-          onChange={handleTabChange}
-          items={list.map((_, i) => {
-            return {
-              label: _.text,
-              key: i,
-            };
-          })}
-        />
+          <Tabs
+            centered
+            defaultActiveKey='0'
+            tabBarGutter={80}
+            onChange={handleTabChange}
+            items={list.map((_, i) => {
+              return {
+                label: _.text,
+                key: i,
+              };
+            })}
+          />
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
           <section >

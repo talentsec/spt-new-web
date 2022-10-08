@@ -41,7 +41,7 @@ const ProductMenuList = () => (
 const MenuList = () => {
   const list = menuList.slice(1)
   return (
-    <Collapse accordion ghost expandIcon={()=> null} defaultActiveKey="0">
+    <Collapse accordion ghost expandIcon={() => null} defaultActiveKey="0">
       {
         list.map((item, index) => {
           return (
@@ -75,10 +75,10 @@ export default function Layout({ children }) {
         <link rel="icon" href="/app-icon.svg" />
       </Head>
       <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
-          zIndex: '161'
-        }}>
+        zIndex: '161'
+      }}>
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 h12 align-middle'>
-          <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={()=>setProductMenuDisplay(!productMenuDisplay)}>
+          <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={() => setProductMenuDisplay(!productMenuDisplay)}>
             <Image src={productIcon} alt=''></Image>
           </div>
           <Link href='/'>
@@ -96,7 +96,7 @@ export default function Layout({ children }) {
               menuList.map((item, key) => {
                 return (
                   <span className='mr-10 cursor-pointer hover:text-blue-600' key={key}>
-                    <Dropdown overlay={<Menu items={item.list.map((element,key) => {
+                    <Dropdown overlay={<Menu items={item.list.map((element, key) => {
                       return {
                         key: String(key),
                         label: (
@@ -119,16 +119,16 @@ export default function Layout({ children }) {
               })
             }
           </div>
-          <div className='sm:hidden pt-1' onClick={()=>setMenuDisplay(!menuDisplay)}>
+          <div className='sm:hidden pt-1' onClick={() => setMenuDisplay(!menuDisplay)}>
             <MenuOutlined />
           </div>
         </div>
       </section>
-      <div className='pt-14' style={{minHeight: 'calc(100vh - 360px)'}}>
+      <div className='pt-14' style={{ minHeight: 'calc(100vh - 360px)' }}>
         {
           productMenuDisplay ? <motion.div
-          initial={{ opacity: 1, height: 0 }}
-          animate={{ opacity: 1, height: 'fit-content' }}
+            initial={{ opacity: 1, height: 0 }}
+            animate={{ opacity: 1, height: 'fit-content' }}
             className='fixed bg-white w-full z-10 shadow-xl overflow-hidden'
           >
             <ProductMenuList></ProductMenuList>
@@ -163,12 +163,12 @@ export default function Layout({ children }) {
           </div>
           <div className='flex'>
             {
-              menuList.map((item,index)=> {
+              menuList.map((item, index) => {
                 return (
                   <div key={index} className="text-xs  text-gray-500 leading-6 pr-20">
                     <div className='font-normal text-sm mb-3 text-black'>{item.title}</div>
                     {
-                      item.list.map((menu, key)=> {
+                      item.list.map((menu, key) => {
                         return (
                           <Link href={menu.link} key={key}>
                             <div className='hover:text-blue-600 cursor-pointer'>{menu.title}</div>

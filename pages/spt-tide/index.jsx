@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
 import { Button } from 'antd'
-import {tideFunctionList, companySafeList} from '@/constant/info.js'
+import { tideFunctionList, companySafeList } from '@/constant/info.js'
 import ValueSlider from '@/components/product/tide/ValueSlider'
 import FunctionCard from '@/components/product/tide-open/FunctionCard.jsx'
 import DeveloperCard from '@/components/product/tide-open/DeveloperCard.jsx'
@@ -62,7 +62,7 @@ export default function Tide() {
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
                   <span>
                     支持多资产（网页、主机）全生命周期安全性模拟检测，覆盖多种安全
-  攻击场景，以及5个企业业务场景
+                    攻击场景，以及5个企业业务场景
                   </span>
                 </section>
               </section>
@@ -103,7 +103,7 @@ export default function Tide() {
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-start gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
                   <span>
-                   提供高端的订阅式网络安全年度防御服务，确保企业可以在不断变化的外部环境威胁面前保持防御能力
+                    提供高端的订阅式网络安全年度防御服务，确保企业可以在不断变化的外部环境威胁面前保持防御能力
                   </span>
                 </section>
               </section>

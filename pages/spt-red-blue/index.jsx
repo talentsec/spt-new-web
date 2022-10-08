@@ -122,7 +122,7 @@ export default function Rescue() {
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>攻防演练</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white leading-8 tracking-new-widest'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等<br/>
+              <div className='text-xl text-white leading-8 tracking-new-widest'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等<br />
                 攻方服务:可控无限渗透测试，内网漫游，社交攻击尝试，物理尝试等
               </div>
             </div>
@@ -134,18 +134,18 @@ export default function Rescue() {
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-14'>
-        <Tabs
-          centered
-          defaultActiveKey='0'
-          tabBarGutter={80}
-          onChange={handleTabChange}
-          items={list.map((_, i) => {
-            return {
-              label: _.text,
-              key: i,
-            };
-          })}
-        />
+          <Tabs
+            centered
+            defaultActiveKey='0'
+            tabBarGutter={80}
+            onChange={handleTabChange}
+            items={list.map((_, i) => {
+              return {
+                label: _.text,
+                key: i,
+              };
+            })}
+          />
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
           <section >
@@ -208,7 +208,7 @@ export default function Rescue() {
                               backgroundColor: selectedRedItem.button === item.button ? 'rgb(239 68 68)' : '#fff',
                               color: selectedRedItem.button !== item.button ? 'rgb(239 68 68)' : '#fff',
                             }}
-                            onClick={() => setSelectedRedItem(item)}>
+                              onClick={() => setSelectedRedItem(item)}>
                               {item.button}
                             </span>
                           )
@@ -253,7 +253,7 @@ export default function Rescue() {
                               backgroundColor: selectedBlueItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
                               color: selectedBlueItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
                             }}
-                            onClick={() => setSelectedBlueItem(item)}>
+                              onClick={() => setSelectedBlueItem(item)}>
                               {item.button}
                             </span>
                           )
@@ -281,7 +281,7 @@ export default function Rescue() {
           <Title title="服务价值" subTitle='service value'></Title>
           <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8'>
             {
-              valueList.map((item,key) => {
+              valueList.map((item, key) => {
                 return (
                   <div key={key} className="flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4">
                     <section className='flex-shrink-0'>

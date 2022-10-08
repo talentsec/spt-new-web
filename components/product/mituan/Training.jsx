@@ -32,7 +32,7 @@ const infoList = [
   },
 ]
 
-const Part = ({data}) => {
+const Part = ({ data }) => {
   return <div className='flex gap-4 p-b-10 w-2/5 h-44 px-5 mr-28'>
     <section className='flex-shrink-0'>
       <Image src={data.icon} alt='' width={80} height={80}></Image>
@@ -70,7 +70,7 @@ export default function Training() {
           <section>
             <section className='text-white text-xl mb-4'>安全培训</section>
             <section className='text-white font-light pr-12'>在教学实训功能中，设置了多种类型的安全课程，并按照内容难度进行分类，用户可以依照能力层级进行自主学习。
-  教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。</section>
+              教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。</section>
           </section>
         </section>
         <section className='absolute right-0 -top-14'>

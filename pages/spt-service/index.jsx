@@ -126,6 +126,120 @@ const webList = [
   '客户端侧测试',
 ]
 
+const infoList = [
+  [
+    {
+      title: '得到授权',
+      items: [
+        '提前进行电话预约',
+        '邮件确认授权'
+      ]
+    },
+    {
+      title: '项目管理附件',
+      items: [
+        '填写风险告知说明',
+        '确认项目进度总表',
+        '工程师签署保密协议以及授权书'
+      ]
+    }
+  ],
+  [
+    {
+      title: '渗透测试',
+      items: [
+        '项目实施反馈',
+        '邮件:实时测试内容',
+        '渗透测试checklist'
+      ]
+    },
+    {
+      title: '项目管理附件',
+      items: [
+        '填写风险告知说明',
+        '确认项目进度总表',
+        '项目实施过程控制表',
+        '项目实施过程控制表',
+        '渗透测试报告-完整',
+        '渗透测试报告-简版',
+        '邮件日报'
+      ]
+    }
+  ],
+  [
+    {
+      title: '提交渗透报告',
+      items: [
+        '撰写渗透测试报告',
+      ]
+    },
+    {
+      title: '项目管理附件',
+      items: [
+        '更新漏洞跟踪表',
+        '更新项目进度总表',
+        '邮件日报',
+      ]
+    }
+  ],
+  [
+    {
+      title: '协助修复',
+      items: [
+        '现场',
+        '远程',
+        '修复方案'
+      ]
+    },
+    {
+      title: '项目管理附件',
+      items: [
+        '更新漏洞跟踪表',
+        '更新项目进度总表',
+        '邮件日报',
+      ]
+    }
+  ],
+  [
+    {
+      title: '安全培训',
+      items: [
+        '完整漏洞列表',
+        '相关培训材料',
+        '培训日期预约',
+        '正式邮件'
+      ]
+    },
+    {
+      title: '项目管理附件',
+      items: [
+        '培训PPT',
+      ]
+    }
+  ],
+  [
+    {
+      title: '项目验收',
+      items: [
+        '项目验收',
+        '申请付款',
+        '正式邮件',
+      ]
+    },
+    {
+      title: '项目管理附件',
+      items: [
+        '项目验收申请',
+        '渗透测试报告-完整',
+        '项目进度总',
+        '项目变更申请',
+        '项目验收PPT',
+        '漏洞跟踪表'
+      ]
+    }
+  ],
+]
+
 export default function Rescue() {
   const [selectedRedItem, setSelectedRedItem] = useState(redPartList[0])
   const [selectedBlueItem, setSelectedBlueItem] = useState(bluePartList[0])
@@ -302,7 +416,7 @@ export default function Rescue() {
         <section className='py-8 sm:min-w-max' id="progress">
           <Title title="渗透测试流程" subTitle='Penetration test process'></Title>
           <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
-            <ProgressScrollCard></ProgressScrollCard>
+            <ProgressScrollCard infoList={infoList}></ProgressScrollCard>
           </section>
         </section>
         <section className='py-8 sm:min-w-max' id="progress">
@@ -310,7 +424,7 @@ export default function Rescue() {
           <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个纬度：</div>
           <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
             {
-              webList.map((item,index) => {
+              webList.map((item, index) => {
                 return (
                   <div key={index} className="w-56 h-56 bg-gray-100 rounded-2xl pt-16 sm:hover:scale-105 transition-all">
                     <section className='flex justify-center mb-3'>

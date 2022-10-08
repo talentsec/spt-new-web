@@ -16,10 +16,10 @@ const list = [
   }
 ]
 
-export default function ContentCard({data, rounded}) {
+export default function ContentCard({ data, rounded }) {
   const [isHover, setIsHover] = useState(false)
   return (
-    <div className='text-gray-800 hover:text-white p-10 pb-9' 
+    <div className='text-gray-800 hover:text-white p-10 pb-9 transition-all'
       style={{
         borderRadius: rounded ? '8px' : '0',
         backgroundColor: isHover ? data.hoverColor : data.color,
@@ -28,7 +28,7 @@ export default function ContentCard({data, rounded}) {
       }}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      >
+    >
       <section>
         <Image src={isHover ? data.hoverIcon : data.icon} alt=''></Image>
       </section>
@@ -42,17 +42,17 @@ export default function ContentCard({data, rounded}) {
               <div key={key}>
                 <div className='mb-3'>
                   {
-                    item.title ? 
-                    <div className='text-base flex items-center gap-3'>
-                      <span className='inline-block rounded-full h-4 w-1' style={{
-                        backgroundColor: isHover ? '#fff' : '#165DFF'
-                      }}></span>
-                      <span>
-                        {item.title}
-                      </span>
-                    </div> 
-                    : 
-                    null
+                    item.title ?
+                      <div className='text-base flex items-center gap-3'>
+                        <span className='inline-block rounded-full h-4 w-1' style={{
+                          backgroundColor: isHover ? '#fff' : '#165DFF'
+                        }}></span>
+                        <span>
+                          {item.title}
+                        </span>
+                      </div>
+                      :
+                      null
                   }
                 </div>
                 {

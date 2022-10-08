@@ -6,7 +6,7 @@ import icon2 from '@/assets/img/product/user2.svg'
 import icon3 from '@/assets/img/product/user3.svg'
 
 
-export default function UserCard({data}) {
+export default function UserCard({ data }) {
   return (
     <div className=' p-6 flex w-full items-center mb-20 h-96'>
       <section className='bg-gray-100 p-8 h-72 flex items-center hover:h-96 transition-all'>
@@ -25,10 +25,10 @@ export default function UserCard({data}) {
         <div>
           <Image src={icon3} alt=''></Image>
           <section className='text-xl font-bold mt-7 mb-4'>
-          工具开源市场
+            工具开源市场
           </section>
           <section className='text-gray-400 leading-6'>
-          潮汐为安全从业人员搭建的开源市场中提供了大量原子级别工具/编排/模组/应用，为您增效赋能，实现工作效率大幅提升
+            潮汐为安全从业人员搭建的开源市场中提供了大量原子级别工具/编排/模组/应用，为您增效赋能，实现工作效率大幅提升
           </section>
           <section className='h-8'></section>
         </div>
@@ -45,7 +45,7 @@ export default function UserCard({data}) {
           <section className='mt-4 flex items-center cursor-pointer hover:text-blue-200' onClick={() => location.href = '/'}>
             <span>了解详情</span>
             <span className='scale-75 pb-2'>
-            <RightOutlined /><RightOutlined />
+              <RightOutlined /><RightOutlined />
             </span>
           </section>
         </div>

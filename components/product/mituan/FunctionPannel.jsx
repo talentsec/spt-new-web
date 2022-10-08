@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function FunctionPannel({data}) {
+export default function FunctionPannel({ data }) {
   return (
     <div className='flex gap-3 hover:shadow-card sm:w-2/5 h-44 rounded-xl p-10 flex-shrink-0'>
       <section className='flex-shrink-0'>

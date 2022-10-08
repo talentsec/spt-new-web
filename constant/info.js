@@ -65,7 +65,7 @@ export const products = [
     button: '服务详情',
     link: '/'
   },
-  
+
 ]
 
 export const teams = [
@@ -325,7 +325,7 @@ export const riskCoverList = [
     icon: risk9,
     title: '安全开发'
   },
-] 
+]
 
 export const mituanfunctionList = [
   {

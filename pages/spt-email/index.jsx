@@ -9,10 +9,155 @@ import MainImg from '@/assets/img/service/redBlueMain.png'
 import blueImg from '@/assets/img/service/bluePart.png'
 import redImg from '@/assets/img/service/redPart.png'
 import redIcon from '@/assets/img/service/redPartIcon.svg'
+import classIcon1 from '@/assets/img/product/user1.svg'
+import classIcon2 from '@/assets/img/service/contentIcon.svg'
+import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
 import Footer from '@/components/common/Footer'
 import SupportCard from '@/components/service/redBlue/SupportCard'
+import Card from '@/components/service/email/Card'
+import HoverCard from '@/components/common/HoverCard'
+import SelectedCard from '@/components/common/SelectedCard'
+import ProgressScrollCard from '@/components/service/email/ProgressScrollCard'
 import { redBlueSupportList } from '@/constant/info'
 import Link from 'next/link'
+
+const Toplist = [
+  {
+    title: '70%',
+    text: '数据泄露案件与电子邮件有关'
+  },
+  {
+    title: '50%',
+    text: '企业遭受过邮件攻击'
+  },
+  {
+    title: '94%',
+    text: '企业意识到“邮件危机”，但仍未采取有效的防护措施'
+  }
+]
+const serviceList = [
+  [
+    {
+      title: '邮件注入',
+      items: [
+        'Cc/Bcc注入',
+        '参数注入',
+        '邮件主题注入',
+        '邮件主体注入',
+      ]
+    }
+  ],
+  [
+    {
+      title: '邮件携带 恶意程序',
+      items: [
+        '自解压处理的恶意程序',
+        '快捷方式恶意执行',
+        '加壳及伪造签名的恶意程序',
+        '恶意捆绑程序',
+        'hta格式的恶意程序',
+      ]
+    },
+
+  ],
+  [
+    {
+      title: '邮件调用 恶意代码',
+      items: [
+        '恶意模板远程调用',
+        'EvilClippy伪装',
+        'Mht文件解析',
+        '宏启动函数审查',
+        '恶意的Sct远程调用',
+        'CHM文件内编译内容解析',
+        '邮件附件携带恶意数据',
+        '恶意的Vbscript远程调用',
+      ]
+    }
+  ],
+  [
+    {
+      title: '邮件携带 恶意链接',
+      items: [
+        '被编码伪造的恶意链接',
+        '被缩短处理的恶意链接',
+        '特定恶意网页的链接'
+      ]
+    }
+  ],
+  [
+    {
+      title: '邮件伪造',
+      items: [
+        '发件人真实性核实',
+        '邮件头部解析规则审查',
+        '邮件体格式标识检测',
+      ]
+    }
+  ],
+  [
+    {
+      title: '邮件服务器配置检测',
+      items: [
+        'SPF配置检测',
+        'DMARC配置检测',
+        '恶意程序审查',
+        'VBA宏审查',
+      ]
+    }
+  ]
+]
+
+const solutionList = [
+  {
+    icon: classIcon1,
+    hoverIcon: classIcon2,
+    title: '邮件传输协议',
+    color: '#F7F8FA',
+    hoverColor: '#165DFF',
+    height: '300px',
+    hoverHeight: '400px',
+    info: [
+      {
+        list: [
+          '攻击者可以使用与电子邮件传递相关的应用层协议进行通信，以通过与现有流量混合来避免检测/网络过滤',
+        ]
+      }
+    ]
+  },
+  {
+    icon: classIcon1,
+    hoverIcon: classIcon2,
+    title: '电子邮件内容',
+    color: '#F2F3F5',
+    hoverColor: '#165DFF',
+    height: '300px',
+    hoverHeight: '400px',
+    info: [
+      {
+        list: [
+          '攻击者可能会向受害者发送包含恶意附件或链接的电子邮件，通常是为了在受害者系统上执行恶意代码，其中涉及社会工程技术，例如冒充可信来源',
+        ]
+      }
+    ]
+  },
+  {
+    icon: classIcon1,
+    hoverIcon: classIcon2,
+    title: '邮件收发规则',
+    color: '#F7F8FA',
+    hoverColor: '#165DFF',
+    height: '300px',
+    hoverHeight: '400px',
+    info: [
+      {
+        list: [
+          '攻击者可能会使用电子邮件规则将入站电子邮件隐藏在受感染用户的邮箱中，以规避安全警报、隐藏C2通信或对从受感染帐户发送的内部鱼叉式网络钓鱼电子邮件进行响应',
+        ]
+      }
+    ]
+  },
+]
 
 const list = [
   {
@@ -56,6 +201,24 @@ const valueList = [
   },
 ]
 
+const demandList = [
+  {
+    icon: contentIcon,
+    title: '诱导受害者',
+    content: '电子邮件是勒索软件、木马病毒的主要传播工具。恶意攻击者通过邮件诱导受害者点击含有恶意程序的木马病毒，从而入侵企业内部，“潜伏”至邮件系统或其他服务器中，窃取企业重要数据。'
+  },
+  {
+    icon: contentIcon,
+    title: '渗透重要信息',
+    content: '邮箱系统和系统验证、客户关系、工作内容有着千丝万缕的联系，黑客可通过泄露的邮箱渗透到内部实施攻击。'
+  },
+  {
+    icon: contentIcon,
+    title: '窃取隐私&机密',
+    content: '企业经常要发送合同、招标资料等机密性较高的邮件，电子邮件在网络中多以明文形式传输储存的，个人隐私和公司机密随时存在被截获、篡改和浏览的风险，如果被窃取，后果将不堪设想。'
+  },
+]
+
 const redPartList = [
   {
     button: '无限渗透测试',
@@ -76,6 +239,24 @@ const redPartList = [
     button: '社交攻击尝试',
     title: '社交攻击尝试(SAT)',
     text: '使用社交手段，例如电话、微信、企业QQ、人肉搜索、社工库等方式进行社会工程学攻击尝试，同时获取敏感信息或数据。'
+  },
+]
+
+const applicationList = [
+  {
+    img: 1,
+    title: '主动测试邮箱安全性',
+    text: '根据测评情况出具整改清单，并提供邮箱安全技术指导服务，完成漏洞修复和安全配置。'
+  },
+  {
+    img: 1,
+    title: '验证当前保护措施',
+    text: '对已经完成邮箱保护建设的企业进行安全测评，来验证其邮件系统的安全性。'
+  },
+  {
+    img: 1,
+    title: '信息安全防护需求',
+    text: '依照国家信息安全管理规范和技术标准，开展检测工作；提供整改技术指导服务，保障顺利通过测评。'
   },
 ]
 
@@ -102,7 +283,7 @@ const bluePartList = [
   },
 ]
 
-export default function Rescue() {
+export default function Email() {
   const [selectedRedItem, setSelectedRedItem] = useState(redPartList[0])
   const [selectedBlueItem, setSelectedBlueItem] = useState(bluePartList[0])
 
@@ -134,191 +315,60 @@ export default function Rescue() {
           </div>
           <div className=' top-3/4 mx-auto px-auto  flex  bg-white rounded-lg sm:max-w-7xl -translate-y-12 shadow-card justify-between px-8'>
             {
-              list.map((item, key) => {
+              Toplist.map((item, key) => {
                 return (
-                  <div key={key} className="flex m-8 w-1/3 justify-between">
-                    <section className='flex-shrink-0 '>
-                      <section>{item.title}</section>
-                      <section className='text-gray-400 leading-6 flex-shrink-0'>{item.content}</section>
+                  <div key={key} className="flex my-8 justify-center items-center w-full" style={{
+                    borderRight: key === Toplist.length - 1 ? '0 solid rgba(0,0,0,0.4) ' : '1px solid rgba(0,0,0,0.1) '
+                  }}>
+                    <section className='flex-shrink-0 w-64 pl-6'>
+                      <section className='font-din-bold text-blue-700 text-3xl text-center mb-2'>{item.title}</section>
+                      <section className='text-gray-600 leading-6 flex-shrink-0 text-center text-base h-12'>{item.text}</section>
                     </section>
-                    <section className='flex-shrink-0'>
-                      <Image src={item.icon} alt=''></Image>
-                    </section>
-                    {
-                      key === list.length - 1 ? null : <span className='h-10 border-l'></span>
-                    }
                   </div>
                 )
               })
             }
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:mx-auto mt-14'>
-        <Tabs
-          centered
-          defaultActiveKey='0'
-          tabBarGutter={80}
-          onChange={handleTabChange}
-          items={list.map((_, i) => {
-            return {
-              label: _.text,
-              key: i,
-            };
-          })}
-        />
-        </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
           <section >
-            <Title title="服务介绍" subTitle='Service Introduction'></Title>
-            <div className='sm:flex justify-center gap-16 mb-20'>
-              <section>
-                <Image src={introImg} alt=''></Image>
-              </section>
-              <section className='w-2/5'>
-                <h1 className='text-2xl font-normal'>详细介绍</h1>
-                <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
-                  <span>
-                    安全是一个整体，正如木桶定律，最短的木板是评估木桶品质的标准，安全最薄弱环节也是决定系统好坏的关键。现今企业面临的网络安全威胁日益复杂，攻击者行动策略、工具武器日益更新，令传统防御方法威力不再。
-                  </span>
-                </section>
-                <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
-                  <span>
-                    网络红蓝军对抗的目的就是用来评估企业安全性，高仿真的攻防演练可以帮助企业在更大范围内发现安全隐患，并通过综合利用多漏洞直观展示负面后，有助于找出企业安全中最脆弱的环节，提升企业安全能力的建设。
-                  </span>
-                </section>
-                <section className='mb-4 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
-                  <span>
-                    螣龙安科攻防演练服务是通过多种攻击手段的实战，来检测客户业务系统的安全状态与整体安全防御能力，有效地发现客户的互联网及内网的安全问题，从而帮助客户更好地完善安全防护体系。引入外部专业服务团队的高水平攻防演练不仅是一次宝贵的练兵机会，而且能够体现安全价值，助于推进整改落地。
-                  </span>
-                </section>
-              </section>
+            <Title title="行业痛点及需求" subTitle='industry analysis'></Title>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
+            <div className='sm:flex justify-center gap-6 mb-20 '>
+              {
+                demandList.map((item, key) => {
+                  return <Card key={key} data={item}></Card>
+                })
+              }
             </div>
           </section>
           <section id="support">
-            <Title title="服务支持" subTitle='service support'></Title>
-            <div className='flex gap-8 w-full justify-between mb-20'>
+            <Title title="解决方案" subTitle='SOLUTIONS'></Title>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>全链条检验邮箱安全性，实现主动安全</div>
+            <div className='flex w-full justify-between mb-28 h-96'>
               {
-                redBlueSupportList.map((item, key) => {
+                solutionList.map((item, key) => {
                   return (
-                    <SupportCard key={key} data={item}></SupportCard>
+                    <div key={key} className="w-1/3 shrink-0 flex items-center">
+                      <HoverCard data={item}></HoverCard>
+                    </div>
                   )
                 })
               }
             </div>
           </section>
-          <section id='content'>
-            <Title title="服务内容" subTitle='Service Content'></Title>
-            <section className='flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
-              <section className='w-1/2 px-6'>
-                <h1 className='text-3xl mb-6'>红队服务综述</h1>
-                <div className='flex items-start gap-3'>
-                  <section className='pt-1'>
-                    <Image src={redIcon} alt=''></Image>
-                  </section>
-                  <div>
-                    <h2 className='text-xl font-normal mb-4'>主要类型</h2>
-                    <section>
-                      {
-                        redPartList.map((item, key) => {
-                          return (
-                            <span key={key} className='border-red-500 border-2 text-red-500 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
-                              backgroundColor: selectedRedItem.button === item.button ? 'rgb(239 68 68)' : '#fff',
-                              color: selectedRedItem.button !== item.button ? 'rgb(239 68 68)' : '#fff',
-                            }}
-                            onClick={() => setSelectedRedItem(item)}>
-                              {item.button}
-                            </span>
-                          )
-                        })
-                      }
-                    </section>
-                  </div>
-                </div>
-                <div className='flex items-start gap-3 mt-8'>
-                  <section className='pt-1 flex-shrink-0'>
-                    <Image src={redIcon} alt=''></Image>
-                  </section>
-                  <div>
-                    <h2 className='text-xl font-normal'>{selectedRedItem.title}</h2>
-                    <section className='text-gray-500 font-light text-sm leading-6 h-14'>
-                      {selectedRedItem.text}
-                    </section>
-                  </div>
-                </div>
-              </section>
-              <section>
-                <Image src={redImg} alt=''></Image>
-              </section>
-            </section>
-            <section className='flex gap-6 items-center border-b mb-10 w-full justify-center'>
-              <section>
-                <Image src={blueImg} alt=''></Image>
-              </section>
-              <section className='w-1/2 px-6'>
-                <h1 className='text-3xl mb-6'>蓝队服务综述</h1>
-                <div className='flex items-start gap-3'>
-                  <section className='pt-1 flex-shrink-0 w-6'>
-                    <Image src={redIcon} alt=''></Image>
-                  </section>
-                  <div>
-                    <h2 className='text-xl font-normal mb-4'>主要类型</h2>
-                    <section>
-                      {
-                        bluePartList.map((item, key) => {
-                          return (
-                            <span key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
-                              backgroundColor: selectedBlueItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
-                              color: selectedBlueItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
-                            }}
-                            onClick={() => setSelectedBlueItem(item)}>
-                              {item.button}
-                            </span>
-                          )
-                        })
-                      }
-                    </section>
-                  </div>
-                </div>
-                <div className='flex items-start gap-3 mt-8'>
-                  <section className='pt-1 flex-shrink-0'>
-                    <Image src={redIcon} alt=''></Image>
-                  </section>
-                  <div>
-                    <h2 className='text-xl font-normal'>{selectedBlueItem.title}</h2>
-                    <section className='text-gray-500 font-light text-sm leading-6 h-14'>
-                      {selectedBlueItem.text}
-                    </section>
-                  </div>
-                </div>
-              </section>
-            </section>
+        </section>
+        <section className='w-screen bg-gray-100 py-20'>
+          <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8 mb-12'>
+            <Title title="功能测试项" subTitle='functional test items'></Title>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>六类/二十余项检测，全方位覆盖邮箱安全漏洞</div>
+            <ProgressScrollCard infoList={serviceList}></ProgressScrollCard>
           </section>
         </section>
-        <section className='py-8 sm:min-w-max' id="value">
-          <Title title="服务价值" subTitle='service value'></Title>
-          <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8'>
-            {
-              valueList.map((item,key) => {
-                return (
-                  <div key={key} className="flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4">
-                    <section className='flex-shrink-0'>
-                      <Image src={item.icon} alt=''></Image>
-                    </section>
-                    <section>
-                      <div className='text-xl font-semibold mb-4'>
-                        {item.title}
-                      </div>
-                      <div className='text-sm leading-7 text-gray-500'>
-                        {item.text}
-                      </div>
-                    </section>
-                  </div>
-                )
-              })
-            }
+        <section className='w-screen pt-20 pb-48' style={{ backgroundColor: '#1D2129' }}>
+          <section className=' flex-wrap sm:max-w-7xl justify-center mx-auto gap-8 mb-12'>
+            <Title title="应用场景" subTitle='application scenarios' dark></Title>
+            <SelectedCard list={applicationList}></SelectedCard>
           </section>
         </section>
         <Footer></Footer>

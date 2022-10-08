@@ -25,11 +25,11 @@ const infoList = [
   },
 ]
 
-const Item = ({data}) => {
+const Item = ({ data }) => {
   return (
     <div
-      className="w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all" 
-      >
+      className="w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all"
+    >
       <div className='overflow-hidden h-full mb-6'>
         <h1 className='text-xl h-12'>{data.title}</h1>
         <section className='leading-7 font-light text-gray-500 mt-7'>
@@ -83,8 +83,8 @@ export default function ValueSlider() {
 
   return (
     <div className='w-full relative py-7'>
-      <div 
-        className='flex overflow-x-hidden overflow-y-visible gap-5' 
+      <div
+        className='flex overflow-x-hidden overflow-y-visible gap-5'
         ref={contentBox}>
         {
           infoList.map((item, index) => {
@@ -94,20 +94,20 @@ export default function ValueSlider() {
           })
         }
       </div>
-      
-      { isLeftPosition 
-      ? 
-      <div 
-        className='w-8 h-12 absolute -right-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
-        onClick={slideRight}>
+
+      {isLeftPosition
+        ?
+        <div
+          className='w-8 h-12 absolute -right-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
+          onClick={slideRight}>
           <RightOutlined />
-      </div> 
-      : 
-      <div 
-        className='w-8 h-12 absolute -left-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
-        onClick={slideLeft}>
+        </div>
+        :
+        <div
+          className='w-8 h-12 absolute -left-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
+          onClick={slideLeft}>
           <LeftOutlined />
-      </div>}
+        </div>}
     </div>
   )
 }

@@ -52,12 +52,12 @@ export default function Contect() {
       const map = new AMap.Map('container', {
         resizeEnable: true, //是否监控地图容器尺寸变化
         zoom: 18, //初始地图级别
-        center: [121.4491 , 31.02216 ], //初始地图中心点
+        center: [121.4491, 31.02216], //初始地图中心点
         showIndoorMap: false //关闭室内地图
       });
       const marker = new AMap.Marker({
         icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png",
-        position: [121.4491 , 31.02216 ],
+        position: [121.4491, 31.02216],
         offset: new AMap.Pixel(-13, -30)
       });
       marker.setMap(map);
@@ -127,7 +127,7 @@ export default function Contect() {
             </div>
           </section>
         </section>
-         <Footer></Footer>
+        <Footer></Footer>
       </div>
     </Layout>
   )

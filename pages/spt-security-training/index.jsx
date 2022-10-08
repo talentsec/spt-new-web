@@ -192,9 +192,9 @@ export default function Rescue() {
               <div className='text-xl w-full leading-8 tracking-new-widest'>我们站在攻击者的角度进行高端质量的安全课程内容输出以及培训，专注网络安全、信息安全、白帽子技术等领域，且配备了用于常规漏洞教学的网络攻防靶场。</div>
             </div>
             <div className='px-auto gap-6 mt-10 '>
-              <Button 
-                size='large' 
-                type='primary' 
+              <Button
+                size='large'
+                type='primary'
                 shape="round"
                 onClick={() => location.href = 'https://mituan.zone/'}>免费试用谜团靶场</Button>
             </div>
@@ -208,7 +208,7 @@ export default function Rescue() {
             <Title title="服务价值" subTitle='service value'></Title>
             <div className='sm:flex justify-center gap-6 mb-20'>
               {
-                valueList.map((item,key) => {
+                valueList.map((item, key) => {
                   return (
                     <div key={key} className="flex-1 p-8 rounded-lg hover:-translate-y-3 transition-all" style={{
                       backgroundColor: item.color,

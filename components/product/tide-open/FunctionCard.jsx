@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function FunctionCard({data}) {
+export default function FunctionCard({ data }) {
   return (
     <div className=' p-6 w-64 hover:shadow-card rounded-2xl'>
       <section className='flex justify-center'>

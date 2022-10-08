@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 
-export default function ApplicationCard({data}) {
+export default function ApplicationCard({ data }) {
   return (
     <div className='sm:w-96 sm:shadow-card  p-8 rounded-xl hover:-translate-y-3 transition-all sm:hover:-translate-y-1 transform-all'>
       <Image src={data.icon} alt=''></Image>

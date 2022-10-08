@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Title ({title, subTitle, dark}) {
+export default function Title({ title, subTitle, dark }) {
   return (
     <div className='text-center py-6'>
       <section className='font-din-bold text-4xl uppercase font-bold tracking-new-widest' style={{

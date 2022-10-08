@@ -39,15 +39,15 @@ export default function AsmCarousel() {
         <Image src={leftImg} alt=''></Image>
       </div>
       <div className='px-40'>
-        <Carousel afterChange={onChange} className="" ref={carousel} dots={{className: 'asm_carousel__dots'}}>
+        <Carousel afterChange={onChange} className="" ref={carousel} dots={{ className: 'asm_carousel__dots' }}>
           <div>
-            <Image src={img3} alt=''/>
+            <Image src={img3} alt='' />
           </div>
           <div>
-            <Image src={img2} alt=''/>
+            <Image src={img2} alt='' />
           </div>
           <div>
-          <Image src={img1} alt=''/>
+            <Image src={img1} alt='' />
           </div>
         </Carousel>
       </div>

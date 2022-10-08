@@ -5,7 +5,7 @@ import Layout from '@/components/common/Layout'
 import MainImg from '@/assets/img/product/mituanMain.png'
 import Title from '@/components/common/Title'
 import AdvantageImg from '@/assets/img/product/advantage.svg'
-import {mituanApplication, riskCoverList, mituanfunctionList, mituanTabList} from '@/constant/info.js'
+import { mituanApplication, riskCoverList, mituanfunctionList, mituanTabList } from '@/constant/info.js'
 import ApplicationCard from '@/components/product/mituan/ApplicationCard.jsx'
 import RiskPannel from '@/components/product/mituan/RiskPannel.jsx'
 import FunctionPannel from '@/components/product/mituan/FunctionPannel.jsx'
@@ -90,24 +90,24 @@ export default function index() {
             <Title title="页面展示" subTitle='page display'></Title>
             <div className='mb-20'>
               <Tabs
-                  defaultActiveKey="1"
-                  centered
-                  tabBarGutter={160}
-                  items={mituanTabList.map((item,key)=> {
-                    return ({
-                      label:item.category,
-                      key,
-                      children: <div>
-                        <section className='sm:w-3/5 mx-auto mt-7 mb-2 rounded-xl overflow-hidden' >
-                          <Image src={item.img} alt=''></Image>
-                        </section>
-                        <section className='text-center text-gray-400'>
-                          {item.content}
-                        </section>
-                      </div>
-                    })
-                  })}
-                />
+                defaultActiveKey="1"
+                centered
+                tabBarGutter={160}
+                items={mituanTabList.map((item, key) => {
+                  return ({
+                    label: item.category,
+                    key,
+                    children: <div>
+                      <section className='sm:w-3/5 mx-auto mt-7 mb-2 rounded-xl overflow-hidden' >
+                        <Image src={item.img} alt=''></Image>
+                      </section>
+                      <section className='text-center text-gray-400'>
+                        {item.content}
+                      </section>
+                    </div>
+                  })
+                })}
+              />
             </div>
           </section>
         </section>
