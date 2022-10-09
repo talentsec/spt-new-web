@@ -3,23 +3,21 @@ import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
 import { Button, Tabs } from 'antd'
-import introImg from '@/assets/img/service/redBlueIntro.svg'
 import valueIcon from '@/assets/img/service/redBlueValueIcon.svg'
-import MainImg from '@/assets/img/service/redBlueMain.png'
-import blueImg from '@/assets/img/service/bluePart.png'
-import redImg from '@/assets/img/service/redPart.png'
-import redIcon from '@/assets/img/service/redPartIcon.svg'
+import MainImg from '@/assets/img/service/emailMain.png'
 import classIcon1 from '@/assets/img/product/user1.svg'
 import classIcon2 from '@/assets/img/service/contentIcon.svg'
 import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
 import Footer from '@/components/common/Footer'
-import SupportCard from '@/components/service/redBlue/SupportCard'
 import Card from '@/components/service/email/Card'
 import HoverCard from '@/components/common/HoverCard'
 import SelectedCard from '@/components/common/SelectedCard'
 import ProgressScrollCard from '@/components/service/email/ProgressScrollCard'
-import { redBlueSupportList } from '@/constant/info'
 import Link from 'next/link'
+import appImg1 from '@/assets/img/service/emailApplication1.png'
+import appImg2 from '@/assets/img/service/emailApplication2.png'
+import appImg3 from '@/assets/img/service/emailApplication3.png'
+
 
 const Toplist = [
   {
@@ -159,47 +157,6 @@ const solutionList = [
   },
 ]
 
-const list = [
-  {
-    text: '服务介绍',
-    herf: '#intro'
-  },
-  {
-    text: '服务支持',
-    herf: '#support'
-  },
-  {
-    text: '服务内容',
-    herf: '#content'
-  },
-  {
-    text: '服务价值',
-    herf: '#value'
-  }
-]
-
-const valueList = [
-  {
-    icon: valueIcon,
-    title: '提升团队能力',
-    text: '防守方通过内部多部门协同作战，实践大规模攻击情况下的防护流程及运营状态，提升应急处置效率和实战能力'
-  },
-  {
-    icon: valueIcon,
-    title: '高层视角评估安全体系',
-    text: '查看系统内部加密情况，不做过多操作，保持系统原状（非专业人员不建议自行使用各类解密工具，以防破坏原始文件数据）'
-  },
-  {
-    icon: valueIcon,
-    title: '威胁可视化',
-    text: '红蓝对抗中发现客户资产的攻击面，以结果为导向深入扩展，展示出模拟真实入侵的后果和影响面'
-  },
-  {
-    icon: valueIcon,
-    title: '解决木桶效应',
-    text: '企业传统安全防护与安全运营易堆积未修复漏洞，对抗中攻击方通过尝试任何可利用的风险点，提出修复建议，解决木桶效应'
-  },
-]
 
 const demandList = [
   {
@@ -219,95 +176,43 @@ const demandList = [
   },
 ]
 
-const redPartList = [
-  {
-    button: '无限渗透测试',
-    title: '无限渗透测试（IPT)',
-    text: '可控无限渗透测试(IPT)：对组织进行技术渗透测试，以攻击进入组织内部、获取敏感数据或某个制定目标为目的'
-  },
-  {
-    button: '内网漫游',
-    title: '内网漫游(IRT)',
-    text: '成功进入组织内部后，进行内网整体漫游，以获取多、高权限、敏感数据或某个目标。'
-  },
-  {
-    button: '物理攻击尝试',
-    title: '物理攻击尝试(PAT)',
-    text: '使用物理手段，尝试进行攻击获取敏感数据。'
-  },
-  {
-    button: '社交攻击尝试',
-    title: '社交攻击尝试(SAT)',
-    text: '使用社交手段，例如电话、微信、企业QQ、人肉搜索、社工库等方式进行社会工程学攻击尝试，同时获取敏感信息或数据。'
-  },
-]
-
 const applicationList = [
   {
-    img: 1,
+    img: appImg1,
     title: '主动测试邮箱安全性',
     text: '根据测评情况出具整改清单，并提供邮箱安全技术指导服务，完成漏洞修复和安全配置。'
   },
   {
-    img: 1,
+    img: appImg2,
     title: '验证当前保护措施',
     text: '对已经完成邮箱保护建设的企业进行安全测评，来验证其邮件系统的安全性。'
   },
   {
-    img: 1,
+    img: appImg3,
     title: '信息安全防护需求',
     text: '依照国家信息安全管理规范和技术标准，开展检测工作；提供整改技术指导服务，保障顺利通过测评。'
   },
 ]
 
-const bluePartList = [
-  {
-    button: '仿真环境搭建',
-    title: '仿真环境搭建(CSE)',
-    text: '可控无限渗透测试(IPT)：对组织进行技术渗透测试，以攻击进入组织内部、获取敏感数据或某个制定目标为目的'
-  },
-  {
-    button: '应急策略制定',
-    title: '应急策略制定(ERR)',
-    text: '与相关部门人员制定应急策略，并规范工作流程'
-  },
-  {
-    button: '风险检测',
-    title: '风险检测(RCM)',
-    text: '对被攻击环境进行风险评估、检测与监测'
-  },
-  {
-    button: '日志威胁分析',
-    title: '日志威胁分析(LTA)',
-    text: '在对抗演习期间，对网络、安全设备、主机、中间件等系统日志进行综合安全分析'
-  },
-]
-
 export default function Email() {
-  const [selectedRedItem, setSelectedRedItem] = useState(redPartList[0])
-  const [selectedBlueItem, setSelectedBlueItem] = useState(bluePartList[0])
 
-  const handleTabChange = (key) => {
-    const target = list[Number(key)]
-    const element = document.querySelector(target.herf)
-    document.documentElement.scrollTo({
-      top: element.offsetTop - 40,
-      behavior: 'smooth'
-    })
-  }
   return (
     <Layout>
-      <div className='sm:min-w-max'>
+      <div className='sm:min-w-main-width'>
         <section className='w-screen sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
-          <div className='sm:max-w-7xl mx-auto'>
-            <div className='absolute top-1/4 text-5xl text-white'>邮件安全</div>
-            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white leading-8 tracking-new-widest'>
+          <div className='sm:min-w-main-width'>
+            <Image src={MainImg} alt='' layout='responsive'></Image>
+          </div>
+          <div className='sm:max-w-7xl sm:min-w-max mx-auto'>
+            <div className='absolute top-1/3 -mt-8'>
+              <div className='text-5xl text-white mb-3'>
+                邮件安全
+              </div>
+              <div className='text-xl text-white leading-8 tracking-new-widest font-light'>
                 企业需要主动检测邮箱安全，预先处理风险
               </div>
             </div>
-            <div className='absolute top-2/3 px-auto gap-6'>
+            <div className='absolute top-1/2 px-auto pt-2'>
               <Link href='/'>
                 <Button size='large' type='primary' shape="round">立即咨询</Button>
               </Link>
@@ -365,8 +270,8 @@ export default function Email() {
             <ProgressScrollCard infoList={serviceList}></ProgressScrollCard>
           </section>
         </section>
-        <section className='w-screen pt-20 pb-48' style={{ backgroundColor: '#1D2129' }}>
-          <section className=' flex-wrap sm:max-w-7xl justify-center mx-auto gap-8 mb-12'>
+        <section className='w-screen pt-20 pb-24' style={{ backgroundColor: '#1D2129' }}>
+          <section className=' flex-wrap sm:max-w-7xl sm:min-w-main-width justify-center mx-auto gap-8 mb-2'>
             <Title title="应用场景" subTitle='application scenarios' dark></Title>
             <SelectedCard list={applicationList}></SelectedCard>
           </section>

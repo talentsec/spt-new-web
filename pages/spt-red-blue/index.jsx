@@ -9,6 +9,7 @@ import MainImg from '@/assets/img/service/redBlueMain.png'
 import blueImg from '@/assets/img/service/bluePart.png'
 import redImg from '@/assets/img/service/redPart.png'
 import redIcon from '@/assets/img/service/redPartIcon.svg'
+import blueIcon from '@/assets/img/service/bluePartIcon.svg'
 import Footer from '@/components/common/Footer'
 import SupportCard from '@/components/service/redBlue/SupportCard'
 import { redBlueSupportList } from '@/constant/info'
@@ -241,7 +242,7 @@ export default function Rescue() {
                 <h1 className='text-3xl mb-6'>蓝队服务综述</h1>
                 <div className='flex items-start gap-3'>
                   <section className='pt-1 flex-shrink-0 w-6'>
-                    <Image src={redIcon} alt=''></Image>
+                    <Image src={blueIcon} alt=''></Image>
                   </section>
                   <div>
                     <h2 className='text-xl font-normal mb-4'>主要类型</h2>
@@ -264,7 +265,7 @@ export default function Rescue() {
                 </div>
                 <div className='flex items-start gap-3 mt-8'>
                   <section className='pt-1 flex-shrink-0'>
-                    <Image src={redIcon} alt=''></Image>
+                    <Image src={blueIcon} alt=''></Image>
                   </section>
                   <div>
                     <h2 className='text-xl font-normal'>{selectedBlueItem.title}</h2>
