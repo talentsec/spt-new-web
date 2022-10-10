@@ -15,6 +15,7 @@ import appImg1 from '@/assets/img/service/riskAppImg1.png'
 import appImg2 from '@/assets/img/service/riskAppImg2.png'
 import appImg3 from '@/assets/img/service/riskAppImg3.png'
 import Footer from '@/components/common/Footer'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 
 const list = [
@@ -176,13 +177,15 @@ export default function Code() {
           </section>
           <section id="value">
             <Title title="服务价值" subTitle='service value'></Title>
-            <div className='sm:flex justify-center gap-4 mb-20'>
-              {
-                valueList.map((item, key) => {
-                  return <ApplicationCard key={key} data={item}></ApplicationCard>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex justify-center gap-4 mb-20'>
+                {
+                  valueList.map((item, key) => {
+                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
         </section>
         <section className='w-screen bg-gray-100 sm:min-w-main-width py-14'>
@@ -192,7 +195,7 @@ export default function Code() {
           </section>
         </section>
         <section className='w-screen bg-gray-700 sm:min-w-main-width py-14'>
-          <section id='process'>
+          <section id='application'>
             <Title title="应用场景" subTitle='Application scenario' dark></Title>
             <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-6 justify-center'>
               <SelectedCard list={applicationList}></SelectedCard>

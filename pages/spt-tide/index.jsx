@@ -4,19 +4,16 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
 import { Button } from 'antd'
-import { tideFunctionList, companySafeList } from '@/constant/info.js'
+import { companySafeList } from '@/constant/info.js'
 import ValueSlider from '@/components/product/tide/ValueSlider'
-import FunctionCard from '@/components/product/tide-open/FunctionCard.jsx'
-import DeveloperCard from '@/components/product/tide-open/DeveloperCard.jsx'
 import ApplicationCard from '@/components/product/mituan/ApplicationCard.jsx'
 import Occasion from '@/components/product/tide/Occasion'
-import UserCard from '@/components/product/tide-open/UserCard.jsx'
-import Problem from '@/components/product/tide-open/Problem'
 import Footer from '@/components/common/Footer'
 import coreImg1 from '@/assets/img/product/coreFunction1.png'
 import coreImg2 from '@/assets/img/product/coreFunction2.png'
 import coreImg3 from '@/assets/img/product/coreFunction3.png'
 import MainImg from '@/assets/img/product/tide2.png'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 export default function Tide() {
   return (
@@ -38,13 +35,15 @@ export default function Tide() {
         <section className='sm:max-w-7xl sm:mx-auto mt-20'>
           <section>
             <Title title="企业安全" subTitle='Enterprise security status'></Title>
-            <div className='sm:flex justify-center gap-6 mb-20 '>
-              {
-                companySafeList.map((item, key) => {
-                  return <ApplicationCard key={key} data={item}></ApplicationCard>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex justify-center gap-6 mb-20 '>
+                {
+                  companySafeList.map((item, key) => {
+                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section>
             <Title title="核心功能" subTitle='Core functions'></Title>
@@ -114,11 +113,15 @@ export default function Tide() {
           </section>
           <section>
             <Title title="应用价值" subTitle='Application value'></Title>
-            <ValueSlider></ValueSlider>
+            <AnimationWrapper>
+              <ValueSlider></ValueSlider>
+            </AnimationWrapper>
           </section>
           <section>
             <Title title="应用场景" subTitle='Application scenario'></Title>
-            <Occasion></Occasion>
+            <AnimationWrapper>
+              <Occasion></Occasion>
+            </AnimationWrapper>
           </section>
         </section>
       </div>

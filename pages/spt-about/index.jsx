@@ -17,6 +17,7 @@ import investor2 from '@/assets/img/about/investor2.png'
 import investor3 from '@/assets/img/about/investor3.png'
 import timeLine2 from '@/assets/img/about/awardTime.svg'
 import award from '@/assets/img/about/award.png'
+import { motion } from 'framer-motion';
 
 const list = [
   {
@@ -147,13 +148,19 @@ export default function Contect() {
       <div className='min-w-max'>
         <section className='w-screen sm:min-w-main-width '>
           <Image src={mainImg} alt='' layout='responsive'></Image>
-          <section className='absolute top-60 w-full'>
-            <section className='flex justify-center'>
-              <Image src={logo} alt=''></Image>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0 }}
+          >
+            <section className='absolute top-60 w-full'>
+              <section className='flex justify-center'>
+                <Image src={logo} alt=''></Image>
+              </section>
+              <h1 className='text-center font-bold text-5xl my-10'>让世界安全互联</h1>
+              <section className='text-center text-gray-500 text-xl'>打造新一代安全生态，为客户安全保驾护航<span className='mx-2'></span>打造一流的网络安全产品，赢得客户的持续信任和认可</section>
             </section>
-            <h1 className='text-center font-bold text-5xl my-10'>让世界安全互联</h1>
-            <section className='text-center text-gray-500 text-xl'>打造新一代安全生态，为客户安全保驾护航<span className='mx-2'></span>打造一流的网络安全产品，赢得客户的持续信任和认可</section>
-          </section>
+          </motion.div>
         </section>
         <section className='w-screen sm:min-w-main-width bg-gray-50 py-20'>
           <Title title="公司简介" subTitle='Company Profile'></Title>

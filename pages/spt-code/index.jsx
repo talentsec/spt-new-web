@@ -11,6 +11,7 @@ import icon1 from '@/assets/img/product/user1.svg'
 import icon2 from '@/assets/img/service/contentIcon.svg'
 import Link from 'next/link'
 import Problem from '@/components/product/tide-open/Problem'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 const list = [
   {
@@ -27,7 +28,7 @@ const list = [
   },
   {
     text: 'Q&A',
-    herf: '#Q&A'
+    herf: '#QA'
   }
 ]
 
@@ -223,26 +224,28 @@ export default function Code() {
         <section className='w-screen bg-gray-100 sm:min-w-main-width py-14'>
           <section id='content'>
             <Title title="主要审计内容" subTitle='Main audit contents'></Title>
-            <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-6 justify-center'>
-              {
-                contentList.map((item, key) => {
-                  return (
-                    <div key={key} className="bg-white rounded-lg px-6 py-7 w-96 flex gap-4 sm:hover:scale-105 transition-all">
-                      <section className='shrink-0'>
-                        <Image src={contentIcon} alt='' width={48} height={48}></Image>
-                      </section>
-                      <section>
-                        <div className='font-bold text-xl mb-2'>{item.title}</div>
-                        <div className='text-gray-500 text-sm font-light leading-6'>{item.text}</div>
-                      </section>
-                    </div>
-                  )
-                })
-              }
-            </section>
+            <AnimationWrapper>
+              <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-6 justify-center'>
+                {
+                  contentList.map((item, key) => {
+                    return (
+                      <div key={key} className="bg-white rounded-lg px-6 py-7 w-96 flex gap-4 sm:hover:scale-105 transition-all">
+                        <section className='shrink-0'>
+                          <Image src={contentIcon} alt='' width={48} height={48}></Image>
+                        </section>
+                        <section>
+                          <div className='font-bold text-xl mb-2'>{item.title}</div>
+                          <div className='text-gray-500 text-sm font-light leading-6'>{item.text}</div>
+                        </section>
+                      </div>
+                    )
+                  })
+                }
+              </section>
+            </AnimationWrapper>
           </section>
         </section>
-        <section className='py-8 my-16 sm:max-w-7xl sm:min-w-main-width sm:mx-auto' id="Q&A">
+        <section className='py-8 my-16 sm:max-w-7xl sm:min-w-main-width sm:mx-auto' id="QA">
           <Title title="FAQ" subTitle=''></Title>
           <Problem list={problemList} expandIndex={0}></Problem>
         </section>

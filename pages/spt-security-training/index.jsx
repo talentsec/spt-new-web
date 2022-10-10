@@ -21,6 +21,7 @@ import Progress from '@/components/service/rescue/Progress'
 import Footer from '@/components/common/Footer'
 import ApplicationCard from '@/components/product/mituan/ApplicationCard'
 import HoverCard from '@/components/common/HoverCard'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 
 const list = [
@@ -191,12 +192,14 @@ export default function Rescue() {
             <div className='mt-4 font-light'>
               <div className='text-xl w-full leading-8 tracking-new-widest'>我们站在攻击者的角度进行高端质量的安全课程内容输出以及培训，专注网络安全、信息安全、白帽子技术等领域，且配备了用于常规漏洞教学的网络攻防靶场。</div>
             </div>
-            <div className='px-auto gap-6 mt-10 '>
-              <Button
-                size='large'
-                type='primary'
-                shape="round"
-                onClick={() => location.href = 'https://mituan.zone/'}>免费试用谜团靶场</Button>
+            <div className='px-auto gap-6 mt-10'>
+              <span className='inline-block hover:scale-105'>
+                <Button
+                  size='large'
+                  type='primary'
+                  shape="round"
+                  onClick={() => location.href = 'https://mituan.zone/'}>免费试用谜团靶场</Button>
+              </span>
             </div>
           </div>
           <div className='flex-shrink-0'>
@@ -231,13 +234,15 @@ export default function Rescue() {
           </section>
           <section id='content'>
             <Title title="现有网络安全培训的痛点" subTitle='CYBER SECURITY training pain points'></Title>
-            <div className='sm:flex justify-center gap-4 mb-20'>
-              {
-                shortcomingList.map((item, key) => {
-                  return <ApplicationCard key={key} data={item}></ApplicationCard>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex justify-center gap-4 mb-20'>
+                {
+                  shortcomingList.map((item, key) => {
+                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section id="company">
             <Title title="培训优势" subTitle='Training advantage'></Title>
@@ -265,13 +270,19 @@ export default function Rescue() {
         </section>
         <section className=' py-8 sm:max-w-7xl mx-auto'>
           <Title title="课程分类" subTitle='course sorts'></Title>
-          <div className='flex justify-center gap-4 mb-20 w-full items-center h-96 mt-14'>
-            {
-              classList.map((item, key) => {
-                return <HoverCard key={key} data={item} rounded></HoverCard>
-              })
-            }
-          </div>
+          <AnimationWrapper>
+            <div className='flex justify-center gap-4 mb-20 w-full items-center h-96 mt-14'>
+              {
+                classList.map((item, key) => {
+                  return (
+                    <div key={key} className='w-1/3'>
+                      <HoverCard data={item} rounded></HoverCard>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </AnimationWrapper>
         </section>
       </div>
     </Layout>

@@ -144,6 +144,26 @@ export const menuList = [
         title: '攻防演练支持',
         link: '/spt-red-blue'
       },
+      {
+        title: '信息安全培训',
+        link: '/spt-security-training'
+      },
+      {
+        title: '邮件安全',
+        link: '/spt-email'
+      },
+      {
+        title: '代码审计',
+        link: '/spt-code'
+      },
+      {
+        title: '风险评估',
+        link: '/spt-risk'
+      },
+      {
+        title: '应急响应',
+        link: '/spt-response'
+      },
       // {
       //   title: '邮件安全检测',
       //   link: ''

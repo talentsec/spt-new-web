@@ -2,24 +2,16 @@ import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
+import { Button } from 'antd'
 import valueIcon from '@/assets/img/service/riskValueIcon.svg'
 import MainImg from '@/assets/img/service/responseMain.png'
 import Link from 'next/link'
-import ApplicationCard from '@/components/product/mituan/ApplicationCard'
-import contentImg from '@/assets/img/service/riskContent.svg'
-import RiskTab from '@/components/service/risk/Tab.jsx'
 import Progress from '@/components/service/rescue/Progress'
-import SelectedCard from '@/components/common/SelectedCard'
 import appImg1 from '@/assets/img/service/riskAppImg1.png'
 import appImg2 from '@/assets/img/service/riskAppImg2.png'
-import appImg3 from '@/assets/img/service/riskAppImg3.png'
 import Footer from '@/components/common/Footer'
 import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
-import redIcon from '@/assets/img/service/redPartIcon.svg'
 import blueIcon from '@/assets/img/service/bluePartIcon.svg'
-import blueImg from '@/assets/img/service/bluePart.png'
-import redImg from '@/assets/img/service/redPart.png'
 import contentImg1 from '@/assets/img/service/responseContent1.svg'
 import contentImg2 from '@/assets/img/service/responseContent2.svg'
 import appImg from '@/assets/img/service/responseApp.png'
@@ -28,7 +20,7 @@ const intrusionProcessList = [
   {
     button: '暴力破解',
     title: '暴力破解',
-    text: '通过系统、服务的漏洞进行攻击，如永恒之蓝、Redis未授权访问等'
+    text: '针对系统有包括rdp、ssh、telnet等，针对服务有包括mysql、ftp等，一般可以通过超级弱口令工具、hydra进行爆破'
   },
   {
     button: '漏洞利用',
@@ -233,7 +225,7 @@ export default function Response() {
                   )
                 })
               }
-              <section className='relative w-full mb-20'>
+              <section className='relative w-full mb-20  transition-all'>
                 <section>
                   <Image src={appImg} alt='' layout='responsive'></Image>
                 </section>

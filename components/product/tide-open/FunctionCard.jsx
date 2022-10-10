@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function FunctionCard({ data }) {
   return (
-    <div className=' p-6 w-64 hover:shadow-card rounded-2xl'>
+    <div className='p-6 hover:shadow-card rounded-2xl py-10 pb-20'>
       <section className='flex justify-center'>
         <Image src={data.icon} alt=''></Image>
       </section>

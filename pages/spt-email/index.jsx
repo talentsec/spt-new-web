@@ -17,6 +17,7 @@ import Link from 'next/link'
 import appImg1 from '@/assets/img/service/emailApplication1.png'
 import appImg2 from '@/assets/img/service/emailApplication2.png'
 import appImg3 from '@/assets/img/service/emailApplication3.png'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 
 const Toplist = [
@@ -205,7 +206,7 @@ export default function Email() {
           </div>
           <div className='sm:max-w-7xl sm:min-w-max mx-auto'>
             <div className='absolute top-1/3 -mt-8'>
-              <div className='text-5xl text-white mb-3'>
+              <div className='text-5xl text-white mb-3 '>
                 邮件安全
               </div>
               <div className='text-xl text-white leading-8 tracking-new-widest font-light'>
@@ -213,7 +214,7 @@ export default function Email() {
               </div>
             </div>
             <div className='absolute top-1/2 px-auto pt-2'>
-              <Link href='/'>
+              <Link href='/spt-contact'>
                 <Button size='large' type='primary' shape="round">立即咨询</Button>
               </Link>
             </div>
@@ -239,13 +240,15 @@ export default function Email() {
           <section >
             <Title title="行业痛点及需求" subTitle='industry analysis'></Title>
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
-            <div className='sm:flex justify-center gap-6 mb-20 '>
-              {
-                demandList.map((item, key) => {
-                  return <Card key={key} data={item}></Card>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex justify-center gap-6 mb-20 '>
+                {
+                  demandList.map((item, key) => {
+                    return <Card key={key} data={item}></Card>
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section id="support">
             <Title title="解决方案" subTitle='SOLUTIONS'></Title>

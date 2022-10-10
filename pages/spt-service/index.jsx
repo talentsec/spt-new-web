@@ -21,6 +21,7 @@ import Footer from '@/components/common/Footer'
 import TestCard from '@/components/service/service/TestCard'
 import ProgressScrollCard from '@/components/service/service/ProgressScrollCard'
 import { motion, useScroll, useTransform } from "framer-motion";
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 const list = [
   {
@@ -398,20 +399,22 @@ export default function Rescue() {
         </section>
         <section className='py-8 sm:min-w-max' id="progress">
           <Title title="服务对象" subTitle='service object'></Title>
-          <section className='w-3/4 flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-x-10 gap-y-6 mb-20'>
-            {
-              targetList.map((item, key) => {
-                return (
-                  <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0 sm:hover:scale-105 transition-all'>
-                    <section>
-                      <Image src={item.icon} alt=''></Image>
-                    </section>
-                    <span className='text-xl font-medium'>{item.text}</span>
-                  </div>
-                )
-              })
-            }
-          </section>
+          <AnimationWrapper>
+            <section className='w-3/4 flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-x-10 gap-y-6 mb-20'>
+              {
+                targetList.map((item, key) => {
+                  return (
+                    <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0 sm:hover:scale-105 transition-all'>
+                      <section>
+                        <Image src={item.icon} alt=''></Image>
+                      </section>
+                      <span className='text-xl font-medium'>{item.text}</span>
+                    </div>
+                  )
+                })
+              }
+            </section>
+          </AnimationWrapper>
         </section>
         <section className='py-8 sm:min-w-max' id="progress">
           <Title title="渗透测试流程" subTitle='Penetration test process'></Title>

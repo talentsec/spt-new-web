@@ -14,10 +14,9 @@ import ValueSlider from '@/components/product/asm/ValueSlider'
 import Footer from '@/components/common/Footer'
 import { motion, useScroll, useTransform } from "framer-motion";
 
-
 export default function Tide() {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0.04, 0.2], [0.8, 1]);
+  const scale = useTransform(scrollYProgress, [0.04, 0.2], [1, 1]);
   const bottomScale = useTransform(scrollYProgress, [0.9, 1], [0.6, 0.8]);
 
   return (
@@ -41,9 +40,24 @@ export default function Tide() {
           <section>
             <Title title="企业安全现状" subTitle='Enterprise security status'></Title>
             <motion.div
-              style={{
-                scale,
-              }}>
+              layout
+              initial={{
+                opacity: 0.3,
+                scale: 0.92
+              }}
+              whileInView={{
+                opacity: 1,
+                scale: 1,
+                transition: {
+                  delayChildren: 0.3,
+                  staggerChildren: 0.2
+                }
+              }}
+              viewport={{
+                once: true,
+                margin: '-120px'
+              }}
+            >
               <div className='sm:flex justify-between gap-6 mb-20 '>
                 {
                   nowInfoList.map((item, key) => {
@@ -53,21 +67,12 @@ export default function Tide() {
               </div>
             </motion.div>
           </section>
-          {/* <section>
-            <Title title="对于开发者" subTitle='For users'></Title>
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>直接调用平台的自动化安全能力，创造您自己的安全工具或编排</div>
-            <DeveloperCard></DeveloperCard>
-          </section>
-          <section>
-            <Title title="社区指南以及常见问题" subTitle='Community Guidelines'></Title>
-            <Problem></Problem>
-          </section> */}
         </section>
         <section className='w-screen sm:min-w-main-width bg-gray-800 relative'>
           <Image src={backImg} alt='' layout='responsive'></Image>
-          <div className='absolute top-12 w-full'>
+          <div className='absolute top-12 w-full mt-4'>
             <Title title="核心功能" subTitle='Core Functions' dark={true}></Title>
-            <div className='sm:max-w-7xl sm:mx-auto'>
+            <div className='sm:max-w-7xl sm:mx-auto mt-4'>
               <AsmCarousel></AsmCarousel>
             </div>
           </div>
@@ -75,9 +80,24 @@ export default function Tide() {
         <section className='sm:max-w-7xl sm:mx-auto mt-20 mb-4'>
           <Title title="应用价值" subTitle='Application value'></Title>
           <motion.div
-            style={{
-              bottomScale
-            }}>
+            layout
+            initial={{
+              opacity: 0.3,
+              scale: 0.92
+            }}
+            whileInView={{
+              opacity: 1,
+              scale: 1,
+              transition: {
+                delayChildren: 0.3,
+                staggerChildren: 0.2
+              }
+            }}
+            viewport={{
+              once: true,
+              margin: '-120px'
+            }}
+          >
             <ValueSlider></ValueSlider>
           </motion.div>
         </section>

@@ -14,6 +14,7 @@ import Footer from '@/components/common/Footer'
 import SupportCard from '@/components/service/redBlue/SupportCard'
 import { redBlueSupportList } from '@/constant/info'
 import Link from 'next/link'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 const list = [
   {
@@ -180,15 +181,17 @@ export default function Rescue() {
           </section>
           <section id="support">
             <Title title="服务支持" subTitle='service support'></Title>
-            <div className='flex gap-8 w-full justify-between mb-20'>
-              {
-                redBlueSupportList.map((item, key) => {
-                  return (
-                    <SupportCard key={key} data={item}></SupportCard>
-                  )
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='flex gap-8 w-full justify-between mb-20'>
+                {
+                  redBlueSupportList.map((item, key) => {
+                    return (
+                      <SupportCard key={key} data={item}></SupportCard>
+                    )
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section id='content'>
             <Title title="服务内容" subTitle='Service Content'></Title>
@@ -234,7 +237,7 @@ export default function Rescue() {
                 <Image src={redImg} alt=''></Image>
               </section>
             </section>
-            <section className='flex gap-6 items-center border-b mb-10 w-full justify-center'>
+            <section className='flex gap-6 items-center border-b pb-16 mb-10 w-full justify-center'>
               <section>
                 <Image src={blueImg} alt=''></Image>
               </section>
@@ -280,27 +283,29 @@ export default function Rescue() {
         </section>
         <section className='py-8 sm:min-w-max' id="value">
           <Title title="服务价值" subTitle='service value'></Title>
-          <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8'>
-            {
-              valueList.map((item, key) => {
-                return (
-                  <div key={key} className="flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4">
-                    <section className='flex-shrink-0'>
-                      <Image src={item.icon} alt=''></Image>
-                    </section>
-                    <section>
-                      <div className='text-xl font-semibold mb-4'>
-                        {item.title}
-                      </div>
-                      <div className='text-sm leading-7 text-gray-500'>
-                        {item.text}
-                      </div>
-                    </section>
-                  </div>
-                )
-              })
-            }
-          </section>
+          <AnimationWrapper>
+            <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8'>
+              {
+                valueList.map((item, key) => {
+                  return (
+                    <div key={key} className="flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4">
+                      <section className='flex-shrink-0'>
+                        <Image src={item.icon} alt=''></Image>
+                      </section>
+                      <section>
+                        <div className='text-xl font-semibold mb-4'>
+                          {item.title}
+                        </div>
+                        <div className='text-sm leading-7 text-gray-500'>
+                          {item.text}
+                        </div>
+                      </section>
+                    </div>
+                  )
+                })
+              }
+            </section>
+          </AnimationWrapper>
         </section>
         <Footer></Footer>
       </div>

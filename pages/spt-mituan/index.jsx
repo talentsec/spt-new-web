@@ -10,6 +10,7 @@ import ApplicationCard from '@/components/product/mituan/ApplicationCard.jsx'
 import RiskPannel from '@/components/product/mituan/RiskPannel.jsx'
 import FunctionPannel from '@/components/product/mituan/FunctionPannel.jsx'
 import Training from '@/components/product/mituan/Training.jsx'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 export default function index() {
   return (
@@ -28,13 +29,15 @@ export default function index() {
         <section className='sm:max-w-7xl sm:mx-auto mt-20'>
           <section>
             <Title title="谜团靶场·应用场景" subTitle='Application scenarios'></Title>
-            <div className='sm:flex justify-center gap-4 mb-20'>
-              {
-                mituanApplication.map((item, key) => {
-                  return <ApplicationCard key={key} data={item}></ApplicationCard>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex justify-center gap-4 mb-20'>
+                {
+                  mituanApplication.map((item, key) => {
+                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section>
             <Title title="漏洞涵盖" subTitle='Vulnerability Coverage'></Title>
@@ -48,13 +51,15 @@ export default function index() {
           </section>
           <section>
             <Title title="核心功能" subTitle='Core functions'></Title>
-            <div className='sm:flex flex-wrap justify-center gap-2 mb-20'>
-              {
-                mituanfunctionList.map((item, key) => {
-                  return <FunctionPannel key={key} data={item}></FunctionPannel>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex flex-wrap justify-center gap-2 mb-20'>
+                {
+                  mituanfunctionList.map((item, key) => {
+                    return <FunctionPannel key={key} data={item}></FunctionPannel>
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section>
             <Title title="靶场配套安全培训" subTitle='Safety Training'></Title>

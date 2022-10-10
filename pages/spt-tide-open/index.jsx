@@ -10,6 +10,7 @@ import DeveloperCard from '@/components/product/tide-open/DeveloperCard.jsx'
 import UserCard from '@/components/product/tide-open/UserCard.jsx'
 import Problem from '@/components/product/tide-open/Problem'
 import Link from 'next/link'
+import AnimationWrapper from '@/components/common/AnimationWrapper'
 
 const problemList = [
   {
@@ -47,23 +48,33 @@ export default function Tide() {
         <section className='sm:max-w-7xl sm:mx-auto mt-20'>
           <section>
             <Title title="平台功能介绍" subTitle='Platform function introduction'></Title>
-            <div className='sm:flex justify-center gap-6 mb-20 '>
-              {
-                tideFunctionList.map((item, key) => {
-                  return <FunctionCard key={key} data={item}></FunctionCard>
-                })
-              }
-            </div>
+            <AnimationWrapper>
+              <div className='sm:flex justify-center gap-6 mb-20 w-full'>
+                {
+                  tideFunctionList.map((item, key) => {
+                    return (
+                      <div key={key} className='w-1/4'>
+                        <FunctionCard data={item}></FunctionCard>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </AnimationWrapper>
           </section>
           <section>
             <Title title="对于使用者" subTitle='for developers'></Title>
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
-            <UserCard></UserCard>
+            <AnimationWrapper>
+              <UserCard></UserCard>
+            </AnimationWrapper>
           </section>
           <section>
             <Title title="对于开发者" subTitle='For users'></Title>
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>直接调用平台的自动化安全能力，创造您自己的安全工具或编排</div>
-            <DeveloperCard></DeveloperCard>
+            <AnimationWrapper>
+              <DeveloperCard></DeveloperCard>
+            </AnimationWrapper>
           </section>
           <section className='mb-16'>
             <Title title="社区指南以及常见问题" subTitle='Community Guidelines'></Title>
