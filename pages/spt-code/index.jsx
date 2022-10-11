@@ -101,7 +101,7 @@ export default function Code() {
   return (
     <Layout>
       <div className='sm:min-w-max'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>代码审计</div>
@@ -221,7 +221,7 @@ export default function Code() {
             </div>
           </section>
         </section>
-        <section className='w-screen bg-gray-100 sm:min-w-main-width py-14'>
+        <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
           <section id='content'>
             <Title title="主要审计内容" subTitle='Main audit contents'></Title>
             <AnimationWrapper>

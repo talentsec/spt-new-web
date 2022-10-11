@@ -35,15 +35,15 @@ const variantsItem = {
 export default function Home() {
   return (
     <Layout>
-      <section className='w-screen relative sm:min-width '>
+      <section className='w-full relative sm:min-width '>
         {/* <img src={backImg} alt=''></img> */}
         {/* <Image src={backImg} alt='' ></Image> */}
         <img src='./assets/img/main.svg' className="w-full hidden sm:block"></img>
         <img src='./assets/img/phoneMain.png' className="w-full sm:hidden"></img>
         <div className='w-full absolute top-16 sm:top-1/4 left-0 '>
-          <div className='sm:max-w-7xl sm:mx-auto sm:w-full mx-8  h-full z-2'>
+          <div className='sm:max-w-7xl sm:mx-auto sm:w-full mx-8 h-full z-2'>
             <div className='text-xl text-center sm:text-left sm:text-4xl'>螣龙安科·中国·上海</div>
-            <div className='inline-block file:text-2xl text-center sm:text-left  sm:text-5xl font-extrabold my-3' style={{
+            <div className='inline-block w-full sm:w-fit text-2xl text-center sm:text-left  sm:text-5xl font-extrabold my-3' style={{
               background: 'linear-gradient(270deg, #346BFF 0%, #4BAAFF 100%)',
               'WebkitBackgroundClip': 'text',
               'WebkitTextFillColor': 'transparent',

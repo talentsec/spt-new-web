@@ -22,7 +22,7 @@ export default function Tide() {
   return (
     <Layout>
       <div className='min-w-max'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='absolute top-1/4 text-center text-5xl text-white w-full'>潮汐·攻击面管理平台</div>
           <div className='absolute top-1/2 w-full px-auto -mt-5'>
@@ -68,7 +68,7 @@ export default function Tide() {
             </motion.div>
           </section>
         </section>
-        <section className='w-screen sm:min-w-main-width bg-gray-800 relative'>
+        <section className='w-full sm:min-w-main-width bg-gray-800 relative'>
           <Image src={backImg} alt='' layout='responsive'></Image>
           <div className='absolute top-12 w-full mt-4'>
             <Title title="核心功能" subTitle='Core Functions' dark={true}></Title>

@@ -31,7 +31,7 @@ const infoList = [
 
 export default function AsmTop() {
   return (
-    <div className='w-screen sm:min-w-main-width rounded-lg shadow-card'>
+    <div className='w-full sm:min-w-main-width rounded-lg shadow-card'>
       <div className='sm:max-w-7xl sm:mx-auto flex justify-between items-center'>
         {
           infoList.map((item, key) => {

@@ -46,37 +46,71 @@ const Part = ({ data }) => {
 
 export default function Training() {
   return (
-    <div className='relative rounded-xl shadow-card pt-20'>
-      <section className='absolute left-20 top-15'>
-        <Image src={line1} alt=''></Image>
-      </section>
-      <section className='absolute left-20 top-15'>
-        <Image src={line2} alt=''></Image>
-      </section>
-      <section className='sm:flex flex-wrap justify-between px-6 mb-16  '>
+    <div>
+      <div className='relative rounded-xl shadow-card pt-20 hidden sm:block'>
+        <section className='absolute left-20 top-15'>
+          <Image src={line1} alt=''></Image>
+        </section>
+        <section className='absolute left-20 top-15'>
+          <Image src={line2} alt=''></Image>
+        </section>
+        <section className='sm:flex flex-wrap justify-between px-6 mb-16  '>
+          {
+            infoList.map((item, key) => {
+              return <Part key={key} data={item}></Part>
+            })
+          }
+        </section>
+        <section className='h-40 relative' style={{
+          background: 'linear-gradient(90deg, #165DFF 0%, #6AA1FF 100%)'
+        }}>
+          <section className='w-4/5 flex p-7 gap-6'>
+            <section className='flex-shrink-0'>
+              <Image src={icon5} alt=''></Image>
+            </section>
+            <section>
+              <section className='text-white text-xl mb-4'>安全培训</section>
+              <section className='text-white font-light pr-12'>在教学实训功能中，设置了多种类型的安全课程，并按照内容难度进行分类，用户可以依照能力层级进行自主学习。
+                教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。</section>
+            </section>
+          </section>
+          <section className='absolute right-0 -top-14'>
+            <Image src={icon6} alt=''></Image>
+          </section>
+        </section>
+      </div>
+      <div className='block sm:hidden'>
         {
           infoList.map((item, key) => {
-            return <Part key={key} data={item}></Part>
+            return (
+              <div key={key} className="shadow-card p-6 mb-3 rounded-xl">
+                <section>
+                  {item.title}
+                </section>
+                <section className='text-gray-400 mt-2 text-xs leading-5'>
+                  {item.content}
+                </section>
+              </div>
+            )
           })
         }
-      </section>
-      <section className='h-40 relative' style={{
-        background: 'linear-gradient(90deg, #165DFF 0%, #6AA1FF 100%)'
-      }}>
-        <section className='w-4/5 flex p-7 gap-6'>
-          <section className='flex-shrink-0'>
-            <Image src={icon5} alt=''></Image>
+        <div
+          className='shadow-card p-6 mb-3 rounded-xl text-white relative'
+          style={{
+            background: 'linear-gradient(90deg, #165DFF 0%, #6AA1FF 100%)'
+          }}>
+          <section className=''>
+            安全培训
           </section>
-          <section>
-            <section className='text-white text-xl mb-4'>安全培训</section>
-            <section className='text-white font-light pr-12'>在教学实训功能中，设置了多种类型的安全课程，并按照内容难度进行分类，用户可以依照能力层级进行自主学习。
-              教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。</section>
+          <section className='mt-2 text-xs leading-5'>
+            在教学实训功能中，设置了多种类型的安全课程，并按照内容难度进行分类，用户可以依照能力层级进行自主学习。
+            教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。
           </section>
-        </section>
-        <section className='absolute right-0 -top-14'>
-          <Image src={icon6} alt=''></Image>
-        </section>
-      </section>
+          <section className='absolute w-24 h-24 -bottom-16 right-0'>
+            <Image src={icon6} alt=''></Image>
+          </section>
+        </div>
+      </div>
     </div>
   )
 }

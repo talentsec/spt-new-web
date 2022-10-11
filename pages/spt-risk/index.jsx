@@ -133,7 +133,7 @@ export default function Code() {
   return (
     <Layout>
       <div className='sm:min-w-max'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>风险评估</div>
@@ -188,13 +188,13 @@ export default function Code() {
             </AnimationWrapper>
           </section>
         </section>
-        <section className='w-screen bg-gray-100 sm:min-w-main-width py-14'>
+        <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
           <section id='process' className='mb-40 mt-4'>
             <Title title="服务流程" subTitle='Service Process'></Title>
             <Progress list={progressList}></Progress>
           </section>
         </section>
-        <section className='w-screen bg-gray-700 sm:min-w-main-width py-14'>
+        <section className='w-full bg-gray-700 sm:min-w-main-width py-14'>
           <section id='application'>
             <Title title="应用场景" subTitle='Application scenario' dark></Title>
             <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-6 justify-center'>

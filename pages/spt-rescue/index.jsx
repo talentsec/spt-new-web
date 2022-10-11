@@ -109,7 +109,7 @@ export default function Rescue() {
   return (
     <Layout>
       <div className='sm:min-w-max'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>勒索病毒解密救援</div>
@@ -195,7 +195,7 @@ export default function Rescue() {
             <ServiceCard></ServiceCard>
           </section>
         </section>
-        <section className='bg-gray-50 w-screen py-8 sm:min-w-max' id="progress">
+        <section className='bg-gray-50 w-full py-14 pb-32 sm:min-w-max' id="progress">
           <Title title="服务流程" subTitle='Service Process'></Title>
           <Progress list={progressList}></Progress>
         </section>

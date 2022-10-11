@@ -200,7 +200,7 @@ export default function Email() {
   return (
     <Layout>
       <div className='sm:min-w-main-width'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <div className='sm:min-w-main-width'>
             <Image src={MainImg} alt='' layout='responsive'></Image>
           </div>
@@ -266,14 +266,14 @@ export default function Email() {
             </div>
           </section>
         </section>
-        <section className='w-screen bg-gray-100 py-20'>
+        <section className='w-full bg-gray-100 py-20'>
           <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8 mb-12'>
             <Title title="功能测试项" subTitle='functional test items'></Title>
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>六类/二十余项检测，全方位覆盖邮箱安全漏洞</div>
             <ProgressScrollCard infoList={serviceList}></ProgressScrollCard>
           </section>
         </section>
-        <section className='w-screen pt-20 pb-24' style={{ backgroundColor: '#1D2129' }}>
+        <section className='w-full pt-20 pb-24' style={{ backgroundColor: '#1D2129' }}>
           <section className=' flex-wrap sm:max-w-7xl sm:min-w-main-width justify-center mx-auto gap-8 mb-2'>
             <Title title="应用场景" subTitle='application scenarios' dark></Title>
             <SelectedCard list={applicationList}></SelectedCard>

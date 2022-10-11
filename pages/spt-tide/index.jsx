@@ -19,7 +19,7 @@ export default function Tide() {
   return (
     <Layout>
       <div className='min-w-max mb-8'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='absolute top-1/4 text-center text-5xl text-white w-full'>潮汐·模拟攻击系统</div>
           <div className='absolute top-1/2 w-full px-auto -mt-5'>

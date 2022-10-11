@@ -119,7 +119,7 @@ export default function Rescue() {
   return (
     <Layout>
       <div className='sm:min-w-max'>
-        <section className='w-screen sm:min-w-main-width relative'>
+        <section className='w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive'></Image>
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>攻防演练</div>

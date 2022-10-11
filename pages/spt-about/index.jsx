@@ -146,7 +146,7 @@ export default function Contect() {
   return (
     <Layout>
       <div className='min-w-max'>
-        <section className='w-screen sm:min-w-main-width '>
+        <section className='w-full sm:min-w-main-width '>
           <Image src={mainImg} alt='' layout='responsive'></Image>
           <motion.div
             initial={{ opacity: 0 }}
@@ -162,7 +162,7 @@ export default function Contect() {
             </section>
           </motion.div>
         </section>
-        <section className='w-screen sm:min-w-main-width bg-gray-50 py-20'>
+        <section className='w-full sm:min-w-main-width bg-gray-50 py-20'>
           <Title title="公司简介" subTitle='Company Profile'></Title>
           <section className='top-40 w-full'>
             <div className='flex sm:max-w-7xl mx-auto gap-8'>
@@ -181,7 +181,7 @@ export default function Contect() {
             </div>
           </section>
         </section>
-        <section className='w-screen sm:min-w-main-width py-20'>
+        <section className='w-full sm:min-w-main-width py-20'>
           <Title title="创始人介绍" subTitle='Founder introduction'></Title>
           <section className='top-40 w-full flex justify-center'>
             <section className=''>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { DownOutlined, SmileOutlined, MenuOutlined } from '@ant-design/icons';
+import { MenuOutlined } from '@ant-design/icons';
 import { Dropdown, Menu, Space, Collapse, Button } from 'antd';
 import { menuList } from '@/constant/info';
 import logo from '@/assets/img/home/logo.svg'
@@ -74,11 +74,11 @@ export default function Layout({ children }) {
         <meta name="description" content="螣龙安科官方网站" />
         <link rel="icon" href="/app-icon.svg" />
       </Head>
-      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
+      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism shadow-none sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
         zIndex: '161'
       }}>
-        <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 h12 align-middle'>
-          <div className='mt-2 hover:text-blue-600 sm:hidden' onClick={() => setProductMenuDisplay(!productMenuDisplay)}>
+        <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 sm:px-0 h12 align-middle'>
+          <div className='mt-2 hover:text-blue-600 pr-4 sm:hidden' onClick={() => setProductMenuDisplay(!productMenuDisplay)}>
             <Image src={productIcon} alt=''></Image>
           </div>
           <Link href='/'>
@@ -86,7 +86,7 @@ export default function Layout({ children }) {
               <Image src={logo} alt=""></Image>
             </div>
           </Link>
-          <div className='hidden sm:block first:sm:block sm:pt-1 '>
+          <div className='hidden sm:block first:sm:block sm:pt-1 sm:-mr-10'>
             <Link href='/'>
               <span className='mr-10 cursor-pointer hover:text-blue-600 text-gray-900'>
                 首页
@@ -119,7 +119,7 @@ export default function Layout({ children }) {
               })
             }
           </div>
-          <div className='sm:hidden pt-1' onClick={() => setMenuDisplay(!menuDisplay)}>
+          <div className='sm:hidden pt-1 pl-4' onClick={() => setMenuDisplay(!menuDisplay)}>
             <MenuOutlined />
           </div>
         </div>
@@ -187,14 +187,14 @@ export default function Layout({ children }) {
           <span>沪ICP备20019790号-1</span>
         </div>
       </section>
-      <section className='w-full  pt-10  sm:hidden mt-10'>
+      <section className='w-full pt-10 sm:hidden mt-10'>
         <div className='text-xs  text-gray-500  leading-6 flex justify-center flex-col items-center align-middle'>
-          <span><Image src={logo} alt=''></Image></span>
-          <section className='font-normal text-sm mb-3 text-black'>关注或联系我们</section>
+          <span className='mb-8'><Image src={logo} alt=''></Image></span>
+          <section className='font-normal text-sm mb-3'>关注或联系我们</section>
           <section>邮箱：contact@talentsec.cn</section>
           <section>联系地址：上海市闵行区东川路555号乙楼1层1001室</section>
-          <section className='mb-1'>联系电话：021-62241157</section>
-          <span><Button type="primary" >联系我们</Button></span>
+          <section className='mb-1 font-din-bold'>联系电话：021-62241157</section>
+          <span><Button type="primary">联系我们</Button></span>
         </div>
         <div className='border-t sm:mx-auto border-slate-300  text-gray-400 text-xs font-light py-1 px-0 mt-7 w-full'>
           <span className='scale-75 text-xs inline-block text-start'>©2020 Serpurity Co.,Ltd All Rights Reserved.</span>

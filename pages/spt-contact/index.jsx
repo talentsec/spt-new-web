@@ -3,12 +3,11 @@ import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
 import mainImg from '@/assets/img/about/contectMain.png'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 import icon1 from '@/assets/img/about/contectIcon1.svg'
 import icon2 from '@/assets/img/about/contectIcon2.svg'
 import icon3 from '@/assets/img/about/contectIcon3.svg'
 import location from '@/assets/img/about/location.svg'
-import joinImg from '@/assets/img/about/join.svg'
-import { Button } from 'antd'
 import Footer from '@/components/common/Footer'
 
 
@@ -31,22 +30,6 @@ const list = [
 ]
 
 export default function Contect() {
-  // useEffect(() => {
-  //   AMapLoader.load({
-  //     "key": "",              // 申请好的Web端开发者Key，首次调用 load 时必填
-  //     "version": "2.0",   // 指定要加载的 JSAPI 的版本，缺省时默认为 1.4.15
-  //     "plugins": [],           // 需要使用的的插件列表，如比例尺'AMap.Scale'等
-  //     "AMapUI": {             // 是否加载 AMapUI，缺省不加载
-  //         "version": '1.1',   // AMapUI 缺省 1.1
-  //         "plugins":[],       // 需要加载的 AMapUI ui插件
-  //     },
-  //     "Loca":{                // 是否加载 Loca， 缺省不加载
-  //         "version": '1.3.2'  // Loca 版本，缺省 1.3.2
-  //     },
-  //   }).then(()=>{
-  //     console.log(AMap)
-  //   });
-  // }, [])
   useEffect(() => {
     const initMap = () => {
       const map = new AMap.Map('container', {
@@ -74,10 +57,44 @@ export default function Contect() {
 
   return (
     <Layout>
-      <div className='min-w-max'>
-        <section className='w-screen sm:min-w-main-width '>
-          <Image src={mainImg} alt='' layout='responsive'></Image>
-          <div className=' top-3/4 mx-auto px-auto  flex  bg-white rounded-lg sm:max-w-7xl -translate-y-12 shadow-card justify-between px-8'>
+      <div className='sm:min-w-max'>
+        <section className='w-full sm:min-w-main-width relative'>
+          <div className='hidden sm:block'>
+            <Image src={mainImg} alt='' layout='responsive' ></Image>
+          </div>
+          <div className='block sm:hidden w-full'>
+            <Image src={phoneMain} alt='' layout='responsive'></Image>
+            <div className='absolute top-14 w-screen'>
+              <section className='text-2xl font-bold text-center w-full'>联系我们</section>
+              <section className='text-center mt-4 text-gray-500'>合作共赢，共建安全网络环境美好未来</section>
+            </div>
+          </div>
+          <div className='sm:hidden absolute top-44 px-5 w-full'>
+            <div className='w-full shadow-card flex flex-col rounded-lg bg-white'>
+              {
+                list.map((item, key) => {
+                  return (
+                    <div key={key} className="flex mx-6 py-6 justify-between" style={{
+                      borderBottom: `${key === list.length - 1 ? '0px' : '1px'} solid rgba(0,0,0,.04)`
+                    }}>
+                      <section className='flex-shrink-0 '>
+                        <section>{item.title}</section>
+                        <section className='text-gray-300 leading-6 flex-shrink-0 mt-2'>{item.content}</section>
+                      </section>
+                      <section className=''>
+                        <Image src={item.icon} alt=''></Image>
+                      </section>
+                      {/* {
+                      key === list.length - 1 ? null : <span className='h-10 border-l'></span>
+                    } */}
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+
+          <div className='hidden top-3/4 mx-auto px-auto  sm:flex  bg-white rounded-lg sm:max-w-7xl -translate-y-12 shadow-card justify-between px-8'>
             {
               list.map((item, key) => {
                 return (
@@ -98,7 +115,7 @@ export default function Contect() {
             }
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:mx-auto mt-20'>
+        <section className='sm:max-w-7xl sm:mx-auto sm:mt-20 mt-52 px-3'>
           {/* <section>
             <Title title="商务咨询" subTitle='business inquiries'></Title>
             <div className='sm:flex justify-center gap-4 mb-20'>
@@ -106,12 +123,10 @@ export default function Contect() {
           </section> */}
           <section>
             <Title title="地址详情" subTitle='Address details'></Title>
-            <div className='sm:flex justify-start mb-20 rounded-lg border p-4 gap-20'>
-              <section className='w-1/2 h-80 rounded-md overflow-hidden' id='container'>
-              </section>
-              <section className='w-1/2'>
-                <section className='leading-7 font-light pt-10'>
-                  <h3 className='leading-8 text-xl flex gap-2'>
+            <div className='sm:flex sm:flex-row-reverse justify-start sm:mb-20 rounded-lg sm:border p-4 gap-20 -mt-10 sm:mt-0'>
+              <section className='sm:w-1/2 mb-5'>
+                <section className='leading-7 font-light sm:pt-10'>
+                  <h3 className='leading-8 text-xl gap-2 hidden sm:flex'>
                     <Image src={location} alt=''></Image>
                     上海
                   </h3>
@@ -123,6 +138,8 @@ export default function Contect() {
                   <article>手机号：15618962651</article>
                   <article>电子邮件：lty@talentsec.cn</article>
                 </section>
+              </section>
+              <section className='sm:w-1/2 sm:h-80 h-56 rounded-md overflow-hidden' id='container'>
               </section>
             </div>
           </section>
