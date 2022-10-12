@@ -56,7 +56,6 @@ export default function DeveloperCard({ data }) {
           </section>
           <section className='leading-6 text-xs'>
             开发者所编写的dockerfile可直接在潮汐开源平台的自主镜像管理系统上构建，无需使用开发者本地的计算资源。开发者可直接在潮汐开源平台上管理自己上传的镜像
-            /编排/模组/应用，为您增效赋能，实现工作效率大幅提升
           </section>
         </section>
         <section className='p-6 h-68 bg-black flex-shrink-0 text-white rounded-lg'>

@@ -18,7 +18,7 @@ import appImg1 from '@/assets/img/service/emailApplication1.png'
 import appImg2 from '@/assets/img/service/emailApplication2.png'
 import appImg3 from '@/assets/img/service/emailApplication3.png'
 import AnimationWrapper from '@/components/common/AnimationWrapper'
-
+import phoneMain from '@/assets/img/home/phoneMain.png'
 
 const Toplist = [
   {
@@ -199,36 +199,55 @@ export default function Email() {
 
   return (
     <Layout>
-      <div className='sm:min-w-main-width'>
+      <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <div className='sm:min-w-main-width'>
+          <div className='sm:min-w-main-width hidden sm:block'>
             <Image src={MainImg} alt='' layout='responsive'></Image>
           </div>
           <div className='sm:max-w-7xl sm:min-w-max mx-auto'>
-            <div className='absolute top-1/3 -mt-8'>
-              <div className='text-5xl text-white mb-3 '>
+            <div className='absolute top-16 sm:top-1/3 sm:-mt-8 z-10 w-full'>
+              <div className='text-xl font-medium sm:font-normal sm:text-5xl sm:text-white mb-7 sm:mb-3 text-center sm:text-left'>
                 邮件安全
               </div>
-              <div className='text-xl text-white leading-8 tracking-new-widest font-light'>
+              <div className='text-sm sm:text-xl sm:text-white sm:leading-8 tracking-new-widest font-light text-center sm:text-left w-4/5 sm:w-full mx-auto'>
                 企业需要主动检测邮箱安全，预先处理风险
               </div>
             </div>
-            <div className='absolute top-1/2 px-auto pt-2'>
+            <div className='absolute top-52 sm:top-1/2 px-auto pt-2 z-10 flex justify-center w-full'>
               <Link href='/spt-contact'>
                 <Button size='large' type='primary' shape="round">立即咨询</Button>
               </Link>
             </div>
           </div>
-          <div className=' top-3/4 mx-auto px-auto  flex  bg-white rounded-lg sm:max-w-7xl -translate-y-12 shadow-card justify-between px-8'>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive'></Image>
+          </div>
+          <div className='top-3/4 mx-auto px-auto hidden sm:flex  bg-white rounded-lg sm:max-w-7xl sm:-translate-y-12 shadow-card justify-between px-8'>
             {
               Toplist.map((item, key) => {
                 return (
-                  <div key={key} className="flex my-8 justify-center items-center w-full" style={{
+                  <div key={key} className="flex my-8 justify-center items-center sm:w-full" style={{
                     borderRight: key === Toplist.length - 1 ? '0 solid rgba(0,0,0,0.4) ' : '1px solid rgba(0,0,0,0.1) '
                   }}>
-                    <section className='flex-shrink-0 w-64 pl-6'>
+                    <section className='flex-shrink-0 sm:w-64 pl-6'>
                       <section className='font-din-bold text-blue-700 text-3xl text-center mb-2'>{item.title}</section>
                       <section className='text-gray-600 leading-6 flex-shrink-0 text-center text-base h-12'>{item.text}</section>
+                    </section>
+                  </div>
+                )
+              })
+            }
+          </div>
+          <div className='top-3/4 mx-4 px-auto sm:hidden bg-white rounded-lg shadow-card justify-between px-8 -mt-4'>
+            {
+              Toplist.map((item, key) => {
+                return (
+                  <div key={key} className="" style={{
+                    borderBottom: key === Toplist.length - 1 ? '0 solid rgba(0,0,0,0.4) ' : '1px solid rgba(0,0,0,0.1) '
+                  }}>
+                    <section className='flex-shrink-0 py-5 flex flex-row-reverse w-full justify-between'>
+                      <section className='font-din-bold text-blue-700 text-xl text-center'>{item.title}</section>
+                      <section className='text-gray-600 leading-6 flex-shrink-0 w-4/5 '>{item.text}</section>
                     </section>
                   </div>
                 )
@@ -239,9 +258,9 @@ export default function Email() {
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
           <section >
             <Title title="行业痛点及需求" subTitle='industry analysis'></Title>
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
             <AnimationWrapper>
-              <div className='sm:flex justify-center gap-6 mb-20 '>
+              <div className='sm:flex justify-center gap-6 mb-20 mx-4 sm:mx-0'>
                 {
                   demandList.map((item, key) => {
                     return <Card key={key} data={item}></Card>
@@ -252,13 +271,39 @@ export default function Email() {
           </section>
           <section id="support">
             <Title title="解决方案" subTitle='SOLUTIONS'></Title>
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>全链条检验邮箱安全性，实现主动安全</div>
-            <div className='flex w-full justify-between mb-28 h-96'>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>全链条检验邮箱安全性，实现主动安全</div>
+            <div className='hidden sm:flex w-full justify-between mb-28 h-96'>
               {
                 solutionList.map((item, key) => {
                   return (
                     <div key={key} className="w-1/3 shrink-0 flex items-center">
                       <HoverCard data={item}></HoverCard>
+                    </div>
+                  )
+                })
+              }
+            </div>
+            <div className='block mx-4 sm:hidden'>
+              {
+                solutionList.map((item, key) => {
+                  return (
+                    <div key={key} className="flex items-center">
+                      <section>
+                        {item.title}
+                      </section>
+                      <section>
+                        {item.info.map((item, index) => {
+                          return (
+                            <div key={index}>
+                              {
+                                item.list.map((text, indey) => {
+                                  return <div key={indey}>{text}</div>
+                                })
+                              }
+                            </div>
+                          )
+                        })}
+                      </section>
                     </div>
                   )
                 })

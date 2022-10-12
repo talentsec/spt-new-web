@@ -11,7 +11,7 @@ import icon6 from '@/assets/img/product/training-6.svg'
 
 const infoList = [
   {
-    icon: icon1,
+    icon: icon4,
     title: 'Web安全',
     content: '全面系统的学习web安全架构、web安全审计等核心内容（适用于高校以及网络安全研究型人员）'
   },
@@ -21,12 +21,12 @@ const infoList = [
     content: '包含网络攻击的应急响应与电子取证、攻击溯源与黑客驱离、勒索病毒防御以及取证三大内容（适用于企业、网络安全研究型人员）'
   },
   {
-    icon: icon3,
+    icon: icon1,
     title: '安全运维',
     content: '讲解企业安全运维及安全加固等内容，课程包含但不限于系统安全排查、实战应急响应、Linux安全运维、SSH服务运维与安全实战等（适用于网络安全研究型人员）'
   },
   {
-    icon: icon4,
+    icon: icon3,
     title: '渗透测试技术',
     content: '主要分为四个模块培训，内容包含KaliLinux、Metasploi的使用方法以及EXP开发（适用于网络安全研究型人员）'
   },

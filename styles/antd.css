@@ -45,11 +45,13 @@
 .phone-tide-collapse-custom-panel .ant-collapse-header {
   /* color: #165DFF !important; */
   font-size: 13px;
+  font-weight: 500;
 }
 
 .tide-collapse-custom-panel .ant-collapse-header {
   /* color: #165DFF !important; */
   font-size: 18px;
+  font-weight: 500;
 }
 
 .tide-collapse-custom-panel .ant-collapse-header:hover {

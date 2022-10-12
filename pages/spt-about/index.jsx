@@ -77,7 +77,7 @@ const marks = {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2022.05</div>,
+    label: <div className='text-xl font-light -translate-y-14'>2020.05</div>,
   },
   1: {
     style: {
@@ -171,7 +171,7 @@ export default function Contect() {
                   上海螣龙科技有限公司是一家面向政府和企业的信息安全服务提供商，以专业的技术和优质的服务为不同领域客户群体提供信息安全旗舰产品。
                 </article>
                 <article className='leading-6 text-gray-700'>
-                  螣龙安科始终以客户为中心，通过专业的安全产品与服务为客户打造安全稳固可信的网络空间生态环境，建立可靠的网络安全保护。
+                  螣龙安科始终以客户为中心，通过专业的安全产品与服务为客户打造安全、稳固、可信的网络空间生态环境，建立可靠的网络安全保护。
                   我们的使命是通过在网络攻击前线获得的创新技术和专业知识，不懈地保护我们的客户；我们希望将顶尖人员和高新技术聚集在一起，成为杰出的安全公司。
                 </article>
               </section>

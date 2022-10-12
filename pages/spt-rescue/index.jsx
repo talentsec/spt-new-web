@@ -117,7 +117,7 @@ export default function Rescue() {
               <div className='text-xl text-white w-full leading-8 tracking-new-widest'>处理勒索病毒，破解加密文件，协助客户摆脱黑客控制</div>
             </div>
             <div className='absolute top-3/4 px-auto gap-6'>
-              <Button size='large' type='primary' shape="round">立即体验</Button>
+              <Button size='large' type='primary' shape="round">立即咨询</Button>
             </div>
           </div>
         </section>

@@ -20,11 +20,11 @@ const problemList = [
   },
   {
     title: '潮汐开源社区能为网络安全从业人员带来什么？',
-    text: 'AI引擎、工具开源市场和订阅式安全应用告别重复的服务属性工作，大幅度提高工作效率；对于开发者而言，能直接调用平台的自动化安全能力，创造属于自己的安全工具或编排。'
+    text: '对于使用者而言，可以通过潮汐平台组件&AI引擎、工具开源市场和订阅式安全应用告别重复的服务属性工作，大幅度提高工作效率；对于开发者而言，能直接调用平台的自动化安全能力，创造属于自己的安全工具或编排。'
   },
   {
     title: '我的数据安全吗？它们被保存在哪里？',
-    text: '安全，潮汐平台将底层的存储引擎设计为 NoSQL，即非关系型数据库，技术选型是 MongoDB。潮汐平台基于 MongoDB 的 命名空间 设计了一个针对性的存储协议，基于这个协议，每个任务的数据存储相互之间都是独立的，并且可以根据协议被停止。'
+    text: '安全。潮汐平台将底层的存储引擎设计为 NoSQL，即非关系型数据库，技术选型是 MongoDB。潮汐平台基于 MongoDB 的命名空间 设计了一个针对性的存储协议，基于这个协议，每个任务的数据存储相互之间都是独立的，并且可以根据协议被停止。'
   },
 ]
 
@@ -75,14 +75,14 @@ export default function Tide() {
             </AnimationWrapper>
           </section>
           <section>
-            <Title title="对于使用者" subTitle='for developers'></Title>
+            <Title title="对于使用者" subTitle='for users'></Title>
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
             <AnimationWrapper>
               <UserCard></UserCard>
             </AnimationWrapper>
           </section>
           <section>
-            <Title title="对于开发者" subTitle='For users'></Title>
+            <Title title="对于开发者" subTitle='For developers'></Title>
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8'>直接调用平台的自动化安全能力，创造您自己的安全工具或编排</div>
             <AnimationWrapper>
               <DeveloperCard></DeveloperCard>

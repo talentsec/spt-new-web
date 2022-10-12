@@ -226,6 +226,10 @@ export const menuList = [
         title: '联系我们',
         link: '/spt-contact'
       },
+      {
+        title: '最新资讯',
+        link: '/spt-news'
+      },
       // {
       //   title: '加入我们',
       //   link: ''
