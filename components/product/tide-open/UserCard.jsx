@@ -26,31 +26,31 @@ export default function UserCard({ data }) {
       <div className='p-6 w-full items-center mb-20 h-96 hidden sm:flex'>
         <section className='bg-gray-100 p-8 h-72 flex items-center hover:h-96 transition-all'>
           <div>
-            <Image src={icon1} alt=''></Image>
+            <Image src={icon1} alt='' />
             <section className='text-xl font-bold mt-7 mb-4'>
               平台组件&AI引擎
             </section>
             <section className='text-gray-400 leading-6'>
               为在线信息系统提供有效且便捷的持久化安全测试环境，有效解决生产系统无法实时针对新的安全事件进行测试的问题
             </section>
-            <section className='h-8'></section>
+            <section className='h-8' />
           </div>
         </section>
         <section className='bg-gray-200 p-8 h-72 flex items-center hover:h-96 transition-all'>
           <div>
-            <Image src={icon3} alt=''></Image>
+            <Image src={icon3} alt='' />
             <section className='text-xl font-bold mt-7 mb-4'>
               工具开源市场
             </section>
             <section className='text-gray-400 leading-6'>
               潮汐为安全从业人员搭建的开源市场中提供了大量原子级别工具/编排/模组/应用，为您增效赋能，实现工作效率大幅提升
             </section>
-            <section className='h-8'></section>
+            <section className='h-8' />
           </div>
         </section>
         <section className='bg-blue-700 p-8 text-white h-72 flex items-center hover:h-96 transition-all'>
           <div>
-            <Image src={icon2} alt=''></Image>
+            <Image src={icon2} alt='' />
             <section className='text-xl font-bold mt-7 mb-4'>
               订阅式安全应用
             </section>

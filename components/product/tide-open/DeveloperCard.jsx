@@ -13,7 +13,7 @@ export default function DeveloperCard({ data }) {
     <div>
       <div className='p-6 sm:flex w-full mb-20 hidden'>
         <section className='p-8 h-68 bg-blue-700 w-1/3 flex-shrink-0 text-white'>
-          <Image src={devIcon3} alt=''></Image>
+          <Image src={devIcon3} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             清晰的包管理系统
           </section>
@@ -22,7 +22,7 @@ export default function DeveloperCard({ data }) {
           </section>
         </section>
         <section className='bg-white p-8 h-68 w-1/3 flex-shrink-0'>
-          <Image src={devIcon2} alt=''></Image>
+          <Image src={devIcon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             自主的镜像管理系统
           </section>
@@ -32,7 +32,7 @@ export default function DeveloperCard({ data }) {
           </section>
         </section>
         <section className='bg-black p-8 h-68 text-white w-1/3 flex-shrink-0'>
-          <Image src={devIcon1} alt=''></Image>
+          <Image src={devIcon1} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             一键关联Github
           </section>

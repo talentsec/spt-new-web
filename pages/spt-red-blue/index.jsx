@@ -120,7 +120,7 @@ export default function Rescue() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>攻防演练</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
@@ -130,7 +130,7 @@ export default function Rescue() {
             </div>
             <div className='absolute top-3/4 px-auto gap-6'>
               <Link href='/spt-contact'>
-                <Button size='large' type='primary' shape="round">立即咨询</Button>
+                <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
@@ -150,28 +150,28 @@ export default function Rescue() {
           />
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
-          <section >
-            <Title title="服务介绍" subTitle='Service Introduction'></Title>
+          <section>
+            <Title title='服务介绍' subTitle='Service Introduction' />
             <div className='sm:flex justify-center gap-16 mb-20'>
               <section>
-                <Image src={introImg} alt=''></Image>
+                <Image src={introImg} alt='' />
               </section>
               <section className='w-2/5'>
                 <h1 className='text-2xl font-normal'>详细介绍</h1>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     安全是一个整体，正如木桶定律，最短的木板是评估木桶品质的标准，安全最薄弱环节也是决定系统好坏的关键。现今企业面临的网络安全威胁日益复杂，攻击者行动策略、工具武器日益更新，令传统防御方法威力不再。
                   </span>
                 </section>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
-                    网络红蓝军对抗的目的就是用来评估企业安全性，高仿真的攻防演练可以帮助企业在更大范围内发现安全隐患，并通过综合利用多漏洞直观展示负面后，有助于找出企业安全中最脆弱的环节，提升企业安全能力的建设。
+                    网络红蓝军对抗的目的就是用来评估企业安全性，高仿真的攻防演练可以帮助企业在更大范围内发现安全隐患，并通过综合利用多漏洞直观展示漏洞危害，有助于找出企业安全网络中的脆弱环节。
                   </span>
                 </section>
                 <section className='mb-4 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     螣龙安科攻防演练服务是通过多种攻击手段的实战，来检测客户业务系统的安全状态与整体安全防御能力，有效地发现客户的互联网及内网的安全问题，从而帮助客户更好地完善安全防护体系。引入外部专业服务团队的高水平攻防演练不仅是一次宝贵的练兵机会，而且能够体现安全价值，助于推进整改落地。
                   </span>
@@ -179,14 +179,14 @@ export default function Rescue() {
               </section>
             </div>
           </section>
-          <section id="support">
-            <Title title="服务支持" subTitle='service support'></Title>
+          <section id='support'>
+            <Title title='服务支持' subTitle='service support' />
             <AnimationWrapper>
               <div className='flex gap-8 w-full justify-between mb-20'>
                 {
                   redBlueSupportList.map((item, key) => {
                     return (
-                      <SupportCard key={key} data={item}></SupportCard>
+                      <SupportCard key={key} data={item} />
                     )
                   })
                 }
@@ -194,13 +194,13 @@ export default function Rescue() {
             </AnimationWrapper>
           </section>
           <section id='content'>
-            <Title title="服务内容" subTitle='Service Content'></Title>
+            <Title title='服务内容' subTitle='Service Content' />
             <section className='flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
               <section className='w-1/2 px-6'>
                 <h1 className='text-3xl mb-6'>红队服务综述</h1>
                 <div className='flex items-start gap-3'>
                   <section className='pt-1'>
-                    <Image src={redIcon} alt=''></Image>
+                    <Image src={redIcon} alt='' />
                   </section>
                   <div>
                     <h2 className='text-xl font-normal mb-4'>主要类型</h2>
@@ -208,11 +208,13 @@ export default function Rescue() {
                       {
                         redPartList.map((item, key) => {
                           return (
-                            <span key={key} className='border-red-500 border-2 text-red-500 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
+                            <span
+                              key={key} className='border-red-500 border-2 text-red-500 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
                               backgroundColor: selectedRedItem.button === item.button ? 'rgb(239 68 68)' : '#fff',
                               color: selectedRedItem.button !== item.button ? 'rgb(239 68 68)' : '#fff',
-                            }}
-                              onClick={() => setSelectedRedItem(item)}>
+                              }}
+                              onClick={() => setSelectedRedItem(item)}
+                            >
                               {item.button}
                             </span>
                           )
@@ -223,7 +225,7 @@ export default function Rescue() {
                 </div>
                 <div className='flex items-start gap-3 mt-8'>
                   <section className='pt-1 flex-shrink-0'>
-                    <Image src={redIcon} alt=''></Image>
+                    <Image src={redIcon} alt='' />
                   </section>
                   <div>
                     <h2 className='text-xl font-normal'>{selectedRedItem.title}</h2>
@@ -234,18 +236,18 @@ export default function Rescue() {
                 </div>
               </section>
               <section>
-                <Image src={redImg} alt=''></Image>
+                <Image src={redImg} alt='' />
               </section>
             </section>
             <section className='flex gap-6 items-center border-b pb-16 mb-10 w-full justify-center'>
               <section>
-                <Image src={blueImg} alt=''></Image>
+                <Image src={blueImg} alt='' />
               </section>
               <section className='w-1/2 px-6'>
                 <h1 className='text-3xl mb-6'>蓝队服务综述</h1>
                 <div className='flex items-start gap-3'>
                   <section className='pt-1 flex-shrink-0 w-6'>
-                    <Image src={blueIcon} alt=''></Image>
+                    <Image src={blueIcon} alt='' />
                   </section>
                   <div>
                     <h2 className='text-xl font-normal mb-4'>主要类型</h2>
@@ -253,11 +255,13 @@ export default function Rescue() {
                       {
                         bluePartList.map((item, key) => {
                           return (
-                            <span key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
+                            <span
+                              key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
                               backgroundColor: selectedBlueItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
                               color: selectedBlueItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
-                            }}
-                              onClick={() => setSelectedBlueItem(item)}>
+                              }}
+                              onClick={() => setSelectedBlueItem(item)}
+                            >
                               {item.button}
                             </span>
                           )
@@ -268,7 +272,7 @@ export default function Rescue() {
                 </div>
                 <div className='flex items-start gap-3 mt-8'>
                   <section className='pt-1 flex-shrink-0'>
-                    <Image src={blueIcon} alt=''></Image>
+                    <Image src={blueIcon} alt='' />
                   </section>
                   <div>
                     <h2 className='text-xl font-normal'>{selectedBlueItem.title}</h2>
@@ -281,16 +285,16 @@ export default function Rescue() {
             </section>
           </section>
         </section>
-        <section className='py-8 sm:min-w-max' id="value">
-          <Title title="服务价值" subTitle='service value'></Title>
+        <section className='py-8 sm:min-w-max' id='value'>
+          <Title title='服务价值' subTitle='service value' />
           <AnimationWrapper>
             <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8'>
               {
                 valueList.map((item, key) => {
                   return (
-                    <div key={key} className="flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4">
+                    <div key={key} className='flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4'>
                       <section className='flex-shrink-0'>
-                        <Image src={item.icon} alt=''></Image>
+                        <Image src={item.icon} alt='' />
                       </section>
                       <section>
                         <div className='text-xl font-semibold mb-4'>
@@ -307,7 +311,7 @@ export default function Rescue() {
             </section>
           </AnimationWrapper>
         </section>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Layout>
   )

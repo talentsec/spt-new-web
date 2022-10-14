@@ -42,7 +42,7 @@ const newsList = [
     category: '比赛快报',
     img: img3,
     title: '2022安全创客汇复赛重庆站圆满落幕，「螣龙安科」晋级20强半决赛',
-    link: 'https://m.sohu.com/coo/sg/560473261_490113',
+    link: 'https://www.qianxin.com/chuangkehui/2022/news/details?id=5268',
     summary: '近日，2022安全创客汇复赛在重庆两江新区圆满结束，20家创新企业经过长达12小时的网安创业“拉力赛”，获得晋级席位，并将在2022北京网络安全大会期间进行最终对决。'
   },
   {
@@ -161,14 +161,14 @@ const newsList = [
     category: '螣龙活动',
     tag: '螣龙活动',
     img: img12,
-    title: '史上最强安全大赛：「螣龙安科」2022潮汐安全应用开发大赛',
+    title: '强强联和安全大赛：「螣龙安科」2022潮汐安全应用开发大赛',
     link: 'https://blog.csdn.net/katekatezzzzz/article/details/125747463?spm=1001.2014.3001.5502',
     summary: '7月2日，经过一周的大众投票， 2022首届潮汐安全应用开发大赛决出了总冠军以及前三甲，比赛圆满落下帷幕...'
   },
   {
     category: '螣龙活动',
     tag: '螣龙活动',
-    title: '恭喜！「影舞者fscan]斩获「螣龙安科」首届潮汐安全开发大赛总冠军',
+    title: '恭喜！「影舞者fscan」斩获「螣龙安科」首届潮汐安全开发大赛总冠军',
     link: 'https://zhuanlan.zhihu.com/p/540690453',
     summary: '首届潮汐安全应用开发大赛由安定坊CyberSec以及螣龙安科主办，比赛历时两个月，共吸引了50组个人/团队报名，最终8组单位进入了于2022年6月25日举办的决赛以及DEMO DAY...'
   },
@@ -218,7 +218,7 @@ export default function News() {
     <Layout>
       <div className='min-w-max mb-8'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl text-4xl text-white mx-auto'>
             <div className='absolute top-1/3'>
               新闻资讯
@@ -228,10 +228,12 @@ export default function News() {
             {
               categoryList.map((item, key) => {
                 return (
-                  <div key={key} className='p-4 cursor-pointer text-base' style={{
+                  <div
+                    key={key} className='p-4 cursor-pointer text-base' style={{
                     color: curCategory === item ? '#165DFF' : "#000"
-                  }}
-                    onClick={() => setCurCategory(item)}>
+                    }}
+                    onClick={() => setCurCategory(item)}
+                  >
                     {item}
                   </div>
                 )
@@ -247,14 +249,14 @@ export default function News() {
           <div>
             {
               curNews.map((item, key) => {
-                return <NewsPannel key={key} data={item}></NewsPannel>
+                return <NewsPannel key={key} data={item} />
               })
             }
           </div>
         </section>
       </div>
       {/* <ASMDetail></ASMDetail> */}
-      <Footer></Footer>
+      <Footer />
     </Layout>
   )
 }

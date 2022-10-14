@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { MenuOutlined } from '@ant-design/icons';
-import { Dropdown, Menu, Space, Collapse, Button } from 'antd';
-import { menuList } from '@/constant/info';
+import { MenuOutlined } from '@ant-design/icons'
+import { Dropdown, Menu, Space, Collapse, Button } from 'antd'
+import { menuList } from '@/constant/info'
 import logo from '@/assets/img/home/logo.svg'
-import Image from 'next/image';
+import Image from 'next/image'
 import downArrow from '@/assets/img/home/downArrow.png'
 import productIcon from '@/assets/img/home/productIcon.svg'
-import { motion } from "framer-motion";
-import Head from 'next/head';
-const { Panel } = Collapse;
+import { motion } from 'framer-motion'
+import Head from 'next/head'
+const { Panel } = Collapse
 
 const DropdownMenu = ({ list }) => {
   return (
@@ -19,10 +19,10 @@ const DropdownMenu = ({ list }) => {
           return {
             key,
             label: (
-              <a target="_blank" rel="noopener noreferrer" href={item.link}>
+              <a target='_blank' rel='noopener noreferrer' href={item.link}>
                 {item.title}
               </a>
-            ),
+            )
           }
         })
       }
@@ -41,14 +41,14 @@ const ProductMenuList = () => (
 const MenuList = () => {
   const list = menuList.slice(1)
   return (
-    <Collapse accordion ghost expandIcon={() => null} defaultActiveKey="0">
+    <Collapse accordion ghost expandIcon={() => null} defaultActiveKey='0'>
       {
         list.map((item, index) => {
           return (
             <Panel header={item.title} key={index}>
               {
                 item.list.map((menu, key) => {
-                  return <section key={key} className="h-9 text-gray-400 pl-3">{menu.title}</section>
+                  return <section key={key} className='h-9 text-gray-400 pl-3'>{menu.title}</section>
                 })
               }
             </Panel>
@@ -59,8 +59,7 @@ const MenuList = () => {
   )
 }
 
-
-export default function Layout({ children }) {
+export default function Layout ({ children }) {
   const [menuDisplay, setMenuDisplay] = useState(false)
   const [productMenuDisplay, setProductMenuDisplay] = useState(false)
   const toggleMenu = () => {
@@ -71,19 +70,21 @@ export default function Layout({ children }) {
     <div className='sm:min-w-main-width'>
       <Head>
         <title>螣龙安科</title>
-        <meta name="description" content="螣龙安科官方网站" />
-        <link rel="icon" href="/app-icon.svg" />
+        <meta name='description' content='螣龙安科官方网站' />
+        <link rel='icon' href='/app-icon.svg' />
       </Head>
-      <section className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism shadow-none sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
-        zIndex: '161'
-      }}>
+      <section
+        className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism shadow-none sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
+          zIndex: '161'
+        }}
+      >
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 sm:px-0 h12 align-middle'>
           <div className='mt-2 hover:text-blue-600 pr-4 sm:hidden' onClick={() => setProductMenuDisplay(!productMenuDisplay)}>
-            <Image src={productIcon} alt=''></Image>
+            <Image src={productIcon} alt='' />
           </div>
           <Link href='/'>
             <div className='w-28 sm:w-48 pt-1.5 sm:pt-1 cursor-pointer'>
-              <Image src={logo} alt=""></Image>
+              <Image src={logo} alt='' />
             </div>
           </Link>
           <div className='hidden sm:block first:sm:block sm:pt-1 sm:-mr-10'>
@@ -105,12 +106,14 @@ export default function Layout({ children }) {
                               {element.title}
                             </div>
                           </Link>
-                        ),
+                        )
                       }
-                    })} />} >
+                    })}
+                                       />}
+                    >
                       <Space>
                         {item.title}
-                        <Image src={downArrow} alt=""></Image>
+                        <Image src={downArrow} alt='' />
                         {/* <DownOutlined /> */}
                       </Space>
                     </Dropdown>
@@ -126,22 +129,26 @@ export default function Layout({ children }) {
       </section>
       <div className='pt-14' style={{ minHeight: 'calc(100vh - 360px)' }}>
         {
-          productMenuDisplay ? <motion.div
-            initial={{ opacity: 1, height: 0 }}
-            animate={{ opacity: 1, height: 'fit-content' }}
-            className='fixed bg-white w-full z-10 shadow-xl overflow-hidden'
-          >
-            <ProductMenuList></ProductMenuList>
-          </motion.div> : null
+          productMenuDisplay
+            ?
+              <motion.div
+                initial={{ opacity: 1, height: 0 }}
+                animate={{ opacity: 1, height: 'fit-content' }}
+                className='fixed bg-white w-full z-10 shadow-xl overflow-hidden'
+              >
+                <ProductMenuList />
+              </motion.div> : null
         }
         {
-          menuDisplay ? <motion.div
-            initial={{ opacity: 1, height: 0 }}
-            animate={{ opacity: 1, height: 'fit-content' }}
-            className='fixed bg-white w-full z-10 shadow-xl overflow-hidden'
-          >
-            <MenuList></MenuList>
-          </motion.div> : null
+          menuDisplay
+            ?
+              <motion.div
+                initial={{ opacity: 1, height: 0 }}
+                animate={{ opacity: 1, height: 'fit-content' }}
+                className='fixed bg-white w-full z-10 shadow-xl overflow-hidden'
+              >
+                <MenuList />
+              </motion.div> : null
         }
         {children}
       </div>
@@ -151,21 +158,21 @@ export default function Layout({ children }) {
             <div className='text-xs  text-gray-500  leading-6'>
               <section className='font-normal text-sm mb-3 text-black'>关注或联系我们</section>
               <section>邮箱：contact@talentsec.cn</section>
-              <section>联系地址：上海市闵行区东川路556号乙楼1层1001室</section>
+              <section>联系地址：上海市闵行区东川路555号乙楼1层1001室</section>
               <section className='mb-1'>联系电话：021-62241157</section>
               <Link href='/spt-contact'>
-                <Button type="primary" >联系我们</Button>
+                <Button type='primary'>联系我们</Button>
               </Link>
             </div>
             <span>
-              <Image src={logo} alt=''></Image>
+              <Image src={logo} alt='' />
             </span>
           </div>
           <div className='flex'>
             {
               menuList.map((item, index) => {
                 return (
-                  <div key={index} className="text-xs  text-gray-500 leading-6 pr-20">
+                  <div key={index} className='text-xs  text-gray-500 leading-6 pr-20'>
                     <div className='font-normal text-sm mb-3 text-black'>{item.title}</div>
                     {
                       item.list.map((menu, key) => {
@@ -189,12 +196,12 @@ export default function Layout({ children }) {
       </section>
       <section className='w-full pt-10 sm:hidden mt-10'>
         <div className='text-xs  text-gray-500  leading-6 flex justify-center flex-col items-center align-middle'>
-          <span className='mb-8'><Image src={logo} alt=''></Image></span>
+          <span className='mb-8'><Image src={logo} alt='' /></span>
           <section className='font-normal text-sm mb-3'>关注或联系我们</section>
           <section>邮箱：contact@talentsec.cn</section>
           <section>联系地址：上海市闵行区东川路555号乙楼1层1001室</section>
           <section className='mb-1 font-din-bold'>联系电话：021-62241157</section>
-          <span><Button type="primary">联系我们</Button></span>
+          <span><Button type='primary'>联系我们</Button></span>
         </div>
         <div className='border-t sm:mx-auto border-slate-300  text-gray-400 text-xs font-light py-1 px-0 mt-7 w-full'>
           <span className='scale-75 text-xs inline-block text-start'>©2020 Serpurity Co.,Ltd All Rights Reserved.</span>

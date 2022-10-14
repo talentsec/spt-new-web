@@ -134,7 +134,7 @@ export default function Code() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>风险评估</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
@@ -144,7 +144,7 @@ export default function Code() {
             </div>
             <div className='absolute top-1/2 px-auto gap-6 pt-16'>
               <Link href='/spt-contact'>
-                <Button size='large' type='primary' shape="round">立即咨询</Button>
+                <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
@@ -165,23 +165,23 @@ export default function Code() {
         </section>
         <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='content'>
           <section>
-            <Title title="服务内容" subTitle='Service Content'></Title>
+            <Title title='服务内容' subTitle='Service Content' />
             <div className='sm:flex justify-center mb-12'>
               <section className='w-2/5 flex-shrink-0 justify-center'>
-                <Image src={contentImg} alt=''></Image>
+                <Image src={contentImg} alt='' />
               </section>
               <section className='w-2/5 flex-shrink-0'>
-                <RiskTab list={contentList}></RiskTab>
+                <RiskTab list={contentList} />
               </section>
             </div>
           </section>
-          <section id="value">
-            <Title title="服务价值" subTitle='service value'></Title>
+          <section id='value'>
+            <Title title='服务价值' subTitle='service value' />
             <AnimationWrapper>
               <div className='sm:flex justify-center gap-4 mb-20'>
                 {
                   valueList.map((item, key) => {
-                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                    return <ApplicationCard key={key} data={item} />
                   })
                 }
               </div>
@@ -190,20 +190,20 @@ export default function Code() {
         </section>
         <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
           <section id='process' className='mb-40 mt-4'>
-            <Title title="服务流程" subTitle='Service Process'></Title>
-            <Progress list={progressList}></Progress>
+            <Title title='服务流程' subTitle='Service Process' />
+            <Progress list={progressList} />
           </section>
         </section>
         <section className='w-full bg-gray-700 sm:min-w-main-width py-14'>
           <section id='application'>
-            <Title title="应用场景" subTitle='Application scenario' dark></Title>
+            <Title title='应用场景' subTitle='Application scenario' dark />
             <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-6 justify-center'>
-              <SelectedCard list={applicationList}></SelectedCard>
+              <SelectedCard list={applicationList} />
             </section>
           </section>
         </section>
       </div>
-      <Footer></Footer>
+      <Footer />
     </Layout>
   )
 }

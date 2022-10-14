@@ -1,6 +1,4 @@
-import React, { useState, useRef } from 'react'
-import Image from 'next/image'
-import { RightOutlined, LeftOutlined } from '@ant-design/icons'
+import React from 'react'
 import { motion } from "framer-motion";
 
 
@@ -46,7 +44,7 @@ const variantsItem = {
 const Item = ({ data }) => {
   return (
     <div
-      className="w-72 flex-shrink-0 h-96 flex-grow-0 p-9 pb-12 shadow-2xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all"
+      className='w-72 flex-shrink-0 h-96 flex-grow-0 p-9 pb-12 shadow-2xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all'
     >
       <div className='overflow-hidden h-full mb-6'>
         <h1 className='text-xl h-12'>{data.title}</h1>
@@ -61,17 +59,19 @@ const Item = ({ data }) => {
 export default function ValueSlider() {
   return (
     <div
-      className='flex gap-5 justify-center'>
+      className='flex gap-5 justify-center'
+    >
       <motion.ul
         className='sm:flex gap-3 px-8 sm:px-0 '
         variants={container}
-        initial="hidden"
-        animate="visible">
+        initial='hidden'
+        animate='visible'
+      >
         {
           infoList.map((item, index) => {
             return (
-              <motion.li key={index} className="item" variants={variantsItem}>
-                <Item key={index} data={item} index={index} ></Item>
+              <motion.li key={index} className='item' variants={variantsItem}>
+                <Item key={index} data={item} index={index} />
               </motion.li>
             )
           })

@@ -110,14 +110,14 @@ export default function Rescue() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>勒索病毒解密救援</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
               <div className='text-xl text-white w-full leading-8 tracking-new-widest'>处理勒索病毒，破解加密文件，协助客户摆脱黑客控制</div>
             </div>
             <div className='absolute top-3/4 px-auto gap-6'>
-              <Button size='large' type='primary' shape="round">立即咨询</Button>
+              <Button size='large' type='primary' shape='round'>立即咨询</Button>
             </div>
           </div>
         </section>
@@ -136,22 +136,23 @@ export default function Rescue() {
           />
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
-          <section >
-            <Title title="应急处理办法" subTitle='Emergency response measures'></Title>
+          <section>
+            <Title title='应急处理办法' subTitle='Emergency response measures' />
             <motion.div
               style={{
                 scale,
-              }}>
+              }}
+            >
               <div className='sm:flex justify-center gap-16 mb-20'>
                 <section>
                   <h1 className='text-3xl'>我们面对的勒索病毒的威胁</h1>
-                  <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全最大威胁之一</section>
+                  <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全严重威胁之一</section>
                   <div className='flex gap-6'>
                     {
                       solutionTabList.map((item, key) => {
                         return (
-                          <div key={key} className="w-36">
-                            <Image src={item.icon} alt=''></Image>
+                          <div key={key} className='w-36'>
+                            <Image src={item.icon} alt='' />
                             <section className='font-light text-gray-600 mt-2'>
                               {item.text}
                             </section>
@@ -165,25 +166,25 @@ export default function Rescue() {
                   </section>
                 </section>
                 <section>
-                  <Image src={solution} alt=''></Image>
+                  <Image src={solution} alt='' />
                 </section>
               </div>
             </motion.div>
 
           </section>
-          <section id="company">
-            <Title title="企业应急处理办法" subTitle='Enterprise emergency response measures'></Title>
+          <section id='company'>
+            <Title title='企业应急处理办法' subTitle='Enterprise emergency response measures' />
             <div className='flex gap-5 w-full justify-between mb-20'>
               {
                 solutionList.map((item, key) => {
                   return (
                     <React.Fragment key={key}>
                       <div className='w-96 p-6 shadow-card rounded-lg sm:hover:-translate-y-1 transition-all'>
-                        <Image src={item.icon} alt=''></Image>
+                        <Image src={item.icon} alt='' />
                         <div className='text-xl font-medium my-4'>{item.title}</div>
                         <div className='text-gray-400 text-sm mb-6'>{item.text}</div>
                       </div>
-                      {(key === solutionList.length - 1) ? null : <Image src={arrow} alt=''></Image>}
+                      {(key === solutionList.length - 1) ? null : <Image src={arrow} alt='' />}
                     </React.Fragment>
                   )
                 })
@@ -191,15 +192,15 @@ export default function Rescue() {
             </div>
           </section>
           <section id='content'>
-            <Title title="服务内容" subTitle='Service Content'></Title>
-            <ServiceCard></ServiceCard>
+            <Title title='服务内容' subTitle='Service Content' />
+            <ServiceCard />
           </section>
         </section>
-        <section className='bg-gray-50 w-full py-14 pb-32 sm:min-w-max' id="progress">
-          <Title title="服务流程" subTitle='Service Process'></Title>
-          <Progress list={progressList}></Progress>
+        <section className='bg-gray-50 w-full py-14 pb-32 sm:min-w-max' id='progress'>
+          <Title title='服务流程' subTitle='Service Process' />
+          <Progress list={progressList} />
         </section>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Layout>
   )

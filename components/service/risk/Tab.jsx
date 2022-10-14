@@ -11,11 +11,14 @@ export default function Tab({ list }) {
         {
           list.map((item, key) => {
             return (
-              <div key={key} className='px-4 py-2 cursor-pointer' style={{
+              <div
+                key={key} className='px-4 py-2 cursor-pointer' style={{
                 backgroundColor: selectedItem === item ? '#E8F3FF' : '#fff',
                 color: selectedItem === item ? '#165DFF' : '#1D2129',
-              }}
-                onClick={() => setSelectedItem(item)}>{item.title}</div>
+                }}
+                onClick={() => setSelectedItem(item)}
+              >{item.title}
+              </div>
             )
           })
         }
@@ -26,8 +29,8 @@ export default function Tab({ list }) {
           {
             selectedItem.content.map((item, key) => {
               return (
-                <div key={key} className="flex items-center mb-3">
-                  <span className='inline-block w-2 h-2 rounded-lg bg-blue-700 mr-2'></span>
+                <div key={key} className='flex items-center mb-3'>
+                  <span className='inline-block w-2 h-2 rounded-lg bg-blue-700 mr-2' />
                   <span className='text-gray-500 font-light'>
                     {item}
                   </span>

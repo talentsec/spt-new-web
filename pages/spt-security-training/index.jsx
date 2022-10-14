@@ -2,11 +2,7 @@ import React from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
-import rescueIcon1 from '@/assets/img/service/rescueIcon1.svg'
-import rescueIcon2 from '@/assets/img/service/rescueIcon2.svg'
-import rescueIcon3 from '@/assets/img/service/rescueIcon3.svg'
-import solutionIcon from '@/assets/img/service/solutionIcon.svg'
+import { Button } from 'antd'
 import MainImg from '@/assets/img/service/trainingMain.svg'
 import valueIcon1 from '@/assets/img/service/trainingIconWhite.svg'
 import valueIcon2 from '@/assets/img/service/trainingIconBlack.svg'
@@ -133,7 +129,7 @@ const shortcomingList = [
   {
     icon: shortComingIcon,
     title: '更新速度慢',
-    content: '安全知识更新过快，导致培训内容落后，缺少紧跟国际最新趋势的安全培训'
+    content: '安全知识更新过快，导致培训内容落后，缺少紧跟国际新趋势的安全培训'
   },
 ]
 
@@ -151,7 +147,7 @@ export default function Rescue() {
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width sm:flex items-center justify-center sm:max-w-7xl mx-auto sm:py-20 gap:20 relative'>
           <div className='block sm:hidden'>
-            <Image src={phoneMain} alt='' ></Image>
+            <Image src={phoneMain} alt='' />
           </div>
           <div className='sm:max-w-7xl sm:w-1/2 px-5 absolute sm:static top-16'>
             <div className='sm:text-5xl text-lg font-medium sm:font-normal text-center sm:text-left'>信息安全培训</div>
@@ -163,28 +159,32 @@ export default function Rescue() {
                 <Button
                   size='large'
                   type='primary'
-                  shape="round"
-                  onClick={() => location.href = 'https://mituan.zone/'}>免费试用谜团靶场</Button>
+                  shape='round'
+                  onClick={() => location.href = 'https://mituan.zone/'}
+                >免费试用谜团靶场
+                </Button>
               </span>
             </div>
           </div>
           <div className='flex-shrink-0 hidden sm:block'>
-            <Image src={MainImg} alt='' ></Image>
+            <Image src={MainImg} alt='' />
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
-          <section >
-            <Title title="服务价值" subTitle='service value'></Title>
+          <section>
+            <Title title='服务价值' subTitle='service value' />
             <div className='sm:flex justify-center gap-6 mb-6 sm:mb-20 px-4 sm:px-0 -mt-8 sm:mt-0'>
               {
                 valueList.map((item, key) => {
                   return (
-                    <div key={key} className="flex-1 mb-3 p-6 sm:p-8 rounded-lg sm:hover:-translate-y-3 transition-all" style={{
+                    <div
+                      key={key} className='flex-1 mb-3 p-6 sm:p-8 rounded-lg sm:hover:-translate-y-3 transition-all' style={{
                       backgroundColor: item.color,
                       color: item.textColor
-                    }}>
+                      }}
+                    >
                       <section className='mb-6 sm:block hidden'>
-                        <Image src={item.icon} alt=''></Image>
+                        <Image src={item.icon} alt='' />
                       </section>
                       <section className='mb-2 sm:mb-4 sm:text-lg font-base text-sm'>
                         {item.title}
@@ -199,56 +199,59 @@ export default function Rescue() {
             </div>
           </section>
           <section id='content'>
-            <Title title="现有网络安全培训的痛点" subTitle='CYBER SECURITY training pain points'></Title>
+            <Title title='现有网络安全培训的痛点' subTitle='CYBER SECURITY training pain points' />
             <AnimationWrapper>
               <div className='sm:flex justify-center gap-4 mb-10 sm:mb-20 px-4 ms:px-0 -mt-6 sm:mt-0'>
                 {
                   shortcomingList.map((item, key) => {
-                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                    return <ApplicationCard key={key} data={item} />
                   })
                 }
               </div>
             </AnimationWrapper>
           </section>
-          <section id="company" className='px-4 sm:px-0'>
-            <Title title="培训优势" subTitle='Training advantage'></Title>
+          <section id='company' className='px-4 sm:px-0'>
+            <Title title='培训优势' subTitle='Training advantage' />
             <div className='sm:flex justify-center gap-16 mb-10 sm:mb-20 -mt-8 sm:mt-0 p-6 sm:p-0 shadow-card sm:shadow-none rounded-lg sm:rounded-none'>
               <section className='sm:w-2/5'>
                 <h3 className='text-base sm:text-3xl'>我们的优势与亮点</h3>
                 <h4 className='text-sm sm:text-xl font-normal'>
-                  <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3'></span>
-                  专业的师资力量</h4>
+                  <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3' />
+                  专业的师资力量
+                </h4>
                 <section className='text-xs sm:text-sm font-light text-gray-400 sm:leading-6 leading-5 pl-4 mb-5'>
                   螣龙安科拥有大量资深信息安全专家，在信息安全各个方向都有较深的造诣，因此将针对不同课题安排不同的安全专家进行全面讲解
                 </section>
                 <h4 className='text-sm sm:text-xl font-normal'>
-                  <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3'></span>
-                  完整的解决方案</h4>
+                  <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3' />
+                  完整的解决方案
+                </h4>
                 <section className='text-xs sm:text-sm font-light text-gray-400 sm:leading-6 leading-5 pl-4 mb-5'>
                   针对企业的安全问题及员工问题，为企业提供完整的培训方案，兼顾企业所有员工在意识评估过程出现的问题，避免安全死角
                 </section>
                 <h4 className='text-sm sm:text-xl font-normal'>
-                  <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3'></span>
-                  定制化、实战型培训内容</h4>
+                  <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3' />
+                  定制化、实战型培训内容
+                </h4>
                 <section className='text-xs sm:text-sm font-light text-gray-400 sm:leading-6 leading-5 pl-4 mb-5'>
-                  螣龙安科会针对每一个客户进行定制化的培训内容以实现最佳培训效果，秉承“实战为主，理论为辅”的宗旨进行课程培训，为客户留下更深刻的印象
+                  螣龙安科会针对每一个客户定制培训内容，以实现高质量的培训效果，秉承“实战为主，理论为辅”的宗旨进行课程培训，为客户留下更深刻的印象
                 </section>
               </section>
               <section className='flex-shrink-0'>
-                <Image src={advantageImg} alt=''></Image>
+                <Image src={advantageImg} alt='' />
               </section>
             </div>
           </section>
         </section>
         <section className='sm:py-8 sm:max-w-7xl mx-auto'>
-          <Title title="课程分类" subTitle='course sorts'></Title>
+          <Title title='课程分类' subTitle='course sorts' />
           <AnimationWrapper>
             <div className='sm:flex justify-center gap-4 sm:mb-20 items-center sm:h-96 sm:mt-14 mx-4 sm:mx-0'>
               {
                 classList.map((item, key) => {
                   return (
                     <div key={key} className='sm:w-1/3 h-64 sm:h-fit mb-4 sm:mb-0 rounded-lg sm:rounded-none overflow-hidden sm:overflow-visible'>
-                      <HoverCard data={item} rounded></HoverCard>
+                      <HoverCard data={item} rounded />
                     </div>
                   )
                 })

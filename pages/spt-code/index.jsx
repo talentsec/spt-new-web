@@ -102,7 +102,7 @@ export default function Code() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>代码审计</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
@@ -112,7 +112,7 @@ export default function Code() {
             </div>
             <div className='absolute top-1/2 px-auto gap-6 pt-16'>
               <Link href='/spt-contact'>
-                <Button size='large' type='primary' shape="round">立即咨询</Button>
+                <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
@@ -133,12 +133,12 @@ export default function Code() {
         </section>
         <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='application'>
           <section>
-            <Title title="应用场景" subTitle='Application scenario'></Title>
+            <Title title='应用场景' subTitle='Application scenario' />
             <div className='sm:flex justify-center gap-16 mb-12'>
               <section className='w-2/5 pt-20 p-10'>
                 <h1 className='text-3xl font-bold text-bold'>新系统上线前</h1>
                 <section className='mb-5 mt-8 font-light leading-6 text-gray-500 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     新上线系统对互联网环境适应性较差，因此在新系统上线前，需要对业务系统进行代码检测；代码审计可以充分挖掘代码中存在的安全缺陷，避免系统刚上线就遇到重大攻击
                   </span>
@@ -148,18 +148,18 @@ export default function Code() {
                 </Link>
               </section>
               <section>
-                <Image src={ApplicationImg} alt=''></Image>
+                <Image src={ApplicationImg} alt='' />
               </section>
             </div>
-            <section className='w-full border-b mb-10'></section>
+            <section className='w-full border-b mb-10' />
             <div className='sm:flex justify-center gap-16 mb-10'>
               <section>
-                <Image src={ApplicationImg2} alt=''></Image>
+                <Image src={ApplicationImg2} alt='' />
               </section>
               <section className='w-2/5 pt-20 p-8'>
                 <h1 className='text-3xl font-bold'>已运行系统</h1>
                 <section className='mb-5 mt-8 font-light leading-6 text-gray-500 flex justify-between gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     通过代码安全审计，能够先于黑客发现系统的安全隐患，提前做好安全防御措施，保证系统各个环节在未知环境下都能经得起黑客挑战，保证业务系统稳定运行
                   </span>
@@ -169,15 +169,15 @@ export default function Code() {
                 </Link>
               </section>
             </div>
-            <section className='w-full border-b mb-20'></section>
+            <section className='w-full border-b mb-20' />
           </section>
-          <section id="value">
-            <Title title="服务价值" subTitle='service value'></Title>
+          <section id='value'>
+            <Title title='服务价值' subTitle='service value' />
             <div className='flex gap-8 w-full justify-between mb-10'>
               <div className='p-6 flex w-full items-center mb-20 h-80'>
                 <section className='bg-black p-8 w-1/3 text-white h-60 hover:h-80 flex items-center transition-all'>
-                  <div >
-                    <Image src={icon2} alt=''></Image>
+                  <div>
+                    <Image src={icon2} alt='' />
                     <section className='text-xl font-bold mt-7 mb-4'>
                       明确安全隐患点
                     </section>
@@ -188,7 +188,7 @@ export default function Code() {
                 </section>
                 <section className='bg-gray-100 p-8 w-1/3 h-60 hover:h-80 flex items-center transition-all'>
                   <div>
-                    <Image src={icon1} alt=''></Image>
+                    <Image src={icon1} alt='' />
                     <section className='text-xl font-bold mt-7 mb-4'>
                       提高安全意识
                     </section>
@@ -199,7 +199,7 @@ export default function Code() {
                 </section>
                 <section className='p-8 w-1/3 h-60 bg-black  text-white hover:h-80 flex items-center transition-all'>
                   <div>
-                    <Image src={icon2} alt=''></Image>
+                    <Image src={icon2} alt='' />
                     <section className='text-xl font-bold mt-7 mb-4'>
                       提高开发人员安全技能
                     </section>
@@ -223,15 +223,15 @@ export default function Code() {
         </section>
         <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
           <section id='content'>
-            <Title title="主要审计内容" subTitle='Main audit contents'></Title>
+            <Title title='主要审计内容' subTitle='Main audit contents' />
             <AnimationWrapper>
               <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-6 justify-center'>
                 {
                   contentList.map((item, key) => {
                     return (
-                      <div key={key} className="bg-white rounded-lg px-6 py-7 w-96 flex gap-4 sm:hover:scale-105 transition-all">
+                      <div key={key} className='bg-white rounded-lg px-6 py-7 w-96 flex gap-4 sm:hover:scale-105 transition-all'>
                         <section className='shrink-0'>
-                          <Image src={contentIcon} alt='' width={48} height={48}></Image>
+                          <Image src={contentIcon} alt='' width={48} height={48} />
                         </section>
                         <section>
                           <div className='font-bold text-xl mb-2'>{item.title}</div>
@@ -245,9 +245,9 @@ export default function Code() {
             </AnimationWrapper>
           </section>
         </section>
-        <section className='py-8 my-16 sm:max-w-7xl sm:min-w-main-width sm:mx-auto' id="QA">
-          <Title title="FAQ" subTitle=''></Title>
-          <Problem list={problemList} expandIndex={0}></Problem>
+        <section className='py-8 my-16 sm:max-w-7xl sm:min-w-main-width sm:mx-auto' id='QA'>
+          <Title title='FAQ' subTitle='' />
+          <Problem list={problemList} expandIndex={0} />
         </section>
       </div>
     </Layout>

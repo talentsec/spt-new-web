@@ -13,7 +13,7 @@ const infoList = [
   {
     icon: icon4,
     title: 'Web安全',
-    content: '全面系统的学习web安全架构、web安全审计等核心内容（适用于高校以及网络安全研究型人员）'
+    content: '全面系统地学习web安全架构、web安全审计等核心内容（适用于高校以及网络安全研究型人员）'
   },
   {
     icon: icon2,
@@ -33,15 +33,17 @@ const infoList = [
 ]
 
 const Part = ({ data }) => {
-  return <div className='flex gap-4 p-b-10 w-2/5 h-44 px-5 mr-28'>
-    <section className='flex-shrink-0'>
-      <Image src={data.icon} alt='' width={80} height={80}></Image>
-    </section>
-    <section>
-      <section className='font-extrabold text-xl leading-7 mb-3'>{data.title}</section>
-      <section className='text-sx text-gray-400 leading-7'>{data.content}</section>
-    </section>
-  </div>
+  return (
+    <div className='flex gap-4 p-b-10 w-2/5 h-44 px-5 mr-28'>
+      <section className='flex-shrink-0'>
+        <Image src={data.icon} alt='' width={80} height={80} />
+      </section>
+      <section>
+        <section className='font-extrabold text-xl leading-7 mb-3'>{data.title}</section>
+        <section className='text-sx text-gray-400 leading-7'>{data.content}</section>
+      </section>
+    </div>
+  )
 }
 
 export default function Training() {
@@ -49,33 +51,36 @@ export default function Training() {
     <div>
       <div className='relative rounded-xl shadow-card pt-20 hidden sm:block'>
         <section className='absolute left-20 top-15'>
-          <Image src={line1} alt=''></Image>
+          <Image src={line1} alt='' />
         </section>
         <section className='absolute left-20 top-15'>
-          <Image src={line2} alt=''></Image>
+          <Image src={line2} alt='' />
         </section>
         <section className='sm:flex flex-wrap justify-between px-6 mb-16  '>
           {
             infoList.map((item, key) => {
-              return <Part key={key} data={item}></Part>
+              return <Part key={key} data={item} />
             })
           }
         </section>
-        <section className='h-40 relative' style={{
+        <section
+          className='h-40 relative' style={{
           background: 'linear-gradient(90deg, #165DFF 0%, #6AA1FF 100%)'
-        }}>
+          }}
+        >
           <section className='w-4/5 flex p-7 gap-6'>
             <section className='flex-shrink-0'>
-              <Image src={icon5} alt=''></Image>
+              <Image src={icon5} alt='' />
             </section>
             <section>
               <section className='text-white text-xl mb-4'>安全培训</section>
               <section className='text-white font-light pr-12'>在教学实训功能中，设置了多种类型的安全课程，并按照内容难度进行分类，用户可以依照能力层级进行自主学习。
-                教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。</section>
+                教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。
+              </section>
             </section>
           </section>
           <section className='absolute right-0 -top-14'>
-            <Image src={icon6} alt=''></Image>
+            <Image src={icon6} alt='' />
           </section>
         </section>
       </div>
@@ -83,7 +88,7 @@ export default function Training() {
         {
           infoList.map((item, key) => {
             return (
-              <div key={key} className="shadow-card p-6 mb-3 rounded-xl">
+              <div key={key} className='shadow-card p-6 mb-3 rounded-xl'>
                 <section>
                   {item.title}
                 </section>
@@ -98,7 +103,8 @@ export default function Training() {
           className='shadow-card p-6 mb-3 rounded-xl text-white relative'
           style={{
             background: 'linear-gradient(90deg, #165DFF 0%, #6AA1FF 100%)'
-          }}>
+          }}
+        >
           <section className=''>
             安全培训
           </section>
@@ -107,7 +113,7 @@ export default function Training() {
             教师可以灵活选取各类资源组建课程，满足个性化的课程教学要求。
           </section>
           <section className='absolute w-24 h-24 -bottom-16 right-0'>
-            <Image src={icon6} alt=''></Image>
+            <Image src={icon6} alt='' />
           </section>
         </div>
       </div>

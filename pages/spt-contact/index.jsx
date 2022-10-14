@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import mainImg from '@/assets/img/about/contectMain.png'
+import mainImg from '@/assets/img/about/contactMain.png'
 import phoneMain from '@/assets/img/home/phoneMain.png'
 import icon1 from '@/assets/img/about/contectIcon1.svg'
 import icon2 from '@/assets/img/about/contectIcon2.svg'
@@ -60,10 +60,18 @@ export default function Contect() {
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
           <div className='hidden sm:block'>
-            <Image src={mainImg} alt='' layout='responsive' ></Image>
+            <Image src={mainImg} alt='' layout='responsive' />
+            <div className='sm:max-w-7xl mx-auto'>
+              <div className='absolute top-1/4 text-5xl text-white'>联系我们</div>
+              <div className='absolute top-1/2 w-3/5 -mt-8 font-light'>
+                <div className='text-xl text-white leading-8 tracking-new-widest'>
+                  合作共赢，共建安全网络环境美好未来
+                </div>
+              </div>
+            </div>
           </div>
           <div className='block sm:hidden w-full'>
-            <Image src={phoneMain} alt='' layout='responsive'></Image>
+            <Image src={phoneMain} alt='' layout='responsive' />
             <div className='absolute top-14 w-screen'>
               <section className='text-2xl font-bold text-center w-full'>联系我们</section>
               <section className='text-center mt-4 text-gray-500'>合作共赢，共建安全网络环境美好未来</section>
@@ -74,15 +82,17 @@ export default function Contect() {
               {
                 list.map((item, key) => {
                   return (
-                    <div key={key} className="flex mx-6 py-6 justify-between" style={{
+                    <div
+                      key={key} className='flex mx-6 py-6 justify-between' style={{
                       borderBottom: `${key === list.length - 1 ? '0px' : '1px'} solid rgba(0,0,0,.04)`
-                    }}>
+                      }}
+                    >
                       <section className='flex-shrink-0 '>
                         <section>{item.title}</section>
                         <section className='text-gray-300 leading-6 flex-shrink-0 mt-2'>{item.content}</section>
                       </section>
                       <section className=''>
-                        <Image src={item.icon} alt=''></Image>
+                        <Image src={item.icon} alt='' />
                       </section>
                       {/* {
                       key === list.length - 1 ? null : <span className='h-10 border-l'></span>
@@ -98,16 +108,16 @@ export default function Contect() {
             {
               list.map((item, key) => {
                 return (
-                  <div key={key} className="flex m-8 w-1/3 justify-between">
+                  <div key={key} className='flex m-8 w-1/3 justify-between'>
                     <section className='flex-shrink-0 '>
                       <section>{item.title}</section>
                       <section className='text-gray-400 leading-6 flex-shrink-0'>{item.content}</section>
                     </section>
                     <section className='flex-shrink-0'>
-                      <Image src={item.icon} alt=''></Image>
+                      <Image src={item.icon} alt='' />
                     </section>
                     {
-                      key === list.length - 1 ? null : <span className='h-10 border-l'></span>
+                      key === list.length - 1 ? null : <span className='h-10 border-l' />
                     }
                   </div>
                 )
@@ -122,12 +132,12 @@ export default function Contect() {
             </div>
           </section> */}
           <section>
-            <Title title="地址详情" subTitle='Address details'></Title>
+            <Title title='地址详情' subTitle='Address details' />
             <div className='sm:flex sm:flex-row-reverse justify-start sm:mb-20 rounded-lg sm:border p-4 gap-20 -mt-10 sm:mt-0'>
               <section className='sm:w-1/2 mb-5'>
                 <section className='leading-7 font-light sm:pt-10'>
                   <h3 className='leading-8 text-xl gap-2 hidden sm:flex'>
-                    <Image src={location} alt=''></Image>
+                    <Image src={location} alt='' />
                     上海
                   </h3>
                   <article>通讯地址：上海市闵行区东川路555号乙楼1层1001室</article>
@@ -139,12 +149,11 @@ export default function Contect() {
                   <article>电子邮件：lty@talentsec.cn</article>
                 </section>
               </section>
-              <section className='sm:w-1/2 sm:h-80 h-56 rounded-md overflow-hidden' id='container'>
-              </section>
+              <section className='sm:w-1/2 sm:h-80 h-56 rounded-md overflow-hidden' id='container' />
             </div>
           </section>
         </section>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Layout>
   )

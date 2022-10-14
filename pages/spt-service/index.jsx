@@ -259,7 +259,7 @@ export default function Rescue() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>渗透测试</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
@@ -268,7 +268,7 @@ export default function Rescue() {
               </div>
             </div>
             <div className='absolute top-3/4 gap-6'>
-              <Button size='large' type='primary' shape="round">立即体验</Button>
+              <Button size='large' type='primary' shape='round'>立即体验</Button>
             </div>
           </div>
         </section>
@@ -277,16 +277,16 @@ export default function Rescue() {
             {
               list.map((item, key) => {
                 return (
-                  <div key={key} className="flex m-8 w-1/3 justify-between">
+                  <div key={key} className='flex m-8 w-1/3 justify-between'>
                     <section className='flex-shrink-0 '>
                       <section>{item.title}</section>
                       <section className='text-gray-400 leading-6 flex-shrink-0'>{item.content}</section>
                     </section>
                     <section className='flex-shrink-0'>
-                      <Image src={item.icon} alt=''></Image>
+                      <Image src={item.icon} alt='' />
                     </section>
                     {
-                      key === list.length - 1 ? null : <span className='h-10 border-l'></span>
+                      key === list.length - 1 ? null : <span className='h-10 border-l' />
                     }
                   </div>
                 )
@@ -295,101 +295,102 @@ export default function Rescue() {
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
-          <section >
-            <Title title="渗透测试意义" subTitle='Significance of penetration test'></Title>
+          <section>
+            <Title title='渗透测试意义' subTitle='Significance of penetration test' />
             <div className='sm:flex justify-center gap-2 mb-20 items-center'>
               <section className='w-2/5'>
                 <h1 className='text-3xl font-normal mb-7'>渗透测试的重要性</h1>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex  gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
-                    识别最迫切需要解决的/危害级别最高的漏洞
+                    识别当前亟需解决的/危害级别较高的漏洞
                   </span>
                 </section>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     对疑难安全事件进行深入分析，锁定攻击源
                   </span>
                 </section>
                 <section className='mb-4 font-light leading-6 text-gray-500 mt-4 flex gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     提升业务逻辑安全性，从根源解决问题
                   </span>
                 </section>
                 <section className='mb-4 font-light leading-6 text-gray-500 mt-4 flex gap-3'>
-                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2'></span>
+                  <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
                     弥补通用安全产品的不足
                   </span>
                 </section>
               </section>
               <section>
-                <Image src={meaningImg} alt=''></Image>
+                <Image src={meaningImg} alt='' />
               </section>
             </div>
           </section>
-          <section id="company">
-            <Title title="渗透测试手段" subTitle='Penetration testing tools'></Title>
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>螣龙安科可以为客户提供全方位的黑/灰/白盒测试</div>
-            <TestCard></TestCard>
+          <section id='company'>
+            <Title title='渗透测试手段' subTitle='Penetration testing tools' />
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>螣龙安科可以为客户提供多维度的黑/灰/白盒测试</div>
+            <TestCard />
           </section>
           <section id='content'>
-            <Title title="服务内容" subTitle='Service Content'></Title>
+            <Title title='服务内容' subTitle='Service Content' />
             <motion.div
               style={{
                 scale,
-              }}>
+              }}
+            >
               <section className='flex gap-5 w-full justify-center mb-8'>
                 <section className='w-64 relative text-right'>
                   <div>
                     <section>
-                      <Image src={contentIcon} alt=''></Image>
+                      <Image src={contentIcon} alt='' />
                     </section>
                     <section className='my-3 text-xl'>
                       黑盒+灰盒结合
                     </section>
-                    <section className='text-xs text-gray-500 leading-5'>
-                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，全方位检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出最佳安全解决方案。
+                    <section className='text-xs text-gray-500 leading-5 text-left'>
+                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，多维度检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出针对性安全解决方案。
                     </section>
                   </div>
                   <div className='absolute bottom-0'>
                     <section>
-                      <Image src={contentIcon} alt=''></Image>
+                      <Image src={contentIcon} alt='' />
                     </section>
                     <section className='my-3 text-xl'>
                       安全修复建议
                     </section>
-                    <section className='text-xs text-gray-500 leading-5'>
+                    <section className='text-xs text-gray-500 leading-5 text-left'>
                       渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。
                     </section>
                   </div>
                 </section>
                 <section className='flex-shrink-0'>
-                  <Image src={contentImg} alt=''></Image>
+                  <Image src={contentImg} alt='' />
                 </section>
                 <section className='w-64 relative'>
                   <div>
                     <section>
-                      <Image src={contentIcon} alt=''></Image>
+                      <Image src={contentIcon} alt='' />
                     </section>
                     <section className='my-3 text-xl'>
-                      黑盒+灰盒结合
+                      安全漏洞发现
                     </section>
                     <section className='text-xs text-gray-500 leading-5'>
-                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，全方位检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出最佳安全解决方案。
+                      找出应用中存在的安全漏洞。对传统安全弱点的串联并形成路径，通过路径式的利用而达到模拟入侵的效果。发掘应用中影响业务正常运行、导致敏感信息泄露、造成现金损失的漏洞。
                     </section>
                   </div>
                   <div className='absolute bottom-0'>
                     <section>
-                      <Image src={contentIcon} alt=''></Image>
+                      <Image src={contentIcon} alt='' />
                     </section>
                     <section className='my-3 text-xl'>
-                      安全修复建议
+                      评估复测
                     </section>
                     <section className='text-xs text-gray-500 leading-5'>
-                      渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。
+                      漏洞修复后，对修复方案及结果进行有效性评估，分析修复方案的有损打击和误打击风险，复验漏洞修复结果。得到有效性评估结果后，汇总并标注漏洞修复结果，及时更新并发送回归测试报告。
                     </section>
                   </div>
                 </section>
@@ -397,8 +398,8 @@ export default function Rescue() {
             </motion.div>
           </section>
         </section>
-        <section className='py-8 sm:min-w-max' id="progress">
-          <Title title="服务对象" subTitle='service object'></Title>
+        <section className='py-8 sm:min-w-max' id='progress'>
+          <Title title='服务对象' subTitle='service object' />
           <AnimationWrapper>
             <section className='w-3/4 flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-x-10 gap-y-6 mb-20'>
               {
@@ -406,7 +407,7 @@ export default function Rescue() {
                   return (
                     <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0 sm:hover:scale-105 transition-all'>
                       <section>
-                        <Image src={item.icon} alt=''></Image>
+                        <Image src={item.icon} alt='' />
                       </section>
                       <span className='text-xl font-medium'>{item.text}</span>
                     </div>
@@ -416,22 +417,22 @@ export default function Rescue() {
             </section>
           </AnimationWrapper>
         </section>
-        <section className='py-8 sm:min-w-max' id="progress">
-          <Title title="渗透测试流程" subTitle='Penetration test process'></Title>
+        <section className='py-8 sm:min-w-max' id='progress'>
+          <Title title='渗透测试流程' subTitle='Penetration test process' />
           <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
-            <ProgressScrollCard infoList={infoList}></ProgressScrollCard>
+            <ProgressScrollCard infoList={infoList} />
           </section>
         </section>
-        <section className='py-8 sm:min-w-max' id="progress">
-          <Title title="WEB测试检测项" subTitle='Penetrant test items'></Title>
+        <section className='py-8 sm:min-w-max' id='progress'>
+          <Title title='WEB测试检测项' subTitle='Penetrant test items' />
           <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个纬度：</div>
           <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
             {
               webList.map((item, index) => {
                 return (
-                  <div key={index} className="w-56 h-56 bg-gray-100 rounded-2xl pt-16 sm:hover:scale-105 transition-all">
+                  <div key={index} className='w-56 h-56 bg-gray-100 rounded-2xl pt-16 sm:hover:scale-105 transition-all'>
                     <section className='flex justify-center mb-3'>
-                      <Image src={webIcon} alt=''></Image>
+                      <Image src={webIcon} alt='' />
                     </section>
                     <section className='text-center text-gray-400'>
                       {item}
@@ -442,7 +443,7 @@ export default function Rescue() {
             }
           </section>
         </section>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Layout>
   )

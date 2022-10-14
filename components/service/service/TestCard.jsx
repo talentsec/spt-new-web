@@ -9,8 +9,8 @@ export default function TestCard() {
   return (
     <div className='p-6 flex w-full items-center mb-20 h-80'>
       <section className='bg-black p-8 w-1/3 text-white h-60 hover:h-80 flex items-center transition-all'>
-        <div >
-          <Image src={icon2} alt=''></Image>
+        <div>
+          <Image src={icon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             黑盒测试
           </section>
@@ -21,7 +21,7 @@ export default function TestCard() {
       </section>
       <section className='bg-gray-200 p-8 w-1/3 h-60 hover:h-80 flex items-center transition-all'>
         <div>
-          <Image src={icon1} alt=''></Image>
+          <Image src={icon1} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             灰盒测试
           </section>
@@ -32,7 +32,7 @@ export default function TestCard() {
       </section>
       <section className='p-8 w-1/3 h-60 bg-blue-700  text-white hover:h-80 flex items-center transition-all'>
         <div>
-          <Image src={icon2} alt=''></Image>
+          <Image src={icon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             灰盒测试
           </section>

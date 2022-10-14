@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
-import valueIcon from '@/assets/img/service/redBlueValueIcon.svg'
+import { Button } from 'antd'
 import MainImg from '@/assets/img/service/emailMain.png'
 import classIcon1 from '@/assets/img/product/user1.svg'
 import classIcon2 from '@/assets/img/service/contentIcon.svg'
@@ -106,7 +105,6 @@ const serviceList = [
     }
   ]
 ]
-
 const solutionList = [
   {
     icon: classIcon1,
@@ -157,8 +155,6 @@ const solutionList = [
     ]
   },
 ]
-
-
 const demandList = [
   {
     icon: contentIcon,
@@ -176,7 +172,6 @@ const demandList = [
     content: '企业经常要发送合同、招标资料等机密性较高的邮件，电子邮件在网络中多以明文形式传输储存的，个人隐私和公司机密随时存在被截获、篡改和浏览的风险，如果被窃取，后果将不堪设想。'
   },
 ]
-
 const applicationList = [
   {
     img: appImg1,
@@ -202,7 +197,7 @@ export default function Email() {
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
           <div className='sm:min-w-main-width hidden sm:block'>
-            <Image src={MainImg} alt='' layout='responsive'></Image>
+            <Image src={MainImg} alt='' layout='responsive' />
           </div>
           <div className='sm:max-w-7xl sm:min-w-max mx-auto'>
             <div className='absolute top-16 sm:top-1/3 sm:-mt-8 z-10 w-full'>
@@ -215,20 +210,22 @@ export default function Email() {
             </div>
             <div className='absolute top-52 sm:top-1/2 px-auto pt-2 z-10 flex justify-center w-full'>
               <Link href='/spt-contact'>
-                <Button size='large' type='primary' shape="round">立即咨询</Button>
+                <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
           <div className='sm:min-w-main-width block sm:hidden'>
-            <Image src={phoneMain} alt='' layout='responsive'></Image>
+            <Image src={phoneMain} alt='' layout='responsive' />
           </div>
           <div className='top-3/4 mx-auto px-auto hidden sm:flex  bg-white rounded-lg sm:max-w-7xl sm:-translate-y-12 shadow-card justify-between px-8'>
             {
               Toplist.map((item, key) => {
                 return (
-                  <div key={key} className="flex my-8 justify-center items-center sm:w-full" style={{
+                  <div
+                    key={key} className='flex my-8 justify-center items-center sm:w-full' style={{
                     borderRight: key === Toplist.length - 1 ? '0 solid rgba(0,0,0,0.4) ' : '1px solid rgba(0,0,0,0.1) '
-                  }}>
+                    }}
+                  >
                     <section className='flex-shrink-0 sm:w-64 pl-6'>
                       <section className='font-din-bold text-blue-700 text-3xl text-center mb-2'>{item.title}</section>
                       <section className='text-gray-600 leading-6 flex-shrink-0 text-center text-base h-12'>{item.text}</section>
@@ -242,9 +239,11 @@ export default function Email() {
             {
               Toplist.map((item, key) => {
                 return (
-                  <div key={key} className="" style={{
+                  <div
+                    key={key} className='' style={{
                     borderBottom: key === Toplist.length - 1 ? '0 solid rgba(0,0,0,0.4) ' : '1px solid rgba(0,0,0,0.1) '
-                  }}>
+                    }}
+                  >
                     <section className='flex-shrink-0 py-5 flex flex-row-reverse w-full justify-between'>
                       <section className='font-din-bold text-blue-700 text-xl text-center'>{item.title}</section>
                       <section className='text-gray-600 leading-6 flex-shrink-0 w-4/5 '>{item.text}</section>
@@ -256,28 +255,28 @@ export default function Email() {
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
-          <section >
-            <Title title="行业痛点及需求" subTitle='industry analysis'></Title>
+          <section>
+            <Title title='行业痛点及需求' subTitle='industry analysis' />
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
             <AnimationWrapper>
               <div className='sm:flex justify-center gap-6 mb-20 mx-4 sm:mx-0'>
                 {
                   demandList.map((item, key) => {
-                    return <Card key={key} data={item}></Card>
+                    return <Card key={key} data={item} />
                   })
                 }
               </div>
             </AnimationWrapper>
           </section>
-          <section id="support">
-            <Title title="解决方案" subTitle='SOLUTIONS'></Title>
+          <section id='support'>
+            <Title title='解决方案' subTitle='SOLUTIONS' />
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>全链条检验邮箱安全性，实现主动安全</div>
             <div className='hidden sm:flex w-full justify-between mb-28 h-96'>
               {
                 solutionList.map((item, key) => {
                   return (
-                    <div key={key} className="w-1/3 shrink-0 flex items-center">
-                      <HoverCard data={item}></HoverCard>
+                    <div key={key} className='w-1/3 shrink-0 flex items-center'>
+                      <HoverCard data={item} />
                     </div>
                   )
                 })
@@ -287,14 +286,14 @@ export default function Email() {
               {
                 solutionList.map((item, key) => {
                   return (
-                    <div key={key} className="flex items-center">
-                      <section>
+                    <div key={key} className='bg-gray-50 rounded-lg mb-3 px-3 py-4'>
+                      <section className='text-base mb-2'>
                         {item.title}
                       </section>
                       <section>
                         {item.info.map((item, index) => {
                           return (
-                            <div key={index}>
+                            <div key={index} className='text-xs leading-5 text-gray-400'>
                               {
                                 item.list.map((text, indey) => {
                                   return <div key={indey}>{text}</div>
@@ -311,20 +310,20 @@ export default function Email() {
             </div>
           </section>
         </section>
-        <section className='w-full bg-gray-100 py-20'>
-          <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-8 mb-12'>
-            <Title title="功能测试项" subTitle='functional test items'></Title>
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>六类/二十余项检测，全方位覆盖邮箱安全漏洞</div>
-            <ProgressScrollCard infoList={serviceList}></ProgressScrollCard>
+        <section className='w-full sm:bg-gray-100 py-20'>
+          <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto sm:gap-8 mb-12'>
+            <Title title='功能测试项' subTitle='functional test items' />
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>六类/二十余项检测，多维度覆盖邮箱安全漏洞</div>
+            <ProgressScrollCard infoList={serviceList} />
           </section>
         </section>
-        <section className='w-full pt-20 pb-24' style={{ backgroundColor: '#1D2129' }}>
+        <section className='w-full pt-4 sm:pt-20 pb-8 sm:pb-24' style={{ backgroundColor: '#1D2129' }}>
           <section className=' flex-wrap sm:max-w-7xl sm:min-w-main-width justify-center mx-auto gap-8 mb-2'>
-            <Title title="应用场景" subTitle='application scenarios' dark></Title>
-            <SelectedCard list={applicationList}></SelectedCard>
+            <Title title='应用场景' subTitle='application scenarios' dark />
+            <SelectedCard list={applicationList} />
           </section>
         </section>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Layout>
   )

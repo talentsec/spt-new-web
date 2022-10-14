@@ -10,7 +10,7 @@ export default function TeamCard({ data, index }) {
 
   return (
     <motion.div
-      className="container"
+      className='container'
       style={{
         scale
       }}
@@ -18,7 +18,7 @@ export default function TeamCard({ data, index }) {
       <div className='bg-slate-50 sm:bg-white sm:w-64 flex-grow-0 flex-shrink-0 rounded-lg hover:shadow-card mb-5 cursor-pointer'>
         <div className='p-9'>
           <div className='flex justify-center mb-2'>
-            <Image src={data.icon} alt="" />
+            <Image src={data.icon} alt='' />
           </div>
           {data.img}
           <div className='mx-auto w-full text-center leading-7'>{data.title}</div>

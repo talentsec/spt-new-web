@@ -5,7 +5,7 @@ export default function ApplicationCard({ data }) {
   return (
     <div className='sm:w-96 shadow-card p-6 sm:p-8 rounded-xl transition-all sm:hover:-translate-y-3 transform-all mb-4 sm:mb-0'>
       <div className='flex justify-center sm:justify-start'>
-        <Image src={data.icon} alt=''></Image>
+        <Image src={data.icon} alt='' />
       </div>
       <section className='sm:text-xl font-bold leading-7 my-2 sm:my-4 text-center sm:text-left'>
         {data.title}

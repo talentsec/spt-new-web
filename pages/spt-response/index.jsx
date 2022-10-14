@@ -20,7 +20,7 @@ const intrusionProcessList = [
   {
     button: '暴力破解',
     title: '暴力破解',
-    text: '针对系统有包括rdp、ssh、telnet等，针对服务有包括mysql、ftp等，一般可以通过超级弱口令工具、hydra进行爆破'
+    text: '针对系统有包括rdp、ssh、telnet等，针对服务有包括mysql、ftp等，一般通过暴力破解工具进行爆破'
   },
   {
     button: '漏洞利用',
@@ -130,7 +130,7 @@ const progressList = [
   },
   {
     title: '攻击分析',
-    text: '可通过网络流量、系统日志等方式分析安全事件类型，得出入侵路径，并结合系统与网络安全现状，为客户制定安全事件最佳解决方案'
+    text: '可通过网络流量、系统日志等方式分析安全事件类型，得出入侵路径，并结合系统与网络安全现状，为客户定制安全事件解决方案'
   },
   {
     title: '事件处置',
@@ -177,17 +177,17 @@ export default function Response() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl mx-auto'>
             <div className='absolute top-1/4 text-5xl text-white'>应急响应</div>
             <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
               <div className='text-xl text-white leading-8 tracking-new-widest'>
-                事件发生后1小时内快速响应，最大程度降低企业损失
+                事件发生后1小时内快速响应，降低企业损失
               </div>
             </div>
             <div className='absolute top-1/2 px-auto gap-6 pt-16'>
               <Link href='/spt-contact'>
-                <Button size='large' type='primary' shape="round">立即咨询</Button>
+                <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
@@ -208,14 +208,14 @@ export default function Response() {
         </section> */}
         <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='content'>
           <section id='process'>
-            <Title title="应用场景" subTitle='Application scenario'></Title>
+            <Title title='应用场景' subTitle='Application scenario' />
             <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-8 justify-center'>
               {
                 applicationList.map((item, key) => {
                   return (
-                    <div key={key} className="bg-white rounded-lg p-8 flex gap-4 sm:hover:scale-105 transition-all w-1/2 flex-1 shadow-card">
+                    <div key={key} className='bg-white rounded-lg p-8 flex gap-4 sm:hover:scale-105 transition-all w-1/2 flex-1 shadow-card'>
                       <section className='shrink-0'>
-                        <Image src={contentIcon} alt='' width={48} height={48}></Image>
+                        <Image src={contentIcon} alt='' width={48} height={48} />
                       </section>
                       <section>
                         <div className='font-bold text-xl mb-2'>{item.title}</div>
@@ -227,29 +227,29 @@ export default function Response() {
               }
               <section className='relative w-full mb-20  transition-all'>
                 <section>
-                  <Image src={appImg} alt='' layout='responsive'></Image>
+                  <Image src={appImg} alt='' layout='responsive' />
                 </section>
                 <section className='absolute top-2 text-white text-center py-8 px-56'>
                   <div className='mb-4 text-3xl'>
-                    做企业最高效的“止血棒”
+                    做企业高效的“止血棒”
                   </div>
                   <div className='leading-7 font-light'>
-                    信息时代，计算机技术飞速发展，有组织、有目的的网络攻击形势愈加明显，近些年来企业成为了网络攻击的主要受害者。事实上，85%的入侵在数分钟内完成，企业往往hui面临信息业务中断、系统宕机、网络瘫痪等重大风险，而螣龙安科提供的入侵应急响应服务（溯源、分析、处置、优化等）可有效遏制入侵态势，第一时间为企业止损。
+                    信息时代，计算机技术飞速发展，有组织、有目的的网络攻击形势愈加明显，近些年来企业成为了网络攻击的主要受害者。事实上，85%的入侵在数分钟内完成，企业往往会面临信息业务中断、系统宕机、网络瘫痪等重大风险，而螣龙安科提供的入侵应急响应服务（溯源、分析、处置、优化等）可有效遏制入侵态势，第一时间为企业止损。
                   </div>
                 </section>
 
               </section>
             </section>
           </section>
-          <section id="value">
-            <Title title="服务内容" subTitle='Service Content'></Title>
+          <section id='value'>
+            <Title title='服务内容' subTitle='Service Content' />
             <div className='gap-4 mb-20'>
               <section className='flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
                 <section className='w-1/2 px-6'>
                   <h1 className='text-3xl mb-6'>分析入侵过程</h1>
                   <div className='flex items-start gap-3'>
                     <section className='pt-1'>
-                      <Image src={blueIcon} alt=''></Image>
+                      <Image src={blueIcon} alt='' />
                     </section>
                     <div>
                       <h2 className='text-xl font-normal mb-4'>主要类型</h2>
@@ -257,11 +257,13 @@ export default function Response() {
                         {
                           intrusionProcessList.map((item, key) => {
                             return (
-                              <span key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
+                              <span
+                                key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
                                 backgroundColor: selectedIntrusionProcessItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
                                 color: selectedIntrusionProcessItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
-                              }}
-                                onClick={() => setSelectedIntrusionProcessItem(item)}>
+                                }}
+                                onClick={() => setSelectedIntrusionProcessItem(item)}
+                              >
                                 {item.button}
                               </span>
                             )
@@ -272,7 +274,7 @@ export default function Response() {
                   </div>
                   <div className='flex items-start gap-3 mt-8'>
                     <section className='pt-1 flex-shrink-0'>
-                      <Image src={blueIcon} alt=''></Image>
+                      <Image src={blueIcon} alt='' />
                     </section>
                     <div>
                       <h2 className='text-xl font-normal'>{selectedIntrusionProcessItem.title}</h2>
@@ -283,18 +285,18 @@ export default function Response() {
                   </div>
                 </section>
                 <section>
-                  <Image src={contentImg1} alt=''></Image>
+                  <Image src={contentImg1} alt='' />
                 </section>
               </section>
               <section className='flex gap-6 items-center border-b mb-10 w-full justify-center'>
                 <section>
-                  <Image src={contentImg2} alt=''></Image>
+                  <Image src={contentImg2} alt='' />
                 </section>
                 <section className='w-1/2 px-6'>
                   <h1 className='text-3xl mb-6'>处置安全事件</h1>
                   <div className='flex items-start gap-3'>
                     <section className='pt-1 flex-shrink-0 w-6'>
-                      <Image src={blueIcon} alt=''></Image>
+                      <Image src={blueIcon} alt='' />
                     </section>
                     <div>
                       <h2 className='text-xl font-normal mb-4'>主要类型</h2>
@@ -302,11 +304,13 @@ export default function Response() {
                         {
                           securityIncidentList.map((item, key) => {
                             return (
-                              <span key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
+                              <span
+                                key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
                                 backgroundColor: selectedSecurityIncidentItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
                                 color: selectedSecurityIncidentItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
-                              }}
-                                onClick={() => setSelectedSecurityIncidentItem(item)}>
+                                }}
+                                onClick={() => setSelectedSecurityIncidentItem(item)}
+                              >
                                 {item.button}
                               </span>
                             )
@@ -317,7 +321,7 @@ export default function Response() {
                   </div>
                   <div className='flex items-start gap-3 mt-8'>
                     <section className='pt-1 flex-shrink-0'>
-                      <Image src={blueIcon} alt=''></Image>
+                      <Image src={blueIcon} alt='' />
                     </section>
                     <div>
                       <h2 className='text-xl font-normal'>{selectedSecurityIncidentItem.title}</h2>
@@ -333,13 +337,13 @@ export default function Response() {
         </section>
         <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
           <section id='process' className='mb-40 mt-4'>
-            <Title title="服务流程" subTitle='Service Process'></Title>
-            <Progress list={progressList}></Progress>
+            <Title title='服务流程' subTitle='Service Process' />
+            <Progress list={progressList} />
           </section>
         </section>
 
       </div>
-      <Footer></Footer>
+      <Footer />
     </Layout>
   )
 }

@@ -23,22 +23,22 @@ export default function Tide() {
     <Layout>
       <div className='min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive'></Image>
+          <Image src={MainImg} alt='' layout='responsive' />
           <div className='absolute top-1/4 text-center text-5xl text-white w-full'>潮汐·攻击面管理平台</div>
           <div className='absolute top-1/2 w-full px-auto -mt-5'>
             <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest font-light'>潮汐ASM平台是一个网络空间资产攻击面管理系统，通过录入简单的种子信息，潮汐ASM平台以种子为核心，在智能引擎以及近百个全球化数据源的加持下，可为企业客户自动化地拓展出完整的网络空间资产。</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center gap-6'>
-            <Button size='large' type='primary' shape="round" onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
-            <Link href="spt-contact">
-              <Button size='large' shape="round" ghost>在线咨询</Button>
+            <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
+            <Link href='spt-contact'>
+              <Button size='large' shape='round' ghost>在线咨询</Button>
             </Link>
           </div>
         </section>
-        <AsmTop></AsmTop>
+        <AsmTop />
         <section className='sm:max-w-7xl sm:mx-auto mt-20'>
           <section>
-            <Title title="企业安全现状" subTitle='Enterprise security status'></Title>
+            <Title title='企业安全现状' subTitle='Enterprise security status' />
             <motion.div
               layout
               initial={{
@@ -61,7 +61,7 @@ export default function Tide() {
               <div className='sm:flex justify-between gap-6 mb-20 '>
                 {
                   nowInfoList.map((item, key) => {
-                    return <ApplicationCard key={key} data={item}></ApplicationCard>
+                    return <ApplicationCard key={key} data={item} />
                   })
                 }
               </div>
@@ -69,16 +69,16 @@ export default function Tide() {
           </section>
         </section>
         <section className='w-full sm:min-w-main-width bg-gray-800 relative'>
-          <Image src={backImg} alt='' layout='responsive'></Image>
+          <Image src={backImg} alt='' layout='responsive' />
           <div className='absolute top-12 w-full mt-4'>
-            <Title title="核心功能" subTitle='Core Functions' dark={true}></Title>
+            <Title title='核心功能' subTitle='Core Functions' dark />
             <div className='sm:max-w-7xl sm:mx-auto mt-4'>
-              <AsmCarousel></AsmCarousel>
+              <AsmCarousel />
             </div>
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-20 mb-4'>
-          <Title title="应用价值" subTitle='Application value'></Title>
+          <Title title='应用价值' subTitle='Application value' />
           <motion.div
             layout
             initial={{
@@ -98,10 +98,10 @@ export default function Tide() {
               margin: '-120px'
             }}
           >
-            <ValueSlider></ValueSlider>
+            <ValueSlider />
           </motion.div>
         </section>
-        <Footer></Footer>
+        <Footer />
       </div>
     </Layout>
   )

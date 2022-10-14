@@ -10,7 +10,7 @@ export default function ServiceCard() {
     <div className='p-6 flex w-full items-center mb-20 h-96'>
       <section className='bg-black p-8 w-1/3 text-white h-80 hover:h-96 flex items-center transition-all'>
         <div>
-          <Image src={icon2} alt=''></Image>
+          <Image src={icon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             勒索处置
           </section>
@@ -21,26 +21,26 @@ export default function ServiceCard() {
       </section>
       <section className='bg-gray-200 p-8 w-1/3 h-80 hover:h-96 flex items-center transition-all'>
         <div>
-          <Image src={icon1} alt=''></Image>
+          <Image src={icon1} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             隐患加固
           </section>
           <section className='text-gray-400 leading-6 text-sm'>
             风险评估、整改优化。结合客户网络安全现状，提出整改优化思路，完善网络安全防护方案，提升客户持续抵御勒索病毒的能力
           </section>
-          <section className='h-10'></section>
+          <section className='h-10' />
         </div>
       </section>
       <section className='bg-blue-700 p-8 h-80 text-white w-1/3 hover:h-96 flex items-center transition-all'>
         <div>
-          <Image src={icon2} alt=''></Image>
+          <Image src={icon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             勒索预防
           </section>
           <section className=' leading-6 text-sm'>
             风险排查、24h持续监控。对企业系统进行整体检测，全面排查风险端口与高危漏洞，及时查杀勒索风险，提供7✖️24h持续监控，实时预警勒索病毒险情
           </section>
-          <section className='h-10'></section>
+          <section className='h-10' />
         </div>
       </section>
     </div>

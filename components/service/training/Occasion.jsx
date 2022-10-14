@@ -11,7 +11,7 @@ const infoList = [
     demand: ['攻防演练活动发展至今已经高度标准化，在演练期间如何在第一时间快速攻下目标，机器肯定比人做的要好。'],
     use: [
       '1.模拟攻击：对整个安全基础架构进行连续、自动化的测试，从而确定系统的长处与弱点；',
-      '2.定位安全短板：迅速定位最需集中关注的区域，阻挡最致命的攻击。'
+      '2.定位安全短板：迅速定位当前亟需集中关注的区域，阻挡潜在的致命攻击。'
     ]
   },
   {
@@ -19,7 +19,7 @@ const infoList = [
     icon: icon2,
     demand: ['企业安全状况的确定是企业安全建设的第一步，如对自身安全情况的了解不足或者存在误差，即使是一个很小的安全风险或漏洞，随着时间发展会变得难以控制，直至有一天企业安全被彻底击穿。'],
     use: [
-      '1.潮汐集成了上百种攻击工具以及漏洞，对黑客攻击行为进行原子化操作拆解，可在企业环境里进行最小动作单元仿真；',
+      '1.潮汐集成了上百种攻击工具以及漏洞，对黑客攻击行为进行原子化操作拆解，可在企业环境里进行针对性单元仿真；',
       '2.可应用在多种类型资产以及linux、windows和mac系统3大系统。'
     ]
   },
@@ -42,16 +42,16 @@ export default function Occasion() {
       {
         infoList.map((item, key) => {
           return (
-            <div key={key} className="rounded-t-3xl w-96 p-8 shadow-card">
+            <div key={key} className='rounded-t-3xl w-96 p-8 shadow-card'>
               <section>
-                <Image src={item.icon} alt=''></Image>
+                <Image src={item.icon} alt='' />
               </section>
               <section className='text-xl font-bold my-5'>
                 {item.title}
               </section>
               <section>
                 <div className='flex gap-3 items-center text-base'>
-                  <span className='w-1 h-4 rounded-lg bg-blue-700 inline-block'></span>
+                  <span className='w-1 h-4 rounded-lg bg-blue-700 inline-block' />
                   需求
                 </div>
                 <div className='leading-6 font-light mt-2 mb-4'>
@@ -60,7 +60,7 @@ export default function Occasion() {
               </section>
               <section>
                 <div className='flex gap-3 items-center text-base'>
-                  <span className='w-1 h-4 rounded-lg bg-blue-700 inline-block'></span>
+                  <span className='w-1 h-4 rounded-lg bg-blue-700 inline-block' />
                   应用
                 </div>
                 <div className='leading-6 font-light mt-2 mb-4'>

@@ -47,7 +47,7 @@ export const products = [
   {
     icon: card1,
     title: '网络攻防产品',
-    content: '潮汐攻击面管理及模拟攻击系统可以自动化发现资产攻击面，并连续、自动化验证企业安全性，帮助企业定位漏洞及安全最短板。谜团·网络攻防靶场致力于打造现实网络系统的平行仿真系统，为现实网络提供“试错”空间，用于学习与培训、测试与验证、评估与演练。',
+    content: '潮汐攻击面管理及模拟攻击系统可以自动化发现资产攻击面，并连续、自动化验证企业安全性，帮助企业定位漏洞及安全短板。谜团·网络攻防靶场致力于打造现实网络系统的平行仿真系统，为现实网络提供“试错”空间，用于学习与培训、测试与验证、评估与演练。',
     button: '产品详情',
     link: '/spt-tide'
   },
@@ -64,7 +64,7 @@ export const products = [
     content: '螣龙站在主动安全视角进行高质量安全课程内容输出以及培训，专注于网络安全、信息安全、白帽子技术等领域，且配备网络攻防靶场用于教学。螣龙安科拥有专业的师资力量、完整的培训解决方案，并为企业提供定制化、实战型网络安全培训内容。',
     button: '服务详情',
     link: '/spt-security-training'
-  },
+  }
 
 ]
 
@@ -73,13 +73,13 @@ export const teams = [
     icon: team1,
     title: '何德全',
     subTitle: '中国工程院院士',
-    content: '中国工程院首批院士，著名的网络安全与信息技术专家，现任国家信息化专家咨询委员会副主任、国家“863”计划监委会委员、国务院信息办网络与信息安全专家组组长、国家信息安全测评认证管委会主任，是上海交通大学网络空间安全学院（原信息安全工程学院）的首任院长、名誉院长。',
+    content: '中国工程院首批院士，著名的网络安全与信息技术专家，现任国家信息化专家咨询委员会副主任、国家“863”计划监委会委员、国务院信息办网络与信息安全专家组组长、国家信息安全测评认证管委会主任，是上海交通大学网络空间安全学院（原信息安全工程学院）的首任院长、名誉院长。'
   },
   {
     icon: team2,
     title: '薛质',
     subTitle: '首席技术顾问',
-    content: '上海交通大学获得博士，现任上海交通大学网络空间安全学院副院长；主持及参加完成了省部级以上科研项目30余项，作为项目负责人完成了国家“863”项目“安全主动网技术研究”等，先后荣获上海市科技进步一等奖2项、二等奖1项和三等奖1项；申请技术专利15项。',
+    content: '上海交通大学获得博士，现任上海交通大学网络空间安全学院副院长；主持及参加完成了省部级以上科研项目30余项，作为项目负责人完成了国家“863”项目“安全主动网技术研究”等，先后荣获上海市科技进步一等奖2项、二等奖1项和三等奖1项；申请技术专利15项。'
   },
   {
     icon: team3,
@@ -91,8 +91,8 @@ export const teams = [
     icon: team4,
     title: '范磊',
     subTitle: '技术顾问',
-    content: '博士，上海交通大学职副教授，主要从事信息安全领域研究工作，主要研究方向包括网络安全管理、无线网络安全、密码协议分析等。近年来参与多项国家及省部级科研项目，包括国家“863”重点项目《基于攻击图及博弈理论的安全事件处理关键技术及系统》等。',
-  },
+    content: '博士，上海交通大学职副教授，主要从事信息安全领域研究工作，主要研究方向包括网络安全管理、无线网络安全、密码协议分析等。近年来参与多项国家及省部级科研项目，包括国家“863”重点项目《基于攻击图及博弈理论的安全事件处理关键技术及系统》等。'
+  }
 ]
 
 export const menuList = [
@@ -114,7 +114,7 @@ export const menuList = [
       {
         title: '潮汐·开源社区',
         link: '/spt-tide-open'
-      },
+      }
     ]
   },
   {
@@ -163,7 +163,7 @@ export const menuList = [
       {
         title: '应急响应',
         link: '/spt-response'
-      },
+      }
       // {
       //   title: '邮件安全检测',
       //   link: ''
@@ -229,7 +229,7 @@ export const menuList = [
       {
         title: '最新资讯',
         link: '/spt-news'
-      },
+      }
       // {
       //   title: '加入我们',
       //   link: ''
@@ -256,7 +256,7 @@ export const productList = [
     title: '谜团·网络攻防靶场',
     link: '/spt-mituan',
     content: '打造现实网络系统的平行仿真系统'
-  },
+  }
 ]
 
 export const tabList = [
@@ -266,7 +266,7 @@ export const tabList = [
     content: '螣龙安科从“主动安全”的视角出发，产品矩阵强调“安全左移”，辅助企业在安全事件发生前完成网络安全建设。',
     button: '了解更多',
     link: '/spt-about',
-    img: tab3,
+    img: tab3
   },
   {
     category: '我们服务的客户',
@@ -274,7 +274,7 @@ export const tabList = [
     content: '公司现有客户的行业覆盖面极广，涉及政府、金融、运营商、能源等，典型头部客户包括中国电信集团、复星集团、中远集团等大型国企央企以及世界500强企业。',
     button: '了解更多',
     link: '/spt-about',
-    img: tab2,
+    img: tab2
   },
   {
     category: '深厚的技术背景',
@@ -282,7 +282,7 @@ export const tabList = [
     content: '公司拥有强大的科技研发实力，研发人员占比超过70%，且团队核心均为信息安全资深专家，拥有丰富的实战经验和研究成果。',
     button: '了解更多',
     link: '/spt-about',
-    img: tab4,
+    img: tab4
   },
   {
     category: '强大的资本支持',
@@ -290,8 +290,8 @@ export const tabList = [
     content: '公司成立至今已完成两轮融资，共获得了知名投资机构数千万元的风险投资，估值过亿。',
     button: '了解更多',
     link: '/spt-about',
-    img: tab1,
-  },
+    img: tab1
+  }
 ]
 
 export const mituanApplication = [
@@ -309,7 +309,7 @@ export const mituanApplication = [
     icon: mituanCard3,
     title: '网安人才培养',
     content: '为网络安全人员提供自主学习、综合演练和技能竞赛支撑，便于受训人员快速有效掌握各类新型网络攻防工具'
-  },
+  }
 ]
 
 export const riskCoverList = [
@@ -348,7 +348,7 @@ export const riskCoverList = [
   {
     icon: risk9,
     title: '安全开发'
-  },
+  }
 ]
 
 export const mituanfunctionList = [
@@ -370,25 +370,25 @@ export const mituanfunctionList = [
   {
     icon: mituanFunction1,
     title: '蓝队/攻防模拟',
-    content: '支持多系统虚拟化、内网环境虚拟化以及安全产品虚拟化，供用户针对不同的攻击方式进行全方位系统防御实操（适用于企业攻防演练行动）'
-  },
+    content: '支持多系统虚拟化、内网环境虚拟化以及安全产品虚拟化，供用户针对不同的攻击方式进行多维度系统防御实操（适用于企业攻防演练行动）'
+  }
 ]
 
 export const mituanTabList = [
   {
     category: 'ExpDB靶机',
     content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
-    img: webPage1,
+    img: webPage1
   },
   {
     category: '独家防御类型靶机',
     content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
-    img: webPage2,
+    img: webPage2
   },
   {
     category: '靶场教程',
     content: '涵盖针对Windows、Linux等多系统的靶机，涵盖多种类型的CVE漏洞',
-    img: webPage3,
+    img: webPage3
   }
 ]
 
@@ -412,7 +412,7 @@ export const tideFunctionList = [
     icon: tideFunciton2,
     title: '社区共享前沿技术',
     content: '潮汐开放了上传工具以及编排的API接口，欢迎并鼓励优秀的开发者们贡献精妙的开源工具或自己创作/改编的工具以及编排，大家共建社区，共同成长!'
-  },
+  }
 ]
 
 export const redBlueSupportList = [
@@ -442,9 +442,9 @@ export const redBlueSupportList = [
     title: '演练组织方',
     list: [
       '协调红蓝双方队伍、制定对抗规则、评估红蓝队的成果，以组织网络对抗活动',
-      '协助客户发现企业安全问题，锻炼客户安全人员能力，并输出整改建议及演练报告',
+      '协助客户发现企业安全问题，锻炼客户安全人员能力，并输出整改建议及演练报告'
     ]
-  },
+  }
 ]
 
 export const companySafeList = [
@@ -456,13 +456,13 @@ export const companySafeList = [
   {
     icon: companyIcon3,
     title: '企业防御过度繁琐',
-    content: '终端/内网的复杂性，攻击的演进，使得企业目前的防御变得更复杂，以致安全团队难以从噪音中找出企业的安全最短板 。现在企业通常平均部署50到75种不同的安全产品 ，这使得技术人员很难把握公司的安全控制是否可以抵御攻击。'
+    content: '终端/内网的复杂性，攻击的演进，使得企业目前的防御变得更复杂，以致安全团队难以从噪音中找出企业的安全短板 。现在企业通常平均部署50到75种不同的安全产品 ，这使得技术人员很难把握公司的安全控制是否可以抵御攻击。'
   },
   {
     icon: companyIcon2,
     title: '防御滞后/响应机制不足',
     content: '企业依靠“尽力而为”的安全性，团队通常是在实际攻击发生后才第一次知道防御失败，但85%的入侵在数分钟内完成，60%的数据泄露发生在一天内，但大部分发现/治理时间超过数天/数月，问题由是否被黑转变为何时被黑与何时发现被黑。'
-  },
+  }
 ]
 
 export const nowInfoList = [
@@ -480,5 +480,5 @@ export const nowInfoList = [
     icon: asmNowIcon2,
     title: '企业攻击面管理存在缺口',
     content: '根据《2022年攻击面管理状态》报告，69%的企业在上半年受到未知或管理不善的互联网资产的危害，Gartner行业分析师将攻击面扩展列为2022年安全和风险管理首要优先事项。'
-  },
+  }
 ]

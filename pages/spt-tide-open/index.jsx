@@ -35,19 +35,19 @@ export default function Tide() {
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
           <div className='hidden sm:block'>
-            <Image src={MainImg} alt='' layout='responsive'></Image>
+            <Image src={MainImg} alt='' layout='responsive' />
           </div>
           <div className='block sm:hidden'>
-            <Image src={phoneMain} alt='' layout='responsive'></Image>
+            <Image src={phoneMain} alt='' layout='responsive' />
           </div>
           <div className='absolute top-1/4 text-center text-xl font-medium sm:font-normal sm:text-5xl sm:text-white w-full'>潮汐·开源社区</div>
           <div className='absolute top-1/2 w-full px-auto -mt-5 font-light'>
             <div className='text-center text-sm sm:text-xl sm:text-white w-4/5 mx-auto sm:leading-8 tracking-new-widest'>新一代主动安全基础设施，在这里，您可以得到强大的技术支持，通过便捷的方式轻松完成工具编排与开发，成为安全技术的贡献者！</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full justify-center gap-6 hidden sm:flex'>
-            <Button size='large' type='primary' shape="round" onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
+            <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
             <Link href='/spt-contact'>
-              <Button size='large' shape="round" ghost>在线咨询</Button>
+              <Button size='large' shape='round' ghost>在线咨询</Button>
             </Link>
           </div>
           <div className='absolute top-3/4 mt-8 mx-auto px-auto w-full justify-center gap-6 flex sm:hidden'>
@@ -59,14 +59,14 @@ export default function Tide() {
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10 sm:mt-20'>
           <section>
-            <Title title="平台功能介绍" subTitle='Platform function introduction'></Title>
+            <Title title='平台功能介绍' subTitle='Platform function introduction' />
             <AnimationWrapper>
               <div className='sm:flex justify-center gap-6 mb-6 sm:mb-20 w-full px-4 sm:px-0 -mt-8 sm:mt-0'>
                 {
                   tideFunctionList.map((item, key) => {
                     return (
                       <div key={key} className='sm:w-1/4'>
-                        <FunctionCard data={item}></FunctionCard>
+                        <FunctionCard data={item} />
                       </div>
                     )
                   })
@@ -75,22 +75,22 @@ export default function Tide() {
             </AnimationWrapper>
           </section>
           <section>
-            <Title title="对于使用者" subTitle='for users'></Title>
+            <Title title='对于使用者' subTitle='for users' />
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
             <AnimationWrapper>
-              <UserCard></UserCard>
+              <UserCard />
             </AnimationWrapper>
           </section>
           <section>
-            <Title title="对于开发者" subTitle='For developers'></Title>
+            <Title title='对于开发者' subTitle='For developers' />
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8'>直接调用平台的自动化安全能力，创造您自己的安全工具或编排</div>
             <AnimationWrapper>
-              <DeveloperCard></DeveloperCard>
+              <DeveloperCard />
             </AnimationWrapper>
           </section>
           <section className='mb-16'>
-            <Title title="社区指南以及常见问题" subTitle='Community Guidelines'></Title>
-            <Problem list={problemList} expandIndex={0}></Problem>
+            <Title title='社区指南以及常见问题' subTitle='Community Guidelines' />
+            <Problem list={problemList} expandIndex={0} />
           </section>
         </section>
       </div>

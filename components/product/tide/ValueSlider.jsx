@@ -1,5 +1,4 @@
 import React, { useState, useRef } from 'react'
-import Image from 'next/image'
 import { RightOutlined, LeftOutlined } from '@ant-design/icons'
 
 const infoList = [
@@ -12,7 +11,7 @@ const infoList = [
     content: '- 深度与MITRE ATT&CK框架融合，潮汐BAS平台提供了安全产业内先进的攻击模拟向量及攻击自动化技术，为客户评估安全建设有效性、优化安全建设策略以及提高安全防御能力提供了巨大支撑。'
   },
   {
-    title: '持续的安全建设评估与与升级',
+    title: '持续的安全建设评估升级',
     content: '- 基于高度标准化、细颗粒度的攻击模拟数据反馈，客户可以简单、快捷地进行安全建设优先级排序，并且针对已经部署的各类安全产品，进行全生命周期的动态测试和持续调优。'
   },
   {
@@ -28,7 +27,7 @@ const infoList = [
 const Item = ({ data }) => {
   return (
     <div
-      className="w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all"
+      className='w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all'
     >
       <div className='overflow-hidden h-full mb-6'>
         <h1 className='text-xl h-12'>{data.title}</h1>
@@ -85,11 +84,12 @@ export default function ValueSlider() {
     <div className='w-full relative py-7'>
       <div
         className='flex overflow-x-hidden overflow-y-visible gap-5'
-        ref={contentBox}>
+        ref={contentBox}
+      >
         {
           infoList.map((item, index) => {
             return (
-              <Item key={index} data={item} index={index} dark={index % 2 === 1}></Item>
+              <Item key={index} data={item} index={index} dark={index % 2 === 1} />
             )
           })
         }
@@ -97,17 +97,19 @@ export default function ValueSlider() {
 
       {isLeftPosition
         ?
-        <div
-          className='w-8 h-12 absolute -right-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
-          onClick={slideRight}>
-          <RightOutlined />
-        </div>
+          <div
+            className='w-8 h-12 absolute -right-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
+            onClick={slideRight}
+          >
+            <RightOutlined />
+          </div>
         :
-        <div
-          className='w-8 h-12 absolute -left-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
-          onClick={slideLeft}>
-          <LeftOutlined />
-        </div>}
+          <div
+            className='w-8 h-12 absolute -left-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
+            onClick={slideLeft}
+          >
+            <LeftOutlined />
+          </div>}
     </div>
   )
 }

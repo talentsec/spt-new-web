@@ -39,13 +39,13 @@ export default function AsmTop() {
               <React.Fragment key={key}>
                 <div className='py-6'>
                   <section className='flex justify-center mb-4'>
-                    <Image src={item.icon} alt=''></Image>
+                    <Image src={item.icon} alt='' />
                   </section>
                   <section className='text-center text-base mb-1'>{item.title}</section>
                   <section className='text-center text-gray-500'>{item.text}</section>
                 </div>
                 {
-                  key === infoList.length - 1 ? null : <div className='border-r h-10 flex-shrink-0'></div>
+                  key === infoList.length - 1 ? null : <div className='border-r h-10 flex-shrink-0' />
                 }
               </React.Fragment>
             )
