@@ -255,7 +255,7 @@ export default function Code() {
           </section>
         </section>
         <section className='py-8 my-16 sm:max-w-7xl sm:min-w-main-width sm:mx-auto' id='QA'>
-          <Title title='FAQ' subTitle='' />
+          <Title title='Q&A' subTitle='' />
           <Problem list={problemList} expandIndex={0} />
         </section>
       </div>

@@ -24,7 +24,7 @@ export default function NewsPannel({ data }) {
       <section className='flex gap-4'>
         {data.img ?
           <div className='flex-shrink-0'>
-            <Image src={data.img} alt='' />
+            <Image src={data.img} alt='' width={180} height={126} />
           </div> : null}
         <div className='py-4 pb-8 flex flex-col justify-between w-full'>
           <section className='bg-gray-100 p-3 rounded-lg text-gray-500 leading-6'>

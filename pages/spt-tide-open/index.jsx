@@ -45,13 +45,13 @@ export default function Tide() {
             <div className='text-center text-sm sm:text-xl sm:text-white w-4/5 mx-auto sm:leading-8 tracking-new-widest'>新一代主动安全基础设施，在这里，您可以得到强大的技术支持，通过便捷的方式轻松完成工具编排与开发，成为安全技术的贡献者！</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full justify-center gap-6 hidden sm:flex'>
-            <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
+            {/* <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button> */}
             <Link href='/spt-contact'>
               <Button size='large' shape='round' ghost>立即咨询</Button>
             </Link>
           </div>
           <div className='absolute top-3/4 mt-8 mx-auto px-auto w-full justify-center gap-6 flex sm:hidden'>
-            <Button size='large' type='primary' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
+            {/* <Button size='large' type='primary' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button> */}
             <Link href='/spt-contact'>
               <Button size='large'>立即咨询</Button>
             </Link>

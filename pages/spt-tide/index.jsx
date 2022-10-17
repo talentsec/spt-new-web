@@ -26,7 +26,7 @@ export default function Tide() {
             <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest font-light'>通过对特定安全过程进行全生命周期地、持续化地、自动化地覆盖式检测，潮汐BAS平台能帮助企业及政府机构有效地识别安全缺陷、发现安全建设不足并且进行数据驱动下的指向性优化建设。</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center gap-6'>
-            <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
+            {/* <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button> */}
             <Link href='/spt-contact'>
               <Button size='large' shape='round' ghost>立即咨询</Button>
             </Link>

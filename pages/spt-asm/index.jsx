@@ -29,7 +29,7 @@ export default function Tide() {
             <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest font-light'>潮汐ASM平台是一个网络空间资产攻击面管理系统，通过录入简单的种子信息，潮汐ASM平台以种子为核心，在智能引擎以及近百个全球化数据源的加持下，可为企业客户自动化地拓展出完整的网络空间资产。</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center gap-6'>
-            <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
+            {/* <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button> */}
             <Link href='spt-contact'>
               <Button size='large' shape='round' ghost>立即咨询</Button>
             </Link>

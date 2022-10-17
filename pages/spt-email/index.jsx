@@ -257,7 +257,7 @@ export default function Email() {
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
           <section>
             <Title title='行业痛点及需求' subTitle='industry analysis' />
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>
+            {/* <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div> */}
             <AnimationWrapper>
               <div className='sm:flex justify-center gap-6 mb-20 mx-4 sm:mx-0'>
                 {

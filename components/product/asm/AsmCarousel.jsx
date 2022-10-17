@@ -4,6 +4,7 @@ import Image from 'next/image';
 import img1 from '@/assets/img/product/asmSlide1.svg'
 import img2 from '@/assets/img/product/asmSlide2.svg'
 import img3 from '@/assets/img/product/asmSlide3.svg'
+import img4 from '@/assets/img/product/asmSlide4.svg'
 import leftImg from '@/assets/img/product/asmLeftButton.svg'
 import rightImg from '@/assets/img/product/asmRightButton.svg'
 
@@ -27,7 +28,7 @@ export default function AsmCarousel() {
       <div className='px-40'>
         <Carousel autoplay ref={carousel} dots={{ className: 'asm_carousel__dots' }}>
           <div>
-            <Image src={img1} alt='' />
+            <Image src={img4} alt='' />
           </div>
           <div>
             <Image src={img2} alt='' />

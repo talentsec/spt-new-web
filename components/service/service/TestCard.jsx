@@ -26,7 +26,7 @@ export default function TestCard() {
             灰盒测试
           </section>
           <section className='text-gray-400 leading-6 text-sm'>
-            在获得网络机构或系统账号等信息后进行渗透
+            介于黑白盒测试之间，在捕获机构资料或系统账号等信息后进行渗透
           </section>
         </div>
       </section>
@@ -37,7 +37,7 @@ export default function TestCard() {
             白盒测试
           </section>
           <section className='leading-6 text-sm'>
-            拿到授权，获得被测目标的资料、应用源代码、数据库结构，并且接入内网进行渗透
+            拿到授权，获得被测目标的资料、应用源代码、数据库结构等，接入内网进行渗透
           </section>
         </div>
       </section>

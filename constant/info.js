@@ -433,7 +433,7 @@ export const redBlueSupportList = [
     title: '蓝队攻击模拟',
     color: '#165DFF',
     list: [
-      '防守方利用配套的安全设备入WAF、IPS、TAC、ESPC、TAM等进行防守',
+      '防守方利用配套的安全设备如WAF、IPS、TAC、ESPC、TAM等进行防守',
       '依托防守人员丰富的实战及应急经验，发现并分析入侵行为，处置应急事件',
       '协助客户抵御网络入侵，传递网络防护经验，发现客户防护体系问题，并输出整改建议'
     ]

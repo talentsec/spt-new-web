@@ -18,7 +18,7 @@ const { Link } = Anchor;
 
 const list = [
   {
-    text: '应急处理办法',
+    text: '勒索病毒威胁',
     href: '#solution'
   },
   {
@@ -38,15 +38,15 @@ const list = [
 const solutionTabList = [
   {
     icon: rescueIcon1,
-    text: '每10家企业就有1家遭受病毒勒索'
+    text: '每11秒将发生一次勒索攻击'
   },
   {
     icon: rescueIcon2,
-    text: '每次勒索发生后，企业平均遭受的经济损失'
+    text: '带来的直接经济损失超过300亿美元'
   },
   {
     icon: rescueIcon3,
-    text: '每次勒索发生后，企业进行安全加固的费用'
+    text: '自2018年以来，勒索软件攻击数量猛增了350%'
   },
 ]
 
@@ -82,7 +82,7 @@ const progressList = [
     text: '确认合作后，视情况安排工程师上门检查中毒情况，同时会对勒索病毒解密前一些关系到解密的成功率和解密出来的数据留存程度的事项进行讲解'
   },
   {
-    title: '报价并开始清楚病毒及解密',
+    title: '报价并开始清除病毒及解密',
     text: '解密过程全程托管，螣龙安科工程师会通宵达旦、尽快解密数据，在完成解密后第一时间进行交付验证，尽量减少企业损失'
   },
   {
@@ -91,7 +91,7 @@ const progressList = [
   },
   {
     title: '进行安全培训',
-    text: '通过安全培训的方式，防止人为原因被钓鱼或者打开不明邮件感染病毒的情况出现，并给出防御方案以预防病毒再次入侵。'
+    text: '通过安全培训的方式，防止人为原因被钓鱼或者打开不明邮件感染病毒的情况出现，并给出防御方案以预防病毒再次入侵'
   }
 ]
 
@@ -149,7 +149,7 @@ export default function Rescue() {
 
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
           <section>
-            <Title title='应急处理办法' subTitle='Emergency response measures' />
+            <Title title='勒索病毒威胁' subTitle='Ransomware Threat' />
             <motion.div
               style={{
                 scale,
@@ -157,7 +157,7 @@ export default function Rescue() {
             >
               <div className='sm:flex justify-center gap-16 mb-20'>
                 <section>
-                  <h1 className='text-3xl mt-8'>我们面对的勒索病毒的威胁</h1>
+                  <h1 className='text-3xl mt-8'>勒索病毒泛滥</h1>
                   <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全严重威胁之一</section>
                   <div className='flex gap-6'>
                     {
@@ -173,6 +173,7 @@ export default function Rescue() {
                       })
                     }
                   </div>
+                  <section className='text-xs mt-10 text-gray-400 text-right italic'>-- 根据《2021勒索攻击白皮书》</section>
                   <section className='mt-6'>
                     {/* <Button type='primary'>服务咨询</Button> */}
                   </section>

@@ -44,7 +44,7 @@ const valueList = [
   {
     icon: valueIcon,
     title: '高层视角评估安全体系',
-    text: '查看系统内部加密情况，不做过多操作，保持系统原状（非专业人员不建议自行使用各类解密工具，以防破坏原始文件数据）'
+    text: '根据对抗结果，以CSO、CIO、CEO视角提出企业安全评估观点及解决方案'
   },
   {
     icon: valueIcon,
@@ -67,17 +67,17 @@ const redPartList = [
   {
     button: '内网漫游',
     title: '内网漫游(IRT)',
-    text: '成功进入组织内部后，进行内网整体漫游，以获取多、高权限、敏感数据或某个目标。'
+    text: '成功进入组织内部后，进行内网整体漫游，以获取高权限、敏感数据或某个目标'
   },
   {
     button: '物理攻击尝试',
     title: '物理攻击尝试(PAT)',
-    text: '使用物理手段，尝试进行攻击获取敏感数据。'
+    text: '使用物理手段，尝试进行攻击获取敏感数据'
   },
   {
     button: '社交攻击尝试',
     title: '社交攻击尝试(SAT)',
-    text: '使用社交手段，例如电话、微信、企业QQ、人肉搜索、社工库等方式进行社会工程学攻击尝试，同时获取敏感信息或数据。'
+    text: '使用社交手段，例如电话、微信、企业QQ、人肉搜索、社工库等方式进行社会工程学攻击尝试，同时获取敏感信息或数据'
   },
 ]
 
@@ -85,7 +85,7 @@ const bluePartList = [
   {
     button: '仿真环境搭建',
     title: '仿真环境搭建(CSE)',
-    text: '可控无限渗透测试(IPT)：对组织进行技术渗透测试，以攻击进入组织内部、获取敏感数据或某个制定目标为目的'
+    text: '仿制实际业务环境或按照要求定制仿真业务环境或系统'
   },
   {
     button: '应急策略制定',
@@ -166,7 +166,7 @@ export default function Rescue() {
                 <Image src={introImg} alt='' />
               </section>
               <section className='w-2/5'>
-                <h1 className='text-2xl font-normal'>详细介绍</h1>
+                <h1 className='text-2xl font-normal' />
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>

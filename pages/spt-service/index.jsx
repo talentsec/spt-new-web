@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
+import { Button } from 'antd'
 import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
 import MainImg from '@/assets/img/service/serviceMain.png'
 import icon1 from '@/assets/img/about/contectIcon1.svg'
@@ -352,7 +352,7 @@ export default function Rescue() {
                       黑盒+灰盒结合
                     </section>
                     <section className='text-xs text-gray-500 leading-5 text-left'>
-                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，多维度检测客户的系统安全性强度。定位安全问题之后，协助客户直观体会系统的脆弱性，并给出针对性安全解决方案。
+                      通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，多维度检测客户的系统安全性强度。
                     </section>
                   </div>
                   <div className='absolute bottom-0'>
@@ -379,7 +379,7 @@ export default function Rescue() {
                       安全漏洞发现
                     </section>
                     <section className='text-xs text-gray-500 leading-5'>
-                      找出应用中存在的安全漏洞。对传统安全弱点的串联并形成路径，通过路径式的利用而达到模拟入侵的效果。发掘应用中影响业务正常运行、导致敏感信息泄露、造成现金损失的漏洞。
+                      找出应用中存在的安全漏洞。对传统安全弱点进行串联并形成路径，通过路径式的利用而达到模拟入侵的效果，从而发掘应用中影响业务正常运行、导致敏感信息泄露、造成经济损失的漏洞。
                     </section>
                   </div>
                   <div className='absolute bottom-0'>
@@ -390,7 +390,7 @@ export default function Rescue() {
                       评估复测
                     </section>
                     <section className='text-xs text-gray-500 leading-5'>
-                      漏洞修复后，对修复方案及结果进行有效性评估，分析修复方案的有损打击和误打击风险，复验漏洞修复结果。得到有效性评估结果后，汇总并标注漏洞修复结果，及时更新并发送回归测试报告。
+                      漏洞修复后，对修复方案及结果进行有效性评估，分析修复方案的有效打击和误打击风险，复验漏洞修复结果。得到有效性评估结果后，汇总并标注漏洞修复结果，及时更新并发送回归测试报告。
                     </section>
                   </div>
                 </section>

@@ -92,8 +92,8 @@ const newsList = [
     category: '创始人动态',
     tag: '创始人动态',
     img: img5,
-    title: '创始人王昊天主讲Web网络安全攻防实践视频学习课程全集',
-    link: 'https://www.jczhijia.com/CourseChaptersList/6212.html',
+    title: '螣龙创始人王昊天亲自分享计算机教程-网络安全攻防实战',
+    link: 'https://time.geekbang.org/course/intro/100055001',
     summary: '本Web网络安全攻防实践视频学习课程全集，由极客时间王昊天老师讲课，共64讲课程，在这门课程中，我们设计了三个主要板块，分别是Web前端基础技术、Web安全常见漏洞攻防演练以及互联网公司安全运营。'
   },
   {
@@ -101,7 +101,7 @@ const newsList = [
     tag: '创始人动态',
     img: img6,
     title: '螣龙创始人王昊天亲自分享计算机教程-Web 漏洞挖掘实战',
-    link: 'https://shikey.com/2022/02/18/web-vulnerability-mining-practice.html',
+    link: 'https://time.geekbang.org/column/intro/100101501',
     summary: '这是一门安全课程，也是一门优雅编码课程...'
   },
   {
@@ -147,7 +147,7 @@ const newsList = [
     category: '商业合作',
     tag: '商业合作',
     title: '「螣龙安科」携手51CTO，发布最新网络安全实战课程',
-    link: 'https://blog.csdn.net/katekatezzzzz/article/details/108654313?spm=1001.2014.3001.5502',
+    link: 'https://zhuanlan.zhihu.com/p/251048903',
     summary: '一年一度的双十一狂欢节即将来临了，相信各大电商平台也正摩拳擦掌跃跃欲试中。回顾2019年，阿里巴巴双十一狂欢节的单日交易额就达到了2684亿人民币，创造了电商交易历史上新的记录...'
   },
   {
@@ -161,8 +161,8 @@ const newsList = [
     category: '螣龙活动',
     tag: '螣龙活动',
     img: img12,
-    title: '强强联和安全大赛：「螣龙安科」2022潮汐安全应用开发大赛',
-    link: 'https://blog.csdn.net/katekatezzzzz/article/details/125747463?spm=1001.2014.3001.5502',
+    title: '强强联合：「螣龙安科」2022潮汐安全应用开发大赛',
+    link: 'https://www.163.com/dy/article/HC0NLALN0539HCHD.html',
     summary: '7月2日，经过一周的大众投票， 2022首届潮汐安全应用开发大赛决出了总冠军以及前三甲，比赛圆满落下帷幕...'
   },
   {
@@ -176,7 +176,7 @@ const newsList = [
     category: '螣龙活动',
     tag: '螣龙活动',
     img: img13,
-    title: '「螣龙安科」潮汐安全应用开发大赛路演版公开！',
+    title: '「螣龙安科」潮汐安全应用开发大赛路演项目公开！',
     link: 'https://www.bilibili.com/video/BV1ar4y1u7zF/?spm_id_from=333.337.search-card.all.click',
     summary: '潮汐安全应用开发大赛demo day路演录播完整视频～快来欣赏上海交通大学网络空间安全学院老师的犀利点评与参赛者精彩的项目演示吧！...'
   },
@@ -184,8 +184,8 @@ const newsList = [
     category: '行业研究',
     tag: '行业研究',
     img: img14,
-    title: '螣龙-安全容器漏洞评估',
-    link: 'https://blog.csdn.net/katekatezzzzz/article/details/108653582?spm=1001.2014.3001.5502',
+    title: '容器漏洞评估',
+    link: 'https://zhuanlan.zhihu.com/p/251030524',
     summary: '现阶段，我们正在从虚拟化过渡到容器化，一些我们所熟悉的容器化技术就包括了诸如docker或quay.io等。一般来说，我们可以通过配置程序依赖环境来为特定应用程序建立镜像，通常当开发人员使用容器时，它不仅把程序进行了打包，同时也可以将程序封装成操作系统一部分。可糟糕的是，我们不知道容器的连接库是否已打补丁或是否易受到攻击...'
   },
   {
