@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
+import { Button, Tabs, Anchor } from 'antd'
 import introImg from '@/assets/img/service/redBlueIntro.svg'
 import valueIcon from '@/assets/img/service/redBlueValueIcon.svg'
 import MainImg from '@/assets/img/service/redBlueMain.png'
@@ -19,19 +19,19 @@ import AnimationWrapper from '@/components/common/AnimationWrapper'
 const list = [
   {
     text: '服务介绍',
-    herf: '#intro'
+    href: '#intro'
   },
   {
     text: '服务支持',
-    herf: '#support'
+    href: '#support'
   },
   {
     text: '服务内容',
-    herf: '#content'
+    href: '#content'
   },
   {
     text: '服务价值',
-    herf: '#value'
+    href: '#value'
   }
 ]
 
@@ -135,8 +135,8 @@ export default function Rescue() {
             </div>
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:mx-auto mt-14'>
-          <Tabs
+        <section className='sm:w-full sm:mx-auto'>
+          {/* <Tabs
             centered
             defaultActiveKey='0'
             tabBarGutter={80}
@@ -147,7 +147,16 @@ export default function Rescue() {
                 key: i,
               };
             })}
-          />
+          /> */}
+          <Anchor offsetTop={0} targetOffset={120}>
+            <div className='mt-14 flex bg-white justify-center text-base gap-12 pt-2'>
+              {
+              list.map((item, key) => {
+                return <Anchor.Link key={key} href={item.href} title={item.text} />
+              })
+            }
+            </div>
+          </Anchor>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
           <section>

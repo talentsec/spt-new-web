@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
+import { Button, Tabs, Anchor } from 'antd'
 import valueIcon from '@/assets/img/service/riskValueIcon.svg'
 import MainImg from '@/assets/img/service/riskMain.png'
 import Link from 'next/link'
@@ -21,19 +21,19 @@ import AnimationWrapper from '@/components/common/AnimationWrapper'
 const list = [
   {
     text: '服务内容',
-    herf: '#content'
+    href: '#content'
   },
   {
     text: '服务价值',
-    herf: '#value'
+    href: '#value'
   },
   {
     text: '服务流程',
-    herf: '#process'
+    href: '#process'
   },
   {
     text: '应用场景',
-    herf: '#application'
+    href: '#application'
   }
 ]
 
@@ -97,7 +97,7 @@ const progressList = [
   },
   {
     title: '形成报告',
-    text: '划分风险等级，确定控制措施并形成风险'
+    text: '划分风险等级，确定控制措施并形成风险报告'
   }
 ]
 
@@ -149,8 +149,8 @@ export default function Code() {
             </div>
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-14'>
-          <Tabs
+        <section className='sm:w-full sm:min-w-main-width sm:mx-auto'>
+          {/* <Tabs
             centered
             defaultActiveKey='0'
             tabBarGutter={80}
@@ -161,7 +161,16 @@ export default function Code() {
                 key: i,
               };
             })}
-          />
+          /> */}
+          <Anchor offsetTop={0} targetOffset={120}>
+            <div className='mt-14 flex bg-white justify-center text-base gap-12 pt-2'>
+              {
+                list.map((item, key) => {
+                  return <Anchor.Link key={key} href={item.href} title={item.text} />
+                })
+              }
+            </div>
+          </Anchor>
         </section>
         <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='content'>
           <section>

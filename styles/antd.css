@@ -76,3 +76,13 @@
 .asm_carousel__dots>.slick-active {
   width: 16px !important;
 }
+
+.ant-anchor-ink {
+  display: none;
+}
+.ant-anchor-link-title {
+  padding-bottom: 8px !important;
+}
+.ant-anchor-link-title-active {
+  border-bottom: 1px solid #1890ff;
+}

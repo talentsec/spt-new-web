@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
+import { Button, Tabs, Anchor } from 'antd'
 import solution from '@/assets/img/service/solution.svg'
 import rescueIcon1 from '@/assets/img/service/rescueIcon1.svg'
 import rescueIcon2 from '@/assets/img/service/rescueIcon2.svg'
@@ -14,23 +14,24 @@ import ServiceCard from '@/components/service/rescue/ServiceCard'
 import Progress from '@/components/service/rescue/Progress'
 import Footer from '@/components/common/Footer'
 import { motion, useScroll, useTransform } from "framer-motion";
+const { Link } = Anchor;
 
 const list = [
   {
     text: '应急处理办法',
-    herf: '#solution'
+    href: '#solution'
   },
   {
     text: '企业应急处理办法',
-    herf: '#company'
+    href: '#company'
   },
   {
     text: '服务内容',
-    herf: '#content'
+    href: '#content'
   },
   {
     text: '服务流程',
-    herf: '#progress'
+    href: '#progress'
   }
 ]
 
@@ -98,14 +99,14 @@ export default function Rescue() {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0.04, 0.16], [0.8, 1]);
 
-  const handleTabChange = (key) => {
-    const target = list[Number(key)]
-    const element = document.querySelector(target.herf)
-    document.documentElement.scrollTo({
-      top: element.offsetTop - 40,
-      behavior: 'smooth'
-    })
-  }
+  // const handleTabChange = (key) => {
+  //   const target = list[Number(key)]
+  //   const element = document.querySelector(target.herf)
+  //   document.documentElement.scrollTo({
+  //     top: element.offsetTop - 40,
+  //     behavior: 'smooth'
+  //   })
+  // }
   return (
     <Layout>
       <div className='sm:min-w-max'>
@@ -121,11 +122,12 @@ export default function Rescue() {
             </div>
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:mx-auto mt-14'>
-          <Tabs
+        <section className='sm:w-full sm:mx-auto bg-white'>
+          {/* <Tabs
             centered
             defaultActiveKey='0'
             tabBarGutter={80}
+
             onChange={handleTabChange}
             items={list.map((_, i) => {
               return {
@@ -133,8 +135,18 @@ export default function Rescue() {
                 key: i,
               };
             })}
-          />
+          /> */}
+          <Anchor offsetTop={0} targetOffset={120}>
+            <div className='mt-14 flex bg-white justify-center text-base gap-12 pt-2'>
+              {
+                list.map((item, key) => {
+                  return <Link key={key} href={item.href} title={item.text} />
+                })
+              }
+            </div>
+          </Anchor>
         </section>
+
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
           <section>
             <Title title='应急处理办法' subTitle='Emergency response measures' />
@@ -145,7 +157,7 @@ export default function Rescue() {
             >
               <div className='sm:flex justify-center gap-16 mb-20'>
                 <section>
-                  <h1 className='text-3xl'>我们面对的勒索病毒的威胁</h1>
+                  <h1 className='text-3xl mt-8'>我们面对的勒索病毒的威胁</h1>
                   <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全严重威胁之一</section>
                   <div className='flex gap-6'>
                     {
@@ -162,7 +174,7 @@ export default function Rescue() {
                     }
                   </div>
                   <section className='mt-6'>
-                    <Button type='primary'>服务咨询</Button>
+                    {/* <Button type='primary'>服务咨询</Button> */}
                   </section>
                 </section>
                 <section>

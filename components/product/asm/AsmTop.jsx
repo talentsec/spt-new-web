@@ -9,7 +9,7 @@ const infoList = [
   {
     icon: icon1,
     title: '探测资产',
-    text: '针对海量资产的极速资产探测发现'
+    text: '针对海量资产的快速资产探测发现'
   },
   {
     icon: icon2,

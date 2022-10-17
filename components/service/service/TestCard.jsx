@@ -34,10 +34,10 @@ export default function TestCard() {
         <div>
           <Image src={icon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
-            灰盒测试
+            白盒测试
           </section>
           <section className='leading-6 text-sm'>
-            在获得网络机构或系统账号等信息后进行渗透
+            拿到授权，获得被测目标的资料、应用源代码、数据库结构，并且接入内网进行渗透
           </section>
         </div>
       </section>

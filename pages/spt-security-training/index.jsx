@@ -14,26 +14,7 @@ import ApplicationCard from '@/components/product/mituan/ApplicationCard'
 import HoverCard from '@/components/common/HoverCard'
 import AnimationWrapper from '@/components/common/AnimationWrapper'
 import phoneMain from '@/assets/img/home/phoneMain.png'
-
-
-const list = [
-  {
-    text: '应急处理办法',
-    herf: '#solution'
-  },
-  {
-    text: '企业应急处理办法',
-    herf: '#company'
-  },
-  {
-    text: '服务内容',
-    herf: '#content'
-  },
-  {
-    text: '服务流程',
-    herf: '#progress'
-  }
-]
+import Link from 'next/link'
 
 const classList = [
   {
@@ -134,14 +115,7 @@ const shortcomingList = [
 ]
 
 export default function Rescue() {
-  const handleTabChange = (key) => {
-    const target = list[Number(key)]
-    const element = document.querySelector(target.herf)
-    document.documentElement.scrollTo({
-      top: element.offsetTop - 40,
-      behavior: 'smooth'
-    })
-  }
+
   return (
     <Layout>
       <div className='sm:min-w-max'>
@@ -156,13 +130,14 @@ export default function Rescue() {
             </div>
             <div className='px-auto gap-6 mt-10 flex justify-center sm:justify-start'>
               <span className='inline-block hover:scale-105'>
-                <Button
-                  size='large'
-                  type='primary'
-                  shape='round'
-                  onClick={() => location.href = 'https://mituan.zone/'}
-                >免费试用谜团靶场
-                </Button>
+                <Link href='/spt-contact'>
+                  <Button
+                    size='large'
+                    type='primary'
+                    shape='round'
+                  >立即咨询
+                  </Button>
+                </Link>
               </span>
             </div>
           </div>
@@ -214,7 +189,7 @@ export default function Rescue() {
             <Title title='培训优势' subTitle='Training advantage' />
             <div className='sm:flex justify-center gap-16 mb-10 sm:mb-20 -mt-8 sm:mt-0 p-6 sm:p-0 shadow-card sm:shadow-none rounded-lg sm:rounded-none'>
               <section className='sm:w-2/5'>
-                <h3 className='text-base sm:text-3xl'>我们的优势与亮点</h3>
+                <h3 className='text-base sm:text-3xl' />
                 <h4 className='text-sm sm:text-xl font-normal'>
                   <span className='inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3' />
                   专业的师资力量

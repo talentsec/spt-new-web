@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import Title from '@/components/common/Title'
-import { Button, Tabs } from 'antd'
+import { Button, Tabs, Anchor } from 'antd'
 import ApplicationImg from '@/assets/img/service/codeApplication.svg'
 import ApplicationImg2 from '@/assets/img/service/codeApplication2.svg'
 import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
@@ -16,19 +16,19 @@ import AnimationWrapper from '@/components/common/AnimationWrapper'
 const list = [
   {
     text: '应用场景',
-    herf: '#appliction'
+    href: '#application'
   },
   {
     text: '服务价值',
-    herf: '#value'
+    href: '#value'
   },
   {
     text: '主要审计内容',
-    herf: '#content'
+    href: '#content'
   },
   {
     text: 'Q&A',
-    herf: '#QA'
+    href: '#QA'
   }
 ]
 
@@ -52,7 +52,7 @@ const problemList = [
 const contentList = [
   {
     title: '系统所用开源框架',
-    text: '包含java反序列化漏洞，导致远程代码执行；Spring、Struts2的相关安全'
+    text: '包含java反序列化漏洞，导致远程代码执行；Spring、Struts2的相关安全问题'
   },
   {
     title: '应用代码关注要素',
@@ -64,11 +64,11 @@ const contentList = [
   },
   {
     title: '源代码设计',
-    text: '不安全的域、方法、类修饰符未使用的外部引用、代码'
+    text: '不安全的域、方法、类修饰符，未使用的外部引用、代码'
   },
   {
     title: '错误处理不当',
-    text: '程序异常处理、返回值用法、空指针、日志记录'
+    text: '程序异常处理，返回值用法，空指针，日志记录'
   },
   {
     title: '直接对象引用',
@@ -84,7 +84,7 @@ const contentList = [
   },
   {
     title: '规范性权限配置',
-    text: '数据库配置规范，Web服务的权限配置SQL语句编写规范'
+    text: '数据库配置规范，Web服务的权限配置，SQL语句编写规范'
   },
 ]
 
@@ -117,8 +117,8 @@ export default function Code() {
             </div>
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-14'>
-          <Tabs
+        <section className='sm:w-full sm:min-w-main-width sm:mx-auto mt-0'>
+          {/* <Tabs
             centered
             defaultActiveKey='0'
             tabBarGutter={80}
@@ -129,7 +129,16 @@ export default function Code() {
                 key: i,
               };
             })}
-          />
+          /> */}
+          <Anchor offsetTop={0} targetOffset={120}>
+            <div className='mt-14 flex bg-white justify-center text-base gap-12 pt-2'>
+              {
+              list.map((item, key) => {
+                return <Anchor.Link key={key} href={item.href} title={item.text} />
+              })
+            }
+            </div>
+          </Anchor>
         </section>
         <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='application'>
           <section>
@@ -143,9 +152,9 @@ export default function Code() {
                     新上线系统对互联网环境适应性较差，因此在新系统上线前，需要对业务系统进行代码检测；代码审计可以充分挖掘代码中存在的安全缺陷，避免系统刚上线就遇到重大攻击
                   </span>
                 </section>
-                <Link href='/spt-contact'>
-                  <Button type='primary'>立即体验</Button>
-                </Link>
+                {/* <Link href='/spt-contact'>
+                  <Button type='primary'>立即咨询</Button>
+                </Link> */}
               </section>
               <section>
                 <Image src={ApplicationImg} alt='' />
@@ -164,9 +173,9 @@ export default function Code() {
                     通过代码安全审计，能够先于黑客发现系统的安全隐患，提前做好安全防御措施，保证系统各个环节在未知环境下都能经得起黑客挑战，保证业务系统稳定运行
                   </span>
                 </section>
-                <Link href='/spt-contact'>
-                  <Button type='primary'>立即体验</Button>
-                </Link>
+                {/* <Link href='/spt-contact'>
+                  <Button type='primary'>立即咨询</Button>
+                </Link> */}
               </section>
             </div>
             <section className='w-full border-b mb-20' />

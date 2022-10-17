@@ -8,7 +8,7 @@ import icon3 from '@/assets/img/product/user3.svg'
 const list = [
   {
     title: '平台组件&AI引擎',
-    text: '为在线信息系统提供有效且便捷的持久化安全测试环境，有效解决生产系统无法实时针对新的安全事件进行测试的问题'
+    text: '组件包含消息中间件/数据存储/镜像构建/主动安全AI模组，支持个人快速构建个性化安全AI应用，将个人安全能力进行标准化输出'
   },
   {
     title: '工具开源市场',
@@ -58,10 +58,10 @@ export default function UserCard({ data }) {
               潮汐还提供了由官方/高安全能力企业/优秀个人搭建的自动化主动安全订阅式服务/应用，支持您完成全生命周期的安全弱点主动发现
             </section>
             <section className='mt-4 flex items-center cursor-pointer hover:text-blue-200' onClick={() => location.href = '/'}>
-              <span>了解详情</span>
+              {/* <span>了解详情</span>
               <span className='scale-75 pb-2'>
                 <RightOutlined /><RightOutlined />
-              </span>
+              </span> */}
             </section>
           </div>
         </section>

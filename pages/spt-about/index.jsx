@@ -146,7 +146,7 @@ export default function Contect() {
                 <Image src={logo} alt='' />
               </section>
               <h1 className='text-center font-medium sm:font-bold sm:text-5xl text-lg  my-10'>让世界安全互联</h1>
-              <section className='leading-6 sm:leading-8 text-sm sm:text-xl text-center text-gray-500 w-4/5 mx-auto'>打造新一代安全生态，为客户安全保驾护航<span className='mx-2' />打造一流的网络安全产品，赢得客户的持续信任和认可</section>
+              <section className='leading-6 sm:leading-8 text-sm sm:text-xl text-center text-gray-500 w-4/5 mx-auto'>打造新一代安全生态，为客户安全保驾护航<span className='mx-2' /><br />打造优质的网络安全产品，赢得客户的持续信任和认可</section>
             </section>
           </motion.div>
         </section>
@@ -160,7 +160,9 @@ export default function Contect() {
                 </article>
                 <article className='leading-6 text-gray-700'>
                   螣龙安科始终以客户为中心，通过专业的安全产品与服务为客户打造安全、稳固、可信的网络空间生态环境，建立可靠的网络安全保护。
-                  我们的使命是通过在网络攻击前线获得的创新技术和专业知识，不懈地保护我们的客户；我们希望将顶尖人员和高新技术聚集在一起，成为杰出的安全公司。
+                </article>
+                <article className='leading-6 text-gray-700 mt-5'>
+                  我们的使命是通过在网络攻防前线获得的创新技术和专业知识，不懈地保护我们的客户；我们希望将顶尖人才和高新技术聚集在一起，成为杰出的安全公司。
                 </article>
               </section>
               <section className='flex-shrink-0 w-1/2'>
@@ -179,7 +181,7 @@ export default function Contect() {
               <h1 className='text-blue-600 text-3xl'>王昊天</h1>
               <h1 className='text-xl'>开源文化爱好者/白帽子/螣龙安科创始人</h1>
               <article className='text-gray-400 leading-7'>
-                上海交通大学信息安全学士，信息安全领域资深专家，上海信息安全行业协会理事。在网络安全领域工作超过10年，为两项数据安全技术的专利发明人，曾承担多个超大型网络安全事件项目并担任安全团队负责人，在信息安全领域拥有丰富的实战经验和研究成果。
+                上海交通大学信息安全学士，信息安全领域资深专家，上海信息安全行业协会理事。在网络安全领域工作超过10年，曾承担多个超大型网络安全事件项目并担任安全团队负责人，在信息安全领域拥有丰富的实战经验和研究成果。
               </article>
             </section>
           </section>
@@ -235,11 +237,10 @@ export default function Contect() {
               </div>
             </div>
           </section>
-          <section>
+          {/* <section>
             <Title title='荣誉资质' subTitle='honorary award' />
             <div className='sm:flex justify-center mb-20 gap-20 items-center px-40'>
               <section className='w-1/2 h-80 rounded-md overflow-hidden relative' id='container'>
-                {/* <Image src={timeLine2} alt=''></Image> */}
                 {
                   awardList.map((item, key) => {
                     return (
@@ -257,7 +258,7 @@ export default function Contect() {
                 <Image src={award} alt='' />
               </section>
             </div>
-          </section>
+          </section> */}
         </section>
         <Footer />
       </div>

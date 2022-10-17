@@ -16,9 +16,11 @@ export default function TeamCard({ data, index }) {
       }}
     >
       <div className='bg-slate-50 sm:bg-white sm:w-64 flex-grow-0 flex-shrink-0 rounded-lg hover:shadow-card mb-5 cursor-pointer'>
-        <div className='p-9'>
+        <div className='p-8'>
           <div className='flex justify-center mb-2'>
-            <Image src={data.icon} alt='' />
+            <span className='rounded-full overflow-hidden' style={{height: '90px', display: 'inline-block'}}>
+              <Image src={data.icon} alt='' width={90} height={90} />
+            </span>
           </div>
           {data.img}
           <div className='mx-auto w-full text-center leading-7'>{data.title}</div>

@@ -40,9 +40,9 @@ export default function Tab({ list }) {
           }
         </section>
       </section>
-      <Link href='/spt-contact'>
+      {/* <Link href='/spt-contact'>
         <Button type='primary'>立即咨询</Button>
-      </Link>
+      </Link> */}
     </div>
   )
 }

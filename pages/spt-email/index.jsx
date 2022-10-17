@@ -208,7 +208,7 @@ export default function Email() {
                 企业需要主动检测邮箱安全，预先处理风险
               </div>
             </div>
-            <div className='absolute top-52 sm:top-1/2 px-auto pt-2 z-10 flex justify-center w-full'>
+            <div className='absolute top-52 sm:top-1/2 sm:px-auto pt-2 z-10 flex justify-center sm:justify-start w-full'>
               <Link href='/spt-contact'>
                 <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>

@@ -28,7 +28,7 @@ const infoList = [
   {
     icon: icon3,
     title: '渗透测试技术',
-    content: '主要分为四个模块培训，内容包含KaliLinux、Metasploi的使用方法以及EXP开发（适用于网络安全研究型人员）'
+    content: '主要分为四个模块，内容包含Kali Linux、SQL注入、Metasploit的使用方法以及EXP开发（适用于网络安全研究型人员）'
   },
 ]
 

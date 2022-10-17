@@ -24,7 +24,7 @@ const problemList = [
   },
   {
     title: '我的数据安全吗？它们被保存在哪里？',
-    text: '安全。潮汐平台将底层的存储引擎设计为 NoSQL，即非关系型数据库，技术选型是 MongoDB。潮汐平台基于 MongoDB 的命名空间 设计了一个针对性的存储协议，基于这个协议，每个任务的数据存储相互之间都是独立的，并且可以根据协议被停止。'
+    text: '安全。潮汐平台将底层的存储引擎设计为 NoSQL，即非关系型数据库，技术选型是 MongoDB。潮汐平台基于 MongoDB 的命名空间设计了一个针对性的存储协议，基于这个协议，每个任务的数据存储相互之间都是独立的，并且可以根据协议被停止。'
   },
 ]
 
@@ -47,13 +47,13 @@ export default function Tide() {
           <div className='absolute top-3/4 mx-auto px-auto w-full justify-center gap-6 hidden sm:flex'>
             <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
             <Link href='/spt-contact'>
-              <Button size='large' shape='round' ghost>在线咨询</Button>
+              <Button size='large' shape='round' ghost>立即咨询</Button>
             </Link>
           </div>
           <div className='absolute top-3/4 mt-8 mx-auto px-auto w-full justify-center gap-6 flex sm:hidden'>
             <Button size='large' type='primary' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
             <Link href='/spt-contact'>
-              <Button size='large'>在线咨询</Button>
+              <Button size='large'>立即咨询</Button>
             </Link>
           </div>
         </section>

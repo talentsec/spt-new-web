@@ -268,7 +268,7 @@ export default function Rescue() {
               </div>
             </div>
             <div className='absolute top-3/4 gap-6'>
-              <Button size='large' type='primary' shape='round'>立即体验</Button>
+              <Button size='large' type='primary' shape='round'>立即咨询</Button>
             </div>
           </div>
         </section>
@@ -425,7 +425,7 @@ export default function Rescue() {
         </section>
         <section className='py-8 sm:min-w-max' id='progress'>
           <Title title='WEB测试检测项' subTitle='Penetrant test items' />
-          <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个纬度：</div>
+          <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个维度：</div>
           <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
             {
               webList.map((item, index) => {

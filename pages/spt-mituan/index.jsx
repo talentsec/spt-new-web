@@ -80,8 +80,8 @@ export default function index() {
             <Title title='亮点优势' subTitle='Highlights' />
             <div className='mb-20 sm:flex justify-between px-4 py-6 shadow-card sm:shadow-none'>
               <section className='sm:w-1/2'>
-                <h3 className='text-base sm:text-3xl'>我们的优势与亮点</h3>
-                <h4 className='text-sm sm:text-xl font-normal'>
+                {/* <h3 className='text-base sm:text-3xl'>我们的优势与亮点</h3> */}
+                <h4 className='text-sm sm:text-xl font-normal mt-8'>
                   <span className='text-xs sm:text-base inline-block w-1.5 h-1.5 rounded bg-blue-500 mr-3' />
                   超逼真模拟技术
                 </h4>

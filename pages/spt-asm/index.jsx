@@ -31,7 +31,7 @@ export default function Tide() {
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center gap-6'>
             <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button>
             <Link href='spt-contact'>
-              <Button size='large' shape='round' ghost>在线咨询</Button>
+              <Button size='large' shape='round' ghost>立即咨询</Button>
             </Link>
           </div>
         </section>
