@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from 'next/Image'
+import Image from 'next/image'
 import line1 from '@/assets/img/product/line1.svg'
 import line2 from '@/assets/img/product/line2.svg'
 import icon1 from '@/assets/img/product/training-1.svg'
