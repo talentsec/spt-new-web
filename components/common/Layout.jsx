@@ -121,6 +121,11 @@ export default function Layout ({ children }) {
                 )
               })
             }
+            <Link href='/spt-news'>
+              <span className='mr-10 cursor-pointer hover:text-blue-600 text-gray-900'>
+                资讯
+              </span>
+            </Link>
           </div>
           <div className='sm:hidden pt-1 pl-4' onClick={() => setMenuDisplay(!menuDisplay)}>
             <MenuOutlined />
