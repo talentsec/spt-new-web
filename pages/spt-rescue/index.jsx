@@ -13,6 +13,7 @@ import arrow from '@/assets/img/service/arrow.svg'
 import ServiceCard from '@/components/service/rescue/ServiceCard'
 import Progress from '@/components/service/rescue/Progress'
 import Footer from '@/components/common/Footer'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 import { motion, useScroll, useTransform } from "framer-motion";
 const { Link } = Anchor;
 
@@ -97,7 +98,8 @@ const progressList = [
 
 export default function Rescue() {
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0.04, 0.16], [0.8, 1]);
+  const isWeb = global.screen?.width > 640
+  const scale = useTransform(scrollYProgress, [0.04, 0.16], [isWeb ? 0.8 : 1, 1]);
 
   // const handleTabChange = (key) => {
   //   const target = list[Number(key)]
@@ -111,18 +113,23 @@ export default function Rescue() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive' />
+          <div className='hidden sm:block'>
+            <Image src={MainImg} alt='' layout='responsive' />
+          </div>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive' />
+          </div>
           <div className='sm:max-w-7xl mx-auto'>
-            <div className='absolute top-1/4 text-5xl text-white'>勒索病毒解密救援</div>
-            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white w-full leading-8 tracking-new-widest'>处理勒索病毒，破解加密文件，协助客户摆脱黑客控制</div>
+            <div className='w-full absolute top-1/4 text-xl font-medium sm:font-normal sm:text-5xl sm:text-white text-center sm:text-left'>勒索病毒解密救援</div>
+            <div className='w-full absolute top-1/2 sm:w-3/5 px-8 sm:px-0 -mt-5 font-light'>
+              <div className='text-sm sm:text-xl sm:text-white w-full sm:leading-8 tracking-new-widest text-center sm:text-left'>处理勒索病毒，破解加密文件，协助客户摆脱黑客控制</div>
             </div>
-            <div className='absolute top-3/4 px-auto gap-6'>
+            <div className='absolute top-3/4 px-auto gap-6 w-full sm:w-auto flex justify-center'>
               <Button size='large' type='primary' shape='round'>立即咨询</Button>
             </div>
           </div>
         </section>
-        <section className='sm:w-full sm:mx-auto bg-white'>
+        <section className='hidden sm:block sm:w-full sm:mx-auto bg-white'>
           {/* <Tabs
             centered
             defaultActiveKey='0'
@@ -155,10 +162,10 @@ export default function Rescue() {
                 scale,
               }}
             >
-              <div className='sm:flex justify-center gap-16 mb-20'>
+              <div className='sm:flex justify-center gap-16 mb-20 px-4 sm:px-0'>
                 <section>
-                  <h1 className='text-3xl mt-8'>勒索病毒泛滥</h1>
-                  <section className='mb-10 text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全严重威胁之一</section>
+                  <h1 className='text-xl sm:text-3xl mt-8'>勒索病毒泛滥</h1>
+                  <section className='mb-10 sm:text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全严重威胁之一</section>
                   <div className='flex gap-6'>
                     {
                       solutionTabList.map((item, key) => {
@@ -183,21 +190,20 @@ export default function Rescue() {
                 </section>
               </div>
             </motion.div>
-
           </section>
           <section id='company'>
             <Title title='企业应急处理办法' subTitle='Enterprise emergency response measures' />
-            <div className='flex gap-5 w-full justify-between mb-20'>
+            <div className='sm:flex gap-5 sm:w-full justify-between mb-20 mx-3 sm:mx-0'>
               {
                 solutionList.map((item, key) => {
                   return (
                     <React.Fragment key={key}>
-                      <div className='w-96 p-6 shadow-card rounded-lg sm:hover:-translate-y-1 transition-all'>
+                      <div className='sm:w-96 p-6 shadow-card rounded-lg sm:hover:-translate-y-1 transition-all'>
                         <Image src={item.icon} alt='' />
                         <div className='text-xl font-medium my-4'>{item.title}</div>
                         <div className='text-gray-400 text-sm mb-6'>{item.text}</div>
                       </div>
-                      {(key === solutionList.length - 1) ? null : <Image src={arrow} alt='' />}
+                      {(key === solutionList.length - 1 || !isWeb) ? null : <Image src={arrow} alt='' />}
                     </React.Fragment>
                   )
                 })
@@ -209,7 +215,7 @@ export default function Rescue() {
             <ServiceCard />
           </section>
         </section>
-        <section className='bg-gray-50 w-full py-14 pb-32 sm:min-w-max' id='progress'>
+        <section className='bg-gray-50 w-full py-14 sm:pb-32 sm:min-w-max' id='progress'>
           <Title title='服务流程' subTitle='Service Process' />
           <Progress list={progressList} />
         </section>

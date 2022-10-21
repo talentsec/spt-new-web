@@ -15,6 +15,7 @@ import SupportCard from '@/components/service/redBlue/SupportCard'
 import { redBlueSupportList } from '@/constant/info'
 import Link from 'next/link'
 import AnimationWrapper from '@/components/common/AnimationWrapper'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 
 const list = [
   {
@@ -120,22 +121,27 @@ export default function Rescue() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive' />
-          <div className='sm:max-w-7xl mx-auto'>
-            <div className='absolute top-1/4 text-5xl text-white'>攻防演练</div>
-            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white leading-8 tracking-new-widest'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等<br />
+          <div className='sm:min-w-main-width hidden sm:block'>
+            <Image src={MainImg} alt='' layout='responsive' />
+          </div>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive' />
+          </div>
+          <div className='sm:max-w-7xl mx-auto w-full sm:w-auto'>
+            <div className='absolute font-medium sm:font-normal top-1/4 text-xl sm:text-5xl sm:text-white text-center sm:text-left w-full sm:w-auto'>攻防演练</div>
+            <div className='absolute top-1/2 w-full sm:w-3/5 -mt-5 font-light'>
+              <div className='w-full text-sm sm:text-xl sm:text-white sm:leading-8 text-center sm:text-left tracking-new-widest px-10 sm:px-0'>防方服务:仿真环境搭建，应急策略制定，⻛险检测等<br />
                 攻方服务:可控无限渗透测试，内网漫游，社交攻击尝试，物理尝试等
               </div>
             </div>
-            <div className='absolute top-3/4 px-auto gap-6'>
+            <div className='absolute top-3/4 px-auto gap-6 w-full sm:w-auto flex justify-center'>
               <Link href='/spt-contact'>
                 <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
         </section>
-        <section className='sm:w-full sm:mx-auto'>
+        <section className='hidden sm:block sm:w-full sm:mx-auto'>
           {/* <Tabs
             centered
             defaultActiveKey='0'
@@ -161,11 +167,8 @@ export default function Rescue() {
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='intro'>
           <section>
             <Title title='服务介绍' subTitle='Service Introduction' />
-            <div className='sm:flex justify-center gap-16 mb-20'>
-              <section>
-                <Image src={introImg} alt='' />
-              </section>
-              <section className='w-2/5'>
+            <div className='sm:flex sm:flex-row-reverse justify-center gap-16 mb-20 mx-3 sm:mx-0 px-5 sm:px-0 shadow-card sm:shadow-none p-4 rounded-lg'>
+              <section className='sm:w-2/5'>
                 <h1 className='text-2xl font-normal' />
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-between gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
@@ -186,12 +189,15 @@ export default function Rescue() {
                   </span>
                 </section>
               </section>
+              <section>
+                <Image src={introImg} alt='' />
+              </section>
             </div>
           </section>
           <section id='support'>
             <Title title='服务支持' subTitle='service support' />
             <AnimationWrapper>
-              <div className='flex gap-8 w-full justify-between mb-20'>
+              <div className='sm:flex gap-8 w-full justify-between mb-20'>
                 {
                   redBlueSupportList.map((item, key) => {
                     return (
@@ -204,8 +210,8 @@ export default function Rescue() {
           </section>
           <section id='content'>
             <Title title='服务内容' subTitle='Service Content' />
-            <section className='flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
-              <section className='w-1/2 px-6'>
+            <section className='sm:flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
+              <section className='sm:w-1/2 px-6'>
                 <h1 className='text-3xl mb-6'>红队服务综述</h1>
                 <div className='flex items-start gap-3'>
                   <section className='pt-1'>
@@ -248,11 +254,11 @@ export default function Rescue() {
                 <Image src={redImg} alt='' />
               </section>
             </section>
-            <section className='flex gap-6 items-center border-b pb-16 mb-10 w-full justify-center'>
+            <section className='sm:flex gap-6 items-center border-b pb-16 mb-10 w-full justify-center'>
               <section>
                 <Image src={blueImg} alt='' />
               </section>
-              <section className='w-1/2 px-6'>
+              <section className='sm:w-1/2 px-6'>
                 <h1 className='text-3xl mb-6'>蓝队服务综述</h1>
                 <div className='flex items-start gap-3'>
                   <section className='pt-1 flex-shrink-0 w-6'>
@@ -301,8 +307,8 @@ export default function Rescue() {
               {
                 valueList.map((item, key) => {
                   return (
-                    <div key={key} className='flex p-8 sm:w-2/5 hover:shadow-card rounded-2xl gap-4'>
-                      <section className='flex-shrink-0'>
+                    <div key={key} className='flex p-6 sm:p-8 sm:w-2/5 hover:shadow-card shadow-card sm:shadow-none mx-3 sm:mx-0 rounded-2xl gap-4'>
+                      <section className='flex-shrink-0 w-10 sm:w-auto'>
                         <Image src={item.icon} alt='' />
                       </section>
                       <section>

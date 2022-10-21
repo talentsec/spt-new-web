@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
 import { Slider } from 'antd';
 import Title from '@/components/common/Title'
 import mainImg from '@/assets/img/about/usMain.svg'
-import icon1 from '@/assets/img/about/contectIcon1.svg'
-import icon2 from '@/assets/img/about/contectIcon2.svg'
-import icon3 from '@/assets/img/about/contectIcon3.svg'
 import Footer from '@/components/common/Footer'
 import logo from '@/assets/img/about/logo.svg'
 import companyImg from '@/assets/img/about/company.png'
@@ -14,7 +11,6 @@ import founderImg from '@/assets/img/about/founder.png'
 import investor1 from '@/assets/img/about/investor1.png'
 import investor2 from '@/assets/img/about/investor2.png'
 import investor3 from '@/assets/img/about/investor3.png'
-import award from '@/assets/img/about/award.png'
 import { motion } from 'framer-motion';
 import phoneMain from '@/assets/img/home/phoneMain.png'
 
@@ -128,7 +124,7 @@ export default function Contect() {
   }
   return (
     <Layout>
-      <div className='min-w-max'>
+      <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width '>
           <div className='hidden sm:block'>
             <Image src={mainImg} alt='' layout='responsive' />
@@ -150,11 +146,11 @@ export default function Contect() {
             </section>
           </motion.div>
         </section>
-        <section className='w-full sm:min-w-main-width bg-gray-50 py-20'>
+        <section className='w-full sm:min-w-main-width sm:bg-gray-50 sm:py-20 px-4 sm:px-0'>
           <Title title='公司简介' subTitle='Company Profile' />
-          <section className='top-40 w-full'>
-            <div className='flex sm:max-w-7xl mx-auto gap-8'>
-              <section className='py-14 gap-7 w-1/2'>
+          <section className='sm:top-40 w-full shadow-card sm:shadow-none p-5 sm:p-0 rounded-lg sm:rounded-none'>
+            <div className='sm:flex sm:max-w-7xl mx-auto gap-8'>
+              <section className='text-xs sm:text-sm font-light sm:font-normal py-2 sm:py-14 gap-7 sm:w-1/2'>
                 <article className='mb-4 leading-6 text-gray-700'>
                   上海螣龙科技有限公司是一家面向政府和企业的信息安全服务提供商，以专业的技术和优质的服务为不同领域客户群体提供信息安全旗舰产品。
                 </article>
@@ -165,24 +161,24 @@ export default function Contect() {
                   我们的使命是通过在网络攻防前线获得的创新技术和专业知识，不懈地保护我们的客户；我们希望将顶尖人才和高新技术聚集在一起，成为杰出的安全公司。
                 </article>
               </section>
-              <section className='flex-shrink-0 w-1/2'>
+              <section className='flex-shrink-0 sm:w-1/2'>
                 <Image src={companyImg} alt='' />
               </section>
             </div>
           </section>
         </section>
-        <section className='w-full sm:min-w-main-width py-20'>
+        <section className='w-full sm:min-w-main-width py-10 sm:py-20'>
           <Title title='创始人介绍' subTitle='Founder introduction' />
-          <section className='top-40 w-full flex justify-center'>
-            <section className=''>
-              <Image src={founderImg} alt='' />
-            </section>
-            <section className='w-96 ml-20 pt-14'>
-              <h1 className='text-blue-600 text-3xl'>王昊天</h1>
-              <h1 className='text-xl'>开源文化爱好者/白帽子/螣龙安科创始人</h1>
-              <article className='text-gray-400 leading-7'>
+          <section className='top-40 sm:w-full sm:flex flex-row-reverse justify-center rounded-lg sm:rounded-none mx-3 p-5 sm:p-0 shadow-card sm:shadow-none sm:mx-0 mb-14 sm:mb-0'>
+            <section className='sm:w-96 sm:ml-20 sm:pt-14'>
+              <h1 className='text-blue-600 text-xl sm:text-3xl'>王昊天</h1>
+              <h1 className='text-base sm:text-xl'>开源文化爱好者/白帽子/螣龙安科创始人</h1>
+              <article className='text-gray-400 leading-7 font-light sm:font-normal'>
                 上海交通大学信息安全学士，信息安全领域资深专家，上海信息安全行业协会理事。在网络安全领域工作超过10年，曾承担多个超大型网络安全事件项目并担任安全团队负责人，在信息安全领域拥有丰富的实战经验和研究成果。
               </article>
+            </section>
+            <section className='mt-4 px-20 sm:px-0 sm:mt-0 flex sm:block justify-center'>
+              <Image src={founderImg} alt='' />
             </section>
           </section>
           <section className='bg-blue-700 -translate-y-2 relative'>
@@ -225,14 +221,14 @@ export default function Contect() {
         <section className='sm:max-w-7xl sm:mx-auto'>
           <section>
             <Title title='投资者' subTitle='investor' />
-            <div className='sm:flex justify-center gap-8 mb-40'>
-              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-10 pt-8 border-slate-100 sm:hover:scale-105 transition-all'>
+            <div className='flex px-4 sm:px-0 justify-center gap-2 sm:gap-8 mb-10 sm:mb-40'>
+              <div className='bg-white w-32 h-14 sm:w-72 sm:h-32 border rounded-md shadow-card p-4 sm:pl-10 sm:pt-8 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor1} alt='' />
               </div>
-              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-11 pt-11 border-slate-100 sm:hover:scale-105 transition-all'>
+              <div className='bg-white w-32 h-14 sm:w-72 sm:h-32 border rounded-md shadow-card p-4 sm:pl-11 sm:pt-11 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor2} alt='' />
               </div>
-              <div className='bg-white w-72 h-32 border rounded-md shadow-card pl-10 pt-7 border-slate-100 sm:hover:scale-105 transition-all'>
+              <div className='bg-white w-32 h-14 sm:w-72 sm:h-32 border rounded-md shadow-card p-4 sm:pl-10 sm:pt-7 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor3} alt='' />
               </div>
             </div>
