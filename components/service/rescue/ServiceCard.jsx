@@ -45,7 +45,7 @@ export default function ServiceCard() {
           </div>
         </section>
       </div>
-      <div className='block sm:hidden px-3'>
+      <div className='block sm:hidden'>
         <div className='bg-black text-white rounded-lg p-5'>
           <section className='text-xl mb-2'>
             勒索处置

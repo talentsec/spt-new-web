@@ -44,11 +44,11 @@ const variantsItem = {
 const Item = ({ data }) => {
   return (
     <div
-      className='w-72 flex-shrink-0 h-96 flex-grow-0 p-9 pb-12 shadow-2xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all'
+      className='sm:w-72 flex-shrink-0 sm:h-96 flex-grow-0 p-6 sm:p-9 sm:pb-12 shadow-card sm:shadow-2xl mb-6 mt-2 sm:mx-2 rounded-lg sm:hover:scale-105 transition-all'
     >
       <div className='overflow-hidden h-full mb-6'>
-        <h1 className='text-xl h-12'>{data.title}</h1>
-        <section className='leading-7 font-light text-gray-500 mt-7'>
+        <h1 className='text-base sm:text-xl sm:h-12'>{data.title}</h1>
+        <section className='leading-7 font-light text-gray-500 sm:mt-7'>
           {data.content}
         </section>
       </div>
@@ -62,7 +62,7 @@ export default function ValueSlider() {
       className='flex gap-5 justify-center'
     >
       <motion.ul
-        className='sm:flex gap-3 px-8 sm:px-0 '
+        className='sm:flex gap-3 px-4 sm:px-0 '
         variants={container}
         initial='hidden'
         animate='visible'

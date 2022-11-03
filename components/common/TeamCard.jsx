@@ -10,7 +10,6 @@ export default function TeamCard({ data, index }) {
 
   return (
     <motion.div
-      className='container'
       style={{
         scale
       }}

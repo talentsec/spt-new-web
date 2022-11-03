@@ -109,14 +109,7 @@ export default function Rescue() {
   const [selectedRedItem, setSelectedRedItem] = useState(redPartList[0])
   const [selectedBlueItem, setSelectedBlueItem] = useState(bluePartList[0])
 
-  const handleTabChange = (key) => {
-    const target = list[Number(key)]
-    const element = document.querySelector(target.herf)
-    document.documentElement.scrollTo({
-      top: element.offsetTop - 40,
-      behavior: 'smooth'
-    })
-  }
+
   return (
     <Layout>
       <div className='sm:min-w-max'>
@@ -208,18 +201,18 @@ export default function Rescue() {
               </div>
             </AnimationWrapper>
           </section>
-          <section id='content'>
+          <section id='content' className='mx-4 sm:px-0'>
             <Title title='服务内容' subTitle='Service Content' />
-            <section className='sm:flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
+            <section className='hidden sm:flex gap-6 items-center shadow-none sm:border-b  pb-10 mb-20 w-full justify-center'>
               <section className='sm:w-1/2 px-6'>
-                <h1 className='text-3xl mb-6'>红队服务综述</h1>
-                <div className='flex items-start gap-3'>
+                <h1 className='text-xl sm:text-3xl mb-6'>红队服务综述</h1>
+                <div className=' items-start gap-3 hidden sm:flex'>
                   <section className='pt-1'>
                     <Image src={redIcon} alt='' />
                   </section>
                   <div>
                     <h2 className='text-xl font-normal mb-4'>主要类型</h2>
-                    <section>
+                    <section className=''>
                       {
                         redPartList.map((item, key) => {
                           return (
@@ -254,7 +247,40 @@ export default function Rescue() {
                 <Image src={redImg} alt='' />
               </section>
             </section>
-            <section className='sm:flex gap-6 items-center border-b pb-16 mb-10 w-full justify-center'>
+            <section className='sm:hidden gap-6 items-center pt-6 shadow-card sm:shadow-none sm:border-b  pb-10 mb-6 w-full justify-center'>
+              <section className='sm:w-1/2 px-6'>
+                <h1 className='text-base mb-6'>红队服务综述</h1>
+                <div className=' items-start gap-3'>
+                  <div>
+                    <section className=''>
+                      {
+                        redPartList.map((item, key) => {
+                          return (
+                            <div key={key}>
+                              <section
+                                className=' text-red-500 font-light flex items-center py-1 rounded-2xl mr-3 cursor-pointer'
+                              >
+                                <Image src={redIcon} alt='' />
+                                <span className='ml-2'>
+                                  {item.button}
+                                </span>                              
+                              </section>
+                              <section className='ml-6 mb-4 text-gray-400 font-light'>
+                                {item.text}
+                              </section>
+                            </div>
+                          )
+                        })
+                      }
+                    </section>
+                  </div>
+                </div>
+              </section>
+              <section className='p-6'>
+                <Image src={redImg} alt='' />
+              </section>
+            </section>
+            <section className='hidden sm:flex gap-6 items-center border-b pb-16 mb-10 w-full justify-center'>
               <section>
                 <Image src={blueImg} alt='' />
               </section>
@@ -296,6 +322,39 @@ export default function Rescue() {
                     </section>
                   </div>
                 </div>
+              </section>
+            </section>
+            <section className='sm:hidden gap-6 shadow-card pt-6 items-center border-b pb-10 mb-10 w-full justify-center'>
+              <section className='sm:w-1/2 px-6'>
+                <h1 className='text-base mb-6'>蓝队服务综述</h1>
+                <div className='flex items-start gap-3'>
+                  <div>
+                    <section>
+                      {
+                        bluePartList.map((item, key) => {
+                          return (
+                            <div key={key}>
+                              <section
+                                className=' text-blue-700 font-light flex items-center py-1 rounded-2xl mr-3 cursor-pointer'
+                              >
+                                <Image src={blueIcon} alt='' />
+                                <span className='ml-2'>
+                                  {item.button}
+                                </span>                              
+                              </section>
+                              <section className='ml-6 mb-4 text-gray-400 font-light'>
+                                {item.text}
+                              </section>
+                            </div>
+                          )
+                        })
+                      }
+                    </section>
+                  </div>
+                </div>
+              </section>
+              <section className='p-2'>
+                <Image src={blueImg} alt='' />
               </section>
             </section>
           </section>

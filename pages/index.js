@@ -139,7 +139,7 @@ export default function Home () {
           <section>
             <section className='text-xl sm:text-4xl font-medium text-center pb-4'>首席顾问团队</section>
             <section className='text-xs  sm:text-base text-center text-slate-400'>螣龙安科的技术顾问团队拥有多年网络安全行业从业经验以及深厚的技术底蕴</section>
-            <div className='sm:flex  mt-10 w-full sm:justify-around'>
+            <div className='sm:flex mt-10  justify-between'>
               {
                 teams.map((item, key) => {
                   return <TeamCard key={key} data={item} index={key} />

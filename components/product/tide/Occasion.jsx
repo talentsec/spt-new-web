@@ -38,12 +38,12 @@ const infoList = [
 
 export default function Occasion() {
   return (
-    <div className='flex gap-10 w-full justify-between'>
+    <div className='sm:flex gap-10 w-full justify-between'>
       {
         infoList.map((item, key) => {
           return (
-            <div key={key} className='rounded-t-3xl w-96 p-8 shadow-card sm:hover:scale-105 transition-all'>
-              <section>
+            <div key={key} className='rounded-t-3xl sm:w-96 p-8 shadow-card sm:hover:scale-105 transition-all'>
+              <section className='w-8 sm:w-auto'>
                 <Image src={item.icon} alt='' />
               </section>
               <section className='text-xl font-bold my-5'>

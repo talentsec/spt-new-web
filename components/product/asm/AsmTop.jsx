@@ -31,21 +31,23 @@ const infoList = [
 
 export default function AsmTop() {
   return (
-    <div className='w-full sm:min-w-main-width rounded-lg shadow-card'>
-      <div className='sm:max-w-7xl sm:mx-auto flex justify-between items-center'>
+    <div className='sm:w-full mx-4 sm:mx-0 sm:min-w-main-width rounded-lg shadow-card'>
+      <div className='sm:max-w-7xl sm:mx-auto sm:flex justify-between items-center px-6 sm:px-0'>
         {
           infoList.map((item, key) => {
             return (
               <React.Fragment key={key}>
-                <div className='py-6'>
-                  <section className='flex justify-center mb-4'>
+                <div className='py-4 sm:py-6 flex justify-between sm:block flex-row-reverse items-center'>
+                  <section className='flex justify-center sm:mb-4 '>
                     <Image src={item.icon} alt='' />
                   </section>
-                  <section className='text-center text-base mb-1'>{item.title}</section>
-                  <section className='text-center text-gray-500'>{item.text}</section>
+                  <div>
+                    <section className='sm:text-center text-base mb-1'>{item.title}</section>
+                    <section className='sm:text-center font-light sm:font-normal text-gray-500 mt-2 sm:mt-0'>{item.text}</section>
+                  </div>
                 </div>
                 {
-                  key === infoList.length - 1 ? null : <div className='border-r h-10 flex-shrink-0' />
+                  key === infoList.length - 1 ? null : <div className='border-b sm:border-r sm:h-10 flex-shrink-0' />
                 }
               </React.Fragment>
             )

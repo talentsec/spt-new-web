@@ -27,11 +27,11 @@ const infoList = [
 const Item = ({ data }) => {
   return (
     <div
-      className='w-72 flex-shrink-0 h-96 flex-grow-0 p-10 pb-10 shadow-xl mb-6 mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all'
+      className='sm:w-72 flex-shrink-0 sm:h-96 flex-grow-0 p-4 sm:p-10 sm:pb-10 shadow-card sm:mb-6 mt-4 sm:mt-2 mx-2 rounded-lg sm:hover:scale-105 transition-all'
     >
-      <div className='overflow-hidden h-full mb-6'>
-        <h1 className='text-xl h-12'>{data.title}</h1>
-        <section className='leading-7 font-light text-gray-500 mt-7'>
+      <div className='overflow-hidden h-full sm:mb-6'>
+        <h1 className='text-base sm:text-xl sm:h-12'>{data.title}</h1>
+        <section className='leading-7 font-light text-gray-500 sm:mt-7'>
           {data.content}
         </section>
       </div>
@@ -81,21 +81,22 @@ export default function ValueSlider() {
   }
 
   return (
-    <div className='w-full relative py-7'>
-      <div
-        className='flex overflow-x-hidden overflow-y-visible gap-5'
-        ref={contentBox}
-      >
-        {
-          infoList.map((item, index) => {
-            return (
-              <Item key={index} data={item} index={index} dark={index % 2 === 1} />
-            )
-          })
-        }
-      </div>
+    <>
+      <div className='w-full relative py-7 hidden sm:block'>
+        <div
+          className='flex overflow-x-hidden overflow-y-visible gap-5'
+          ref={contentBox}
+        >
+          {
+            infoList.map((item, index) => {
+              return (
+                <Item key={index} data={item} index={index} dark={index % 2 === 1} />
+              )
+            })
+          }
+        </div>
 
-      {isLeftPosition
+        {isLeftPosition
         ?
           <div
             className='w-8 h-12 absolute -right-9 z-10 top-48 cursor-pointer hover:scale-110 shadow-xl bg-white px-2 py-3 font-bord rounded-md'
@@ -110,6 +111,18 @@ export default function ValueSlider() {
           >
             <LeftOutlined />
           </div>}
-    </div>
+      </div>
+      <div className='block sm:hidden mb-14'>
+        {
+          infoList.map((item, index) => {
+            return (
+              <Item key={index} data={item} index={index} dark={index % 2 === 1} />
+            )
+          })
+        }
+      </div>
+    </>
+
+
   )
 }

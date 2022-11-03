@@ -39,7 +39,7 @@ export default function Progress({ list }) {
           </div>
         </div>
       </div>
-      <div className='block sm:hidden mx-3'>
+      <div className='block sm:hidden mx-7'>
         {
           list.map((item, key) => {
             return (

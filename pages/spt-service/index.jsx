@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Layout from '@/components/common/Layout'
 import Image from 'next/image'
+import Link from 'next/link'
 import Title from '@/components/common/Title'
 import { Button } from 'antd'
 import contentIcon from '@/assets/img/service/redBlueValueIcon.svg'
@@ -17,11 +18,13 @@ import targetIcon6 from '@/assets/img/service/serviceTargetIcon6.svg'
 import webIcon from '@/assets/img/service/serviceWeb.svg'
 import meaningImg from '@/assets/img/service/meaning.svg'
 import contentImg from '@/assets/img/service/serviceContent.png'
+import phoneContentImg from '@/assets/img/service/phoneServiceContent.png'
 import Footer from '@/components/common/Footer'
 import TestCard from '@/components/service/service/TestCard'
 import ProgressScrollCard from '@/components/service/service/ProgressScrollCard'
 import { motion, useScroll, useTransform } from "framer-motion";
 import AnimationWrapper from '@/components/common/AnimationWrapper'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 
 const list = [
   {
@@ -38,52 +41,6 @@ const list = [
     title: '漏洞修补',
     content: '根据提供的报告对系统漏洞进行修补',
     icon: icon3,
-  },
-]
-
-const redPartList = [
-  {
-    button: '无限渗透测试',
-    title: '无限渗透测试（IPT)',
-    text: '可控无限渗透测试(IPT)：对组织进行技术渗透测试，以攻击进入组织内部、获取敏感数据或某个制定目标为目的'
-  },
-  {
-    button: '内网漫游',
-    title: '内网漫游(IRT)',
-    text: '成功进入组织内部后，进行内网整体漫游，以获取多、高权限、敏感数据或某个目标。'
-  },
-  {
-    button: '物理攻击尝试',
-    title: '物理攻击尝试(PAT)',
-    text: '使用物理手段，尝试进行攻击获取敏感数据。'
-  },
-  {
-    button: '社交攻击尝试',
-    title: '社交攻击尝试(SAT)',
-    text: '使用社交手段，例如电话、微信、企业QQ、人肉搜索、社工库等方式进行社会工程学攻击尝试，同时获取敏感信息或数据。'
-  },
-]
-
-const bluePartList = [
-  {
-    button: '仿真环境搭建',
-    title: '仿真环境搭建(CSE)',
-    text: '可控无限渗透测试(IPT)：对组织进行技术渗透测试，以攻击进入组织内部、获取敏感数据或某个制定目标为目的'
-  },
-  {
-    button: '应急策略制定',
-    title: '应急策略制定(ERR)',
-    text: '与相关部门人员制定应急策略，并规范工作流程'
-  },
-  {
-    button: '风险检测',
-    title: '风险检测(RCM)',
-    text: '对被攻击环境进行风险评估、检测与监测'
-  },
-  {
-    button: '日志威胁分析',
-    title: '日志威胁分析(LTA)',
-    text: '在对抗演习期间，对网络、安全设备、主机、中间件等系统日志进行综合安全分析'
   },
 ]
 
@@ -241,52 +198,68 @@ const infoList = [
   ],
 ]
 
+const contentList = [
+  {
+    title: '黑盒+灰盒结合',
+    content: '通过黑盒与灰盒结合的方式，从外部渗透、钓鱼攻击到内网渗透，多维度检测客户的系统安全性强度。'
+  },
+  {
+    title: '安全漏洞发现',
+    content: '找出应用中存在的安全漏洞。对传统安全弱点进行串联并形成路径，通过路径式的利用而达到模拟入侵的效果，从而发掘应用中影响业务正常运行、导致敏感信息泄露、造成经济损失的漏洞。'
+  },
+  {
+    title: '安全修复建议',
+    content: '渗透测试目的是发现问题并解决问题，故发现漏洞后，关键在于修复漏洞。安全专家会针对漏洞产生的具体原因进行具体分析，为客户提出适合的修复建议，增强客户的网络安全防御系统。'
+  },
+  {
+    title: '评估复测',
+    content: '漏洞修复后，对修复方案及结果进行有效性评估，分析修复方案的有效打击和误打击风险，复验漏洞修复结果。得到有效性评估结果后，汇总并标注漏洞修复结果，及时更新并发送回归测试报告。'
+  },
+]
+
 export default function Rescue() {
-  const [selectedRedItem, setSelectedRedItem] = useState(redPartList[0])
-  const [selectedBlueItem, setSelectedBlueItem] = useState(bluePartList[0])
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0.3, 0.4], [0.8, 1]);
 
-  const handleTabChange = (key) => {
-    const target = list[Number(key)]
-    const element = document.querySelector(target.herf)
-    document.documentElement.scrollTo({
-      top: element.offsetTop - 40,
-      behavior: 'smooth'
-    })
-  }
   return (
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive' />
+          <div className='sm:min-w-main-width hidden sm:block'>
+            <Image src={MainImg} alt='' layout='responsive' />
+          </div>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive' />
+          </div>
           <div className='sm:max-w-7xl mx-auto'>
-            <div className='absolute top-1/4 text-5xl text-white'>渗透测试</div>
-            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white w-full leading-8 tracking-new-widest'>
+            <div className='absolute font-medium sm:font-normal top-1/4 text-xl sm:text-5xl sm:text-white text-center sm:text-left w-full sm:w-auto'>渗透测试</div>
+            <div className='absolute top-1/2 w-full sm:w-3/5 -mt-5 font-light'>
+              <div className='text-sm sm:text-xl sm:text-white w-full sm:leading-8 text-center sm:text-left  tracking-new-widest px-10 sm:px-0'>
                 渗透测试是通过模拟黑客攻击的方式对业务系统进行安全性测试，是一种评估计算机网络系统安全性的方法。
               </div>
             </div>
-            <div className='absolute top-3/4 gap-6'>
-              <Button size='large' type='primary' shape='round'>立即咨询</Button>
+            <div className='absolute top-3/4 px-auto gap-6 w-full sm:w-auto flex justify-center'>
+              <Link href='/spt-contact'>
+                <Button size='large' type='primary' shape='round'>立即咨询</Button>
+              </Link>
             </div>
           </div>
         </section>
         <section className='sm:mx-auto mt-32'>
-          <div className='mx-auto px-auto flex bg-white rounded-lg sm:max-w-7xl -translate-y-12 shadow-card justify-between px-8'>
+          <div className='mx-4 sm:mx-auto px-auto sm:flex bg-white rounded-lg sm:max-w-7xl -translate-y-12 shadow-card justify-between sm:px-8'>
             {
               list.map((item, key) => {
                 return (
-                  <div key={key} className='flex m-8 w-1/3 justify-between'>
+                  <div key={key} className='flex py-5 sm:py-0 mx-8 sm:m-8 sm:w-1/3 justify-between border-b sm:border-b-0'>
                     <section className='flex-shrink-0 '>
                       <section>{item.title}</section>
-                      <section className='text-gray-400 leading-6 flex-shrink-0'>{item.content}</section>
+                      <section className='text-gray-400 leading-6 flex-shrink-0 font-light mt-2'>{item.content}</section>
                     </section>
                     <section className='flex-shrink-0'>
                       <Image src={item.icon} alt='' />
                     </section>
                     {
-                      key === list.length - 1 ? null : <span className='h-10 border-l' />
+                      key === list.length - 1 ? null : <span className='h-10 border-l hidden sm:block' />
                     }
                   </div>
                 )
@@ -297,9 +270,9 @@ export default function Rescue() {
         <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
           <section>
             <Title title='渗透测试意义' subTitle='Significance of penetration test' />
-            <div className='sm:flex justify-center gap-2 mb-20 items-center'>
-              <section className='w-2/5'>
-                <h1 className='text-3xl font-normal mb-7'>渗透测试的重要性</h1>
+            <div className='sm:flex justify-center gap-2 mb-20 items-center shadow-card sm:shadow-none mx-4 sm:mx-0 rounded-lg sm:rounded-none p-4 sm:p-0'>
+              <section className='sm:w-2/5'>
+                <h1 className='text-xl sm:text-3xl font-normal mb-7'>渗透测试的重要性</h1>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex  gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
@@ -325,14 +298,14 @@ export default function Rescue() {
                   </span>
                 </section>
               </section>
-              <section>
+              <section className='p-4 sm:p-0'>
                 <Image src={meaningImg} alt='' />
               </section>
             </div>
           </section>
           <section id='company'>
             <Title title='渗透测试手段' subTitle='Penetration testing tools' />
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>螣龙安科可以为客户提供多维度的黑/灰/白盒测试</div>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg mt-4 sm:mt-0 text-gray-400 sm:text-black'>螣龙安科可以为客户提供多维度的黑/灰/白盒测试</div>
             <TestCard />
           </section>
           <section id='content'>
@@ -341,8 +314,9 @@ export default function Rescue() {
               style={{
                 scale,
               }}
+              className='hidden sm:block'
             >
-              <section className='flex gap-5 w-full justify-center mb-8'>
+              <section className='sm:flex gap-5 w-full justify-center mb-8'>
                 <section className='w-64 relative text-right'>
                   <div>
                     <section>
@@ -396,20 +370,35 @@ export default function Rescue() {
                 </section>
               </section>
             </motion.div>
+            <div className='blcok sm:hidden mx-4'>
+              {
+                contentList.map((item, key) => {
+                  return (
+                    <div key={key} className='mb-2 p-4 rounded-lg bg-gray-100'>
+                      <div className='text-lg'>{item.title}</div>
+                      <div className='text-sm font-light mt-2 leading-6'>{item.content}</div>
+                    </div>
+                  )
+                })
+              }
+              <div className='w-full'>
+                <Image src={phoneContentImg} alt='' layout='responsive' />
+              </div>
+            </div>
           </section>
         </section>
         <section className='py-8 sm:min-w-max' id='progress'>
           <Title title='服务对象' subTitle='service object' />
           <AnimationWrapper>
-            <section className='w-3/4 flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-x-10 gap-y-6 mb-20'>
+            <section className='sm:w-3/4 flex flex-wrap sm:max-w-7xl justify-center mx-auto gap-x-2 sm:gap-x-10 gap-y-2 sm:gap-y-6 mb-20'>
               {
                 targetList.map((item, key) => {
                   return (
-                    <div key={key} className='w-80 shadow-card flex p-5 items-center gap-4 rounded-2xl flex-shrink-0 sm:hover:scale-105 transition-all'>
-                      <section>
+                    <div key={key} className='w-2/5 sm:w-80 shadow-card flex p-5 items-center gap-2 sm:gap-4 rounded-2xl flex-shrink-0 sm:hover:scale-105 transition-all'>
+                      <section className='w-6 h-6'>
                         <Image src={item.icon} alt='' />
                       </section>
-                      <span className='text-xl font-medium'>{item.text}</span>
+                      <span className='text-xs sm:text-xl sm:font-medium flex-10'>{item.text}</span>
                     </div>
                   )
                 })
@@ -425,13 +414,13 @@ export default function Rescue() {
         </section>
         <section className='py-8 sm:min-w-max' id='progress'>
           <Title title='WEB测试检测项' subTitle='Penetrant test items' />
-          <div className='tracking-new-widest w-full text-center -translate-y-8 text-lg'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个维度：</div>
-          <section className='flex flex-wrap sm:max-w-7xl justify-start mx-auto gap-x-10 gap-y-6 mb-20'>
+          <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg mt-4 sm:mt-0 text-gray-400 sm:text-black px-4'>渗透测试的检测深度与检测范围息息相关，渗透测试主要涵盖以下几个维度：</div>
+          <section className='flex flex-wrap sm:max-w-7xl justify-center sm:justify-start mx-auto gap-x-2 sm:gap-x-10 gap-y-2 sm:gap-y-6 mb-20'>
             {
               webList.map((item, index) => {
                 return (
-                  <div key={index} className='w-56 h-56 bg-gray-100 rounded-2xl pt-16 sm:hover:scale-105 transition-all'>
-                    <section className='flex justify-center mb-3'>
+                  <div key={index} className='w-5/12 sm:w-56 sm:h-56 bg-gray-100 rounded sm:rounded-2xl p-4 sm:pt-16 sm:hover:scale-105 transition-all'>
+                    <section className='hidden sm:flex justify-center mb-3'>
                       <Image src={webIcon} alt='' />
                     </section>
                     <section className='text-center text-gray-400'>

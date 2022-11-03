@@ -11,59 +11,75 @@ import { motion } from 'framer-motion'
 import Head from 'next/head'
 const { Panel } = Collapse
 
-const DropdownMenu = ({ list }) => {
-  return (
-    <Menu
-      items={
-        list.map((item, key) => {
-          return {
-            key,
-            label: (
-              <a target='_blank' rel='noopener noreferrer' href={item.link}>
-                {item.title}
-              </a>
-            )
-          }
-        })
-      }
-    />
-  )
-}
 
 const ProductMenuList = () => (
   <div>
-    <section className='text-center h-12 pt-3 border-b border-slate-100 text-slate-500'>潮汐·攻击面管理平台</section>
-    <section className='text-center h-12 pt-3 border-b border-slate-100 text-slate-500'>潮汐·模拟攻击系统</section>
-    <section className='text-center h-12 pt-3 text-slate-500'>谜团·网络攻靶场</section>
+    {
+      menuList[0].list.map((item, key) => {
+        return (
+          <Link key={key} href={item.link}>
+            <section className='text-center h-14 pt-4 border-b border-slate-100 text-slate-500 hover:text-blue-700'>{item.title}</section>
+          </Link>
+        )
+      })
+    }
   </div>
+
+  // <div>
+  //   <section className='text-center h-12 pt-3 border-b border-slate-100 text-slate-500'>潮汐·攻击面管理平台</section>
+  //   <section className='text-center h-12 pt-3 border-b border-slate-100 text-slate-500'>潮汐·模拟攻击系统</section>
+  //   <section className='text-center h-12 pt-3 text-slate-500'>谜团·网络攻靶场</section>
+  // </div>
 )
 
-const MenuList = () => {
-  const list = menuList.slice(1)
-  return (
-    <Collapse accordion ghost expandIcon={() => null} defaultActiveKey='0'>
-      {
-        list.map((item, index) => {
-          return (
-            <Panel header={item.title} key={index}>
-              {
-                item.list.map((menu, key) => {
-                  return <section key={key} className='h-9 text-gray-400 pl-3'>{menu.title}</section>
-                })
-              }
-            </Panel>
-          )
-        })
-      }
-    </Collapse>
-  )
-}
+
 
 export default function Layout ({ children }) {
   const [menuDisplay, setMenuDisplay] = useState(false)
   const [productMenuDisplay, setProductMenuDisplay] = useState(false)
   const toggleMenu = () => {
     setMenuDisplay(!menuDisplay)
+  }
+
+  const MenuList = () => {
+    const list = menuList.slice(1)
+    return (
+      <Collapse accordion ghost expandIcon={() => null} defaultActiveKey='0'>
+        {
+          list.map((item, index) => {
+            return (
+              <Panel header={item.title} key={index}>
+                {
+                  item.list.map((menu, key) => {
+                    return (
+                      <Link href={menu.link} key={key}>
+                        <section className='h-9 text-gray-400 pl-3' onClick={() => setMenuDisplay(false)}>
+                          {menu.title}
+                        </section>
+                      </Link>
+                    )
+                  })
+                }
+              </Panel>
+            )
+          })
+        }
+      </Collapse>
+    )
+  }
+
+  const handleMenuDisplay = () => {
+    if (productMenuDisplay) {
+      setProductMenuDisplay(false)
+    }
+    setMenuDisplay(!menuDisplay)
+  }
+
+  const handleProductMenuDisplay = () => {
+    if (menuDisplay) {
+      setMenuDisplay(false)
+    }
+    setProductMenuDisplay(!productMenuDisplay)
   }
 
   return (
@@ -74,12 +90,12 @@ export default function Layout ({ children }) {
         <link rel='icon' href='/app-icon.svg' />
       </Head>
       <section
-        className='w-full h-14 border-b border-slate-200 py-3 fixed z-10 glassmorphism shadow-none sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
+        className='w-full h-14 border-x-0  py-3 fixed z-10 glassmorphism shadow-none sm:bg-white sm:shadow-sm sm:min-w-main-width' style={{
           zIndex: '161'
         }}
       >
         <div className='sm:max-w-7xl sm:mx-auto flex justify-between px-6 sm:px-0 h12 align-middle'>
-          <div className='mt-2 hover:text-blue-600 pr-4 sm:hidden' onClick={() => setProductMenuDisplay(!productMenuDisplay)}>
+          <div className='mt-2 hover:text-blue-600 pr-4 sm:hidden' onClick={handleProductMenuDisplay}>
             <Image src={productIcon} alt='' />
           </div>
           <Link href='/'>
@@ -127,7 +143,7 @@ export default function Layout ({ children }) {
               </span>
             </Link>
           </div>
-          <div className='sm:hidden pt-1 pl-4' onClick={() => setMenuDisplay(!menuDisplay)}>
+          <div className='sm:hidden pt-1 pl-4' onClick={handleMenuDisplay}>
             <MenuOutlined />
           </div>
         </div>
@@ -146,14 +162,16 @@ export default function Layout ({ children }) {
         }
         {
           menuDisplay
-            ?
+            &&
               <motion.div
                 initial={{ opacity: 1, height: 0 }}
+                exit={{ opacity: 1, height: 0 }}
                 animate={{ opacity: 1, height: 'fit-content' }}
-                className='fixed bg-white w-full z-10 shadow-xl overflow-hidden'
+                className='fixed bg-white w-full shadow-xl overflow-hidden'
+                style={{ zIndex: '500' }}
               >
                 <MenuList />
-              </motion.div> : null
+              </motion.div> 
         }
         {children}
       </div>

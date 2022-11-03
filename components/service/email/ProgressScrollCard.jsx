@@ -147,17 +147,16 @@ export default function ProgressScrollCard({ infoList }) {
           className='mySwiper'
         >
           {
-          infoList.map((item, key) => {
-            return (
-              <SwiperSlide key={key}>
-                <Item data={item} index={key} dark={key % 2 === 1} />
-              </SwiperSlide>
-            )
-          })
-        }
+            infoList.map((item, key) => {
+              return (
+                <SwiperSlide key={key}>
+                  <Item data={item} index={key} dark={key % 2 === 1} />
+                </SwiperSlide>
+              )
+            })
+          }
         </Swiper>
       </div>
-
     </div>
 
   )

@@ -97,9 +97,15 @@ const progressList = [
 ]
 
 export default function Rescue() {
+
+  const [isWeb, setIsWeb] = useState(true)
+
+  if (global.screen?.width < 640) {
+    isWeb && setIsWeb(false)
+  }
+
   const { scrollYProgress } = useScroll();
-  const isWeb = global.screen?.width > 640
-  const scale = useTransform(scrollYProgress, [0.04, 0.16], [isWeb ? 0.8 : 1, 1]);
+  const scale = useTransform(scrollYProgress, [0.04, 0.16], [ 0.8 , 1]);
 
   // const handleTabChange = (key) => {
   //   const target = list[Number(key)]
@@ -154,8 +160,8 @@ export default function Rescue() {
           </Anchor>
         </section>
 
-        <section className='sm:max-w-7xl sm:mx-auto mt-10' id='solution'>
-          <section>
+        <section className='sm:max-w-7xl mx-7 sm:mx-auto mt-10' id='solution'>
+          <section className='hidden sm:block'>
             <Title title='勒索病毒威胁' subTitle='Ransomware Threat' />
             <motion.div
               style={{
@@ -191,9 +197,39 @@ export default function Rescue() {
               </div>
             </motion.div>
           </section>
+          <section className='block sm:hidden'>
+            <Title title='勒索病毒威胁' subTitle='Ransomware Threat' />
+            <div className='sm:flex justify-center gap-16 mb-20 sm:px-0'>
+              <section>
+                <h1 className='text-xl sm:text-3xl mt-8'>勒索病毒泛滥</h1>
+                <section className='mb-10 sm:text-xl mt-4'>巨额利益驱使，勒索病毒成为企业安全严重威胁之一</section>
+                <div className='flex gap-6'>
+                  {
+                      solutionTabList.map((item, key) => {
+                        return (
+                          <div key={key} className='w-36'>
+                            <Image src={item.icon} alt='' />
+                            <section className='font-light text-gray-600 mt-2'>
+                              {item.text}
+                            </section>
+                          </div>
+                        )
+                      })
+                    }
+                </div>
+                <section className='text-xs mt-10 text-gray-400 text-right italic'>-- 根据《2021勒索攻击白皮书》</section>
+                <section className='mt-6'>
+                  {/* <Button type='primary'>服务咨询</Button> */}
+                </section>
+              </section>
+              <section>
+                <Image src={solution} alt='' />
+              </section>
+            </div>
+          </section>
           <section id='company'>
             <Title title='企业应急处理办法' subTitle='Enterprise emergency response measures' />
-            <div className='sm:flex gap-5 sm:w-full justify-between mb-20 mx-3 sm:mx-0'>
+            <div className='sm:flex gap-5 sm:w-full justify-between mb-20 '>
               {
                 solutionList.map((item, key) => {
                   return (
@@ -203,7 +239,9 @@ export default function Rescue() {
                         <div className='text-xl font-medium my-4'>{item.title}</div>
                         <div className='text-gray-400 text-sm mb-6'>{item.text}</div>
                       </div>
-                      {(key === solutionList.length - 1 || !isWeb) ? null : <Image src={arrow} alt='' />}
+                      <span className='hidden sm:block'>
+                        {(key === solutionList.length - 1) ? null : <Image src={arrow} alt='' />}
+                      </span>
                     </React.Fragment>
                   )
                 })

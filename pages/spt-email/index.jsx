@@ -313,7 +313,7 @@ export default function Email() {
         <section className='w-full sm:bg-gray-100 py-20'>
           <section className='flex flex-wrap sm:max-w-7xl justify-center mx-auto sm:gap-8 mb-12'>
             <Title title='功能测试项' subTitle='functional test items' />
-            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500'>六类/二十余项检测，多维度覆盖邮箱安全漏洞</div>
+            <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8 text-gray-500 mt-4 sm:mt-0'>六类/二十余项检测，多维度覆盖邮箱安全漏洞</div>
             <ProgressScrollCard infoList={serviceList} />
           </section>
         </section>

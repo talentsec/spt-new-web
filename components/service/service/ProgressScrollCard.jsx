@@ -3,6 +3,8 @@ import { RightOutlined, LeftOutlined } from '@ant-design/icons'
 import button from '@/assets/img/service/slideButton.svg'
 import itemButton from '@/assets/img/service/slideButton2.svg'
 import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 
 
 const Item = ({ data, dark, index, infoList }) => {
@@ -49,7 +51,7 @@ const Item = ({ data, dark, index, infoList }) => {
 
   return (
     <div
-      className='w-1/4 flex-shrink-0 flex-grow-0 px-8 pt-10 pb-16'
+      className='sm:w-1/4 flex-shrink-0 flex-grow-0 px-4 sm:px-8 pt-4 pb-4 sm:pt-10 sm:pb-16'
       style={{
         backgroundColor: !dark ? '#1D2129' : '#F7F8FA',
         color: !dark ? '#fff' : '#4E5969',
@@ -58,32 +60,34 @@ const Item = ({ data, dark, index, infoList }) => {
     >
       <div className='overflow-hidden h-full mb-5' ref={contentBox}>
         <h1
-          className='font-din-bold text-6xl' style={{
-          background: 'linear-gradient(360deg, #165DFF 16.15%, #12D2AC 88.46%)',
-          backgroundClip: 'text',
-          textFillColor: 'transparent',
-          textAlign: 'justify',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
+          className='font-din-bold text-3xl sm:text-6xl mb-0 sm:mb-4'
+          style={{
+            background: 'linear-gradient(360deg, #165DFF 16.15%, #12D2AC 88.46%)',
+            backgroundClip: 'text',
+            textFillColor: 'transparent',
+            textAlign: 'justify',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
           }}
-        >{'0' + (index + 1)}
+        >
+          {'0' + (index + 1)}
         </h1>
         {
           data.map((element, indey) => {
             return (
               <div key={indey}>
-                <section className='text-xl flex items-center gap-2 font-bold py-4'>
+                <section className='text-sm sm:text-xl flex items-center gap-2 font-bold py-3 sm:py-4'>
                   <span
-                    className='inline-block' style={{
-                    width: '4px',
-                    height: '20px',
-                    background: 'linear-gradient(360deg, #165DFF 16.15%, #12D2AC 88.46%), #D9D9D9',
-                    borderRadius: '8px'
+                    className='inline-block h-4 sm:h-6'
+                    style={{
+                      width: '4px',
+                      background: 'linear-gradient(360deg, #165DFF 16.15%, #12D2AC 88.46%), #D9D9D9',
+                      borderRadius: '8px'
                     }}
                   />
                   {element.title}
                 </section>
-                <section className='font-light font-sm leading-8 pl-4'>
+                <section className='font-light text-xs sm:text-sm sm:font-sm leading-6 sm:leading-8 pl-4'>
                   {
                     element.items.map((proItem, indez) => {
                       return (
@@ -163,26 +167,27 @@ export default function ProgressScrollCard({ infoList }) {
   }
 
   return (
-    <div className='w-full  relative'>
-      <div
-        className='flex overflow-hidden'
-        ref={contentBox}
-        style={{
+    <div>
+      <div className='hidden sm:block w-full relative'>
+        <div
+          className='flex overflow-hidden'
+          ref={contentBox}
+          style={{
           // justifyContent: isLeftPosition ? 'start' : 'end',
           // transform: isLeftPosition ? "translateX('0px')" : "translateX('-600px')",
           transition: 'all .3s ease 0s'
-        }}
-      >
-        {
+          }}
+        >
+          {
           infoList.map((item, index) => {
             return (
               <Item key={index} data={item} index={index} dark={index % 2 === 1} />
             )
           })
         }
-      </div>
+        </div>
 
-      {isLeftPosition
+        {isLeftPosition
         ?
           <div
             className='w-11 h-11 rounded-3xl bg-blue-700 absolute -right-5 z-10 top-44 cursor-pointer hover:scale-110'
@@ -197,6 +202,52 @@ export default function ProgressScrollCard({ infoList }) {
           >
             <Image src={button} alt='' />
           </div>}
+      </div>
+      <div className='block sm:hidden relative w-screen'>
+        <Swiper
+        // effect={"coverflow"}
+          pagination={false}
+          grabCursor
+          centeredSlides
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          slidesPerView={1.6}
+          className='mySwiper'
+        >
+          {
+            infoList.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <Item key={index} data={item} index={index} dark={index % 2 === 1} />
+                </SwiperSlide>
+              )
+            })
+          }
+        </Swiper>
+        {/* <div
+          className='flex overflow-hidden'
+          ref={contentBox}
+          style={{
+          // justifyContent: isLeftPosition ? 'start' : 'end',
+          // transform: isLeftPosition ? "translateX('0px')" : "translateX('-600px')",
+          transition: 'all .3s ease 0s'
+          }}
+        >
+          {
+          infoList.map((item, index) => {
+            return (
+              <Item key={index} data={item} index={index} dark={index % 2 === 1} />
+            )
+          })
+        }
+        </div> */}
+      </div>
     </div>
+
   )
 }

@@ -14,25 +14,39 @@ import coreImg2 from '@/assets/img/product/coreFunction2.png'
 import coreImg3 from '@/assets/img/product/coreFunction3.png'
 import MainImg from '@/assets/img/product/tide2.png'
 import AnimationWrapper from '@/components/common/AnimationWrapper'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 
 export default function Tide() {
   return (
     <Layout>
-      <div className='min-w-max mb-8'>
+      <div className='sm:min-w-max mb-8'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive' />
-          <div className='absolute top-1/4 text-center text-5xl text-white w-full'>潮汐·模拟攻击系统</div>
+          <div className='sm:min-w-main-width hidden sm:block'>
+            <Image src={MainImg} alt='' layout='responsive' />
+          </div>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive' />
+          </div>
+          <div className='absolute top-1/4 text-xl sm:text-5xl sm:text-white text-center w-full'>潮汐·模拟攻击系统</div>
           <div className='absolute top-1/2 w-full px-auto -mt-5'>
-            <div className='text-center text-xl text-white w-4/5 mx-auto leading-8 tracking-new-widest font-light'>通过对特定安全过程进行全生命周期地、持续化地、自动化地覆盖式检测，潮汐BAS平台能帮助企业及政府机构有效地识别安全缺陷、发现安全建设不足并且进行数据驱动下的指向性优化建设。</div>
+            <div className='text-center text-sm sm:text-xl sm:text-white w-4/5 mx-auto sm:leading-8 tracking-new-widest font-light'>通过对特定安全过程进行全生命周期地、持续化地、自动化地覆盖式检测，潮汐BAS平台能帮助企业及政府机构有效地识别安全缺陷、发现安全建设不足并且进行数据驱动下的指向性优化建设。</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center gap-6'>
             {/* <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button> */}
-            <Link href='/spt-contact'>
-              <Button size='large' shape='round' ghost>立即咨询</Button>
-            </Link>
+            <div className='hidden sm:block'>
+              <Link href='/spt-contact'>
+                <Button size='large' shape='round' ghost>立即咨询</Button>
+              </Link>
+            </div>
+            <div className='block sm:hidden mt-4'>
+              <Link href='/spt-contact'>
+                <Button size='large' shape='round' type='primary'>立即咨询</Button>
+              </Link>
+            </div>
+
           </div>
         </section>
-        <section className='sm:max-w-7xl sm:mx-auto mt-20'>
+        <section className='sm:max-w-7xl mx-4 sm:mx-auto mt-20'>
           <section>
             <Title title='企业安全' subTitle='Enterprise security status' />
             <AnimationWrapper>
@@ -47,10 +61,10 @@ export default function Tide() {
           </section>
           <section>
             <Title title='核心功能' subTitle='Core functions' />
-            <div className='sm:flex justify-center gap-16 mb-20 items-center py-10 border-b'>
-              <section className='w-2/5 text-left'>
-                <h1 className='text-2xl font-bolder mb-8'>持续的模拟攻击</h1>
-                <h1 className='text-xl font-normal mb-6'>来验证企业目前的防御体系是否奏效</h1>
+            <div className='sm:flex justify-center gap-16 mb-4 sm:mb-20 items-center py-10 border-b shadow-card sm:shadow-none rounded-lg sm:rounded-none p-4 sm:p-0'>
+              <section className='sm:w-2/5 text-left'>
+                <h1 className='text-xl sm:text-2xl font-bolder sm:mb-8'>持续的模拟攻击</h1>
+                <h1 className='text-base sm:text-xl font-light sm:font-normal mb-6'>来验证企业目前的防御体系是否奏效</h1>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-start gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
@@ -64,17 +78,14 @@ export default function Tide() {
                   </span>
                 </section>
               </section>
-              <section className='w-1/2 flex-shrink-0 flex-grow-0'>
+              <section className='sm:w-1/2 flex-shrink-0 flex-grow-0 mt-8 sm:mt-0'>
                 <Image src={coreImg1} alt='' />
               </section>
             </div>
-            <div className='sm:flex justify-center gap-16 mb-20 items-center py-10 border-b'>
-              <section className='w-1/2 flex-shrink-0 flex-grow-0'>
-                <Image src={coreImg2} alt='' />
-              </section>
-              <section className='w-2/5 text-left'>
-                <h1 className='text-2xl font-bolder mb-8'>帮助企业优先排序</h1>
-                <h1 className='text-xl font-normal mb-6'>先解决亟待处理的安全短板</h1>
+            <div className='sm:flex flex-row-reverse justify-center gap-16 mb-4 sm:mb-20 items-center py-10 border-b shadow-card sm:shadow-none rounded-lg sm:rounded-none p-4 sm:p-0'>
+              <section className='sm:w-2/5 text-left'>
+                <h1 className='text-xl sm:text-2xl font-bolder sm:mb-8'>帮助企业优先排序</h1>
+                <h1 className='text-base sm:text-xl font-light sm:font-normal mb-6'>先解决亟待处理的安全短板</h1>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-start gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
@@ -88,10 +99,14 @@ export default function Tide() {
                   </span>
                 </section>
               </section>
+              <section className='sm:w-1/2 flex-shrink-0 flex-grow-0 mt-8 sm:mt-0'>
+                <Image src={coreImg2} alt='' />
+              </section>
+
             </div>
-            <div className='sm:flex justify-center gap-16 mb-20 items-center py-10 border-b'>
-              <section className='w-2/5 text-left'>
-                <h1 className='text-2xl font-bolder mb-8'>修复并消除安全漏洞</h1>
+            <div className='sm:flex justify-center gap-16 mb-20 items-center py-10 border-b shadow-card sm:shadow-none rounded-lg sm:rounded-none p-4 sm:p-0'>
+              <section className='sm:w-2/5 text-left'>
+                <h1 className='text-xl sm:text-2xl font-bolder sm:mb-8'>修复并消除安全漏洞</h1>
                 <section className='mb-2 font-light leading-6 text-gray-500 mt-4 flex justify-start gap-3'>
                   <span className='inline-block w-2 h-2 rounded bg-blue-700 flex-grow-0 flex-shrink-0 mt-2' />
                   <span>
@@ -105,7 +120,7 @@ export default function Tide() {
                   </span>
                 </section>
               </section>
-              <section className='w-1/2 flex-shrink-0 flex-grow-0'>
+              <section className='sm:w-1/2 flex-shrink-0 flex-grow-0 mt-8 sm:mt-0'>
                 <Image src={coreImg3} alt='' />
               </section>
             </div>

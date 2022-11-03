@@ -10,7 +10,7 @@ export default function ApplicationCard({ data }) {
       <section className='sm:text-xl font-bold leading-7 my-2 sm:my-4 text-center sm:text-left'>
         {data.title}
       </section>
-      <section className='text-slate-400 text-xs sm:text-sm sm:leading-6 text-center sm:text-left'>
+      <section className='text-slate-400 text-xs sm:text-sm leading-6 text-center sm:text-left'>
         {data.content}
       </section>
     </div>

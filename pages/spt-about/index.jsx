@@ -221,7 +221,7 @@ export default function Contect() {
         <section className='sm:max-w-7xl sm:mx-auto'>
           <section>
             <Title title='投资者' subTitle='investor' />
-            <div className='flex px-4 sm:px-0 justify-center gap-2 sm:gap-8 mb-10 sm:mb-40'>
+            <div className='flex px-7 sm:px-0 justify-center gap-2 sm:gap-8 mb-10 sm:mb-40'>
               <div className='bg-white w-32 h-14 sm:w-72 sm:h-32 border rounded-md shadow-card p-4 sm:pl-10 sm:pt-8 border-slate-100 sm:hover:scale-105 transition-all'>
                 <Image src={investor1} alt='' />
               </div>
