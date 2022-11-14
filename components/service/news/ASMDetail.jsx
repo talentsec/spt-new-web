@@ -6,8 +6,8 @@ import img2 from '@/assets/img/news/asm2.png'
 export default function ASMDetail() {
   return (
     <div
-      className='p-8 text-gray-600 overflow-auto' style={{
-      height: '520px'
+      className='p-2 sm:p-8 text-gray-600 overflow-auto' style={{
+        height: '520px'
       }}
     >
       <h1 className='text-center text-3xl'>潮汐ASM介绍</h1>
@@ -15,8 +15,9 @@ export default function ASMDetail() {
         螣龙安科：打造自动化攻击面发现管理系统 为企业实战化攻防赋能
       </h3>
       <div
-        className='leading-8 ' style={{
-        textIndent: '2em'
+        className='leading-8 '
+        style={{
+          textIndent: '2em'
         }}
       >
         <section>

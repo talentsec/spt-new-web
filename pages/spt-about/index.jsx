@@ -55,49 +55,49 @@ const marks = {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2020.05</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2020.05</div>,
   },
   1: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2020.10</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2020.10</div>,
   },
   2: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2021.08</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2021.08</div>,
   },
   3: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2021.10</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2021.10</div>,
   },
   4: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2022.05</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2022.05</div>,
   },
   5: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2022.06</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2022.06</div>,
   },
   6: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2022.08</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2022.08</div>,
   },
   7: {
     style: {
       color: '#FFF',
     },
-    label: <div className='text-xl font-light -translate-y-14'>2022.09</div>,
+    label: <div className='text-xl font-light -translate-y-12 sm:-translate-y-14'>2022.09</div>,
   }
 };
 
@@ -182,10 +182,10 @@ export default function Contect() {
             </section>
           </section>
           <section className='bg-blue-700 -translate-y-2 relative'>
-            {/* <Title title='发展历程' subTitle='Development History'></Title> */}
-            <h1 className='text-4xl text-center text-white font-normal py-9'>发展历程</h1>
+            {/* <Title title='发展历程' subTitle='Development History' /> */}
+            <h1 className='text-xl sm:text-4xl text-center text-white font-normal py-9'>发展历程</h1>
 
-            <section className='flex justify-center pb-28 px-20'>
+            <section className='hidden sm:flex justify-center pb-28 px-20'>
               {/* <Image src={timeLine} alt=''></Image> */}
               <div className='w-full'>
                 <Slider
@@ -201,8 +201,34 @@ export default function Contect() {
                 />
               </div>
             </section>
-            <section className='absolute top-56 flex justify-center w-full'>
-              <div className='bg-white px-10 py-4 h-32 rounded-xl shadow-card sm:w-4/5 flex items-center flex-wrap'>
+            <section className='block sm:hidden justify-center pb-28 px-8 sm:px-20'>
+              <div
+                className='w-full overflow-auto h-32 pt-6 hidden-scroll-bar'
+                style={{
+                  'overflowY': 'hidden',
+                  'overflowX': 'auto',
+                  scrollbarWidth: 'none'
+                }}
+              >
+                <Slider
+                  defaultValue={selectedSlide}
+                  max={7}
+                  min={0}
+                  step={1}
+                  marks={marks}
+                  tooltip={{
+                    open: false,
+                  }}
+                  onChange={handleSlide}
+                  style={{
+                    width: '800px',
+                    marginLeft: '60px'
+                  }}
+                />
+              </div>
+            </section>
+            <section className='absolute sm:top-56 top-48 flex justify-center w-full'>
+              <div className='bg-white px-10 py-4 h-24 sm:h-32 rounded-xl shadow-card sm:w-4/5 flex items-center flex-wrap'>
                 {
                   slideInfoList[selectedSlide].map((item, key) => {
                     return (

@@ -42,14 +42,30 @@ export default function Layout ({ children }) {
   }
 
   const MenuList = () => {
-    const list = menuList.slice(1)
+    const list = menuList.slice(1).concat({
+      title: '资讯',
+      list: [],
+      link: 'spt-news'
+    })
+
     return (
       <Collapse accordion ghost expandIcon={() => null} defaultActiveKey='0'>
         {
           list.map((item, index) => {
-            return (
-              <Panel header={item.title} key={index}>
-                {
+            return item.link
+              ? 
+                <Link href={item.link} key={index}>
+                  <section
+                    className='px-4 py-3'
+                    onClick={() => setMenuDisplay(false)}
+                  >
+                    {item.title}
+                  </section>
+                </Link>
+              :
+              (
+                <Panel header={item.title} key={index}>
+                  {
                   item.list.map((menu, key) => {
                     return (
                       <Link href={menu.link} key={key}>
@@ -60,8 +76,8 @@ export default function Layout ({ children }) {
                     )
                   })
                 }
-              </Panel>
-            )
+                </Panel>
+              )
           })
         }
       </Collapse>

@@ -16,6 +16,7 @@ import appImg2 from '@/assets/img/service/riskAppImg2.png'
 import appImg3 from '@/assets/img/service/riskAppImg3.png'
 import Footer from '@/components/common/Footer'
 import AnimationWrapper from '@/components/common/AnimationWrapper'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 
 
 const list = [
@@ -122,34 +123,31 @@ const applicationList = [
 
 export default function Code() {
 
-  const handleTabChange = (key) => {
-    const target = list[Number(key)]
-    const element = document.querySelector(target.herf)
-    document.documentElement.scrollTo({
-      top: element.offsetTop - 40,
-      behavior: 'smooth'
-    })
-  }
   return (
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive' />
+          <div className='sm:min-w-main-width hidden sm:block'>
+            <Image src={MainImg} alt='' layout='responsive' />
+          </div>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive' />
+          </div>
           <div className='sm:max-w-7xl mx-auto'>
-            <div className='absolute top-1/4 text-5xl text-white'>风险评估</div>
-            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white leading-8 tracking-new-widest'>
+            <div className='absolute font-medium sm:font-normal top-1/4 text-xl sm:text-5xl sm:text-white text-center sm:text-left w-full sm:w-auto'>风险评估</div>
+            <div className='absolute top-1/2 w-full sm:w-3/5 -mt-5 font-light'>
+              <div className='text-sm sm:text-xl sm:text-white w-full sm:leading-8 text-center sm:text-left  tracking-new-widest px-10 sm:px-0'>
                 从安全管理的角度，明晰企业所面临的安全威胁及其安全弱点
               </div>
             </div>
-            <div className='absolute top-1/2 px-auto gap-6 pt-16'>
+            <div className='absolute top-1/2 px-auto gap-6 pt-16 sm:w-auto w-full flex justify-center'>
               <Link href='/spt-contact'>
                 <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
             </div>
           </div>
         </section>
-        <section className='sm:w-full sm:min-w-main-width sm:mx-auto'>
+        <section className='hidden sm:block sm:w-full sm:min-w-main-width sm:mx-auto'>
           {/* <Tabs
             centered
             defaultActiveKey='0'
@@ -172,15 +170,15 @@ export default function Code() {
             </div>
           </Anchor>
         </section>
-        <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='content'>
+        <section className='sm:max-w-7xl sm:min-w-main-width mx-4 sm:mx-auto mt-10 items-center' id='content'>
           <section>
             <Title title='服务内容' subTitle='Service Content' />
-            <div className='sm:flex justify-center mb-12'>
-              <section className='w-2/5 flex-shrink-0 justify-center'>
-                <Image src={contentImg} alt='' />
-              </section>
-              <section className='w-2/5 flex-shrink-0'>
+            <div className='sm:flex flex-row-reverse justify-center mb-12 shadow-card sm:shadow-none p-4 sm:p-0'>
+              <section className='sm:w-2/5 flex-shrink-0'>
                 <RiskTab list={contentList} />
+              </section>
+              <section className='sm:w-2/5 flex-shrink-0 justify-center'>
+                <Image src={contentImg} alt='' />
               </section>
             </div>
           </section>
@@ -197,8 +195,8 @@ export default function Code() {
             </AnimationWrapper>
           </section>
         </section>
-        <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
-          <section id='process' className='mb-40 mt-4'>
+        <section className='w-full sm:bg-gray-100 sm:min-w-main-width sm:py-14'>
+          <section id='process' className='mb-14 sm:mb-40 mt-4'>
             <Title title='服务流程' subTitle='Service Process' />
             <Progress list={progressList} />
           </section>

@@ -20,7 +20,7 @@ export default function SelectedCard({ list }) {
                 <section className='text-base sm:text-xl mb-2'>
                   {item.title}
                 </section>
-                <section className='text-xs sm:text-sm leading-6 font-light h-12'>
+                <section className='text-xs sm:text-sm leading-6 font-light sm:h-12'>
                   {item.text}
                 </section>
               </div>

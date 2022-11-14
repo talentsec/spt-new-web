@@ -12,9 +12,11 @@ export default function Tab({ list }) {
           list.map((item, key) => {
             return (
               <div
-                key={key} className='px-4 py-2 cursor-pointer' style={{
-                backgroundColor: selectedItem === item ? '#E8F3FF' : '#fff',
-                color: selectedItem === item ? '#165DFF' : '#1D2129',
+                key={key}
+                className='flex-1 sm:flex-none px-4 py-2 cursor-pointer flex justify-center rounded'
+                style={{
+                  backgroundColor: selectedItem === item ? '#E8F3FF' : '#fff',
+                  color: selectedItem === item ? '#165DFF' : '#1D2129',
                 }}
                 onClick={() => setSelectedItem(item)}
               >{item.title}
@@ -23,15 +25,15 @@ export default function Tab({ list }) {
           })
         }
       </section>
-      <section className='h-48 mb-4 pr-6'>
-        <h1 className='mt-6 mb-4 text-2xl font-normal text-gray-700'>{selectedItem.title}</h1>
+      <section className='sm:h-48 mb-4 pr-6'>
+        <h1 className='mt-6 mb-4 font-bold sm:font-normal text-lg sm:text-2xl text-gray-700'>{selectedItem.title}</h1>
         <section>
           {
             selectedItem.content.map((item, key) => {
               return (
-                <div key={key} className='flex items-center mb-3'>
-                  <span className='inline-block w-2 h-2 rounded-lg bg-blue-700 mr-2' />
-                  <span className='text-gray-500 font-light'>
+                <div key={key} className='flex items-start mb-3'>
+                  <span className='inline-block w-2 h-2 rounded-lg bg-blue-700 mr-2 shrink-0 mt-1' />
+                  <span className='text-gray-500 font-light text-xs sm:text-sm'>
                     {item}
                   </span>
                 </div>

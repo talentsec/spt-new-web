@@ -216,8 +216,8 @@ export default function News() {
 
   return (
     <Layout>
-      <div className='min-w-max mb-8'>
-        <section className='w-full sm:min-w-main-width relative'>
+      <div className='min-w-max mb-8 bg-gray-100 sm:bg-white'>
+        <section className='hidden sm:block w-full sm:min-w-main-width relative'>
           <Image src={MainImg} alt='' layout='responsive' />
           <div className='sm:max-w-7xl text-4xl text-white mx-auto'>
             <div className='absolute top-1/3'>
@@ -240,10 +240,31 @@ export default function News() {
               })
             }
           </div>
-
         </section>
-        <section className='sm:max-w-7xl sm:mx-auto mt-20'>
-          <h1 className='text-xl ml-4 -mt-20'>
+        <section
+          className='sm:hidden flex w-screen overflow-auto bg-white text-gray-600 border-t'
+          style={{
+
+          }}
+        >
+          {
+            categoryList.map((item, key) => {
+              return (
+                <div
+                  key={key} className='p-4 cursor-pointer text-base flex-shrink-0'
+                  style={{
+                    color: curCategory === item ? '#165DFF' : "#000"
+                  }}
+                  onClick={() => setCurCategory(item)}
+                >
+                  {item}
+                </div>
+              )
+            })
+          }
+        </section>
+        <section className='sm:max-w-7xl sm:mx-auto mt-4 sm:mt-20 '>
+          <h1 className='hidden sm:block text-xl ml-4 -mt-20'>
             {curCategory}
           </h1>
           <div>

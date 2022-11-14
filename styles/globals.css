@@ -26,3 +26,7 @@
 * {
   font-family: "PingFang SC";
 }
+
+.hidden-scroll-bar::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+}

@@ -15,6 +15,8 @@ import blueIcon from '@/assets/img/service/bluePartIcon.svg'
 import contentImg1 from '@/assets/img/service/responseContent1.svg'
 import contentImg2 from '@/assets/img/service/responseContent2.svg'
 import appImg from '@/assets/img/service/responseApp.png'
+import phoneAppImg from '@/assets/img/service/phoneResponseApp.svg'
+import phoneMain from '@/assets/img/home/phoneMain.png'
 
 const intrusionProcessList = [
   {
@@ -177,15 +179,20 @@ export default function Response() {
     <Layout>
       <div className='sm:min-w-max'>
         <section className='w-full sm:min-w-main-width relative'>
-          <Image src={MainImg} alt='' layout='responsive' />
+          <div className='sm:min-w-main-width hidden sm:block'>
+            <Image src={MainImg} alt='' layout='responsive' />
+          </div>
+          <div className='sm:min-w-main-width block sm:hidden'>
+            <Image src={phoneMain} alt='' layout='responsive' />
+          </div>
           <div className='sm:max-w-7xl mx-auto'>
-            <div className='absolute top-1/4 text-5xl text-white'>应急响应</div>
-            <div className='absolute top-1/2 w-3/5 -mt-5 font-light'>
-              <div className='text-xl text-white leading-8 tracking-new-widest'>
+            <div className='absolute font-medium sm:font-normal top-1/4 text-xl sm:text-5xl sm:text-white text-center sm:text-left w-full sm:w-auto'>应急响应</div>
+            <div className='absolute top-1/2 sm:w-3/5 -mt-5 font-light'>
+              <div className='text-center sm:text-left text-sm sm:text-xl sm:text-white leading-8 w-full tracking-new-widest px-10 sm:px-0 '>
                 事件发生后1小时内快速响应，降低企业损失
               </div>
             </div>
-            <div className='absolute top-1/2 px-auto gap-6 pt-16'>
+            <div className='absolute top-1/2 px-auto gap-6 pt-16 w-full sm:w-auto flex justify-center sm:justify-start'>
               <Link href='/spt-contact'>
                 <Button size='large' type='primary' shape='round'>立即咨询</Button>
               </Link>
@@ -207,58 +214,60 @@ export default function Response() {
           />
         </section> */}
         <section className='sm:max-w-7xl sm:min-w-main-width sm:mx-auto mt-10 items-center' id='content'>
-          <section id='process'>
+          <section id='process' className='mx-4 sm:mx-auto'>
             <Title title='应用场景' subTitle='Application scenario' />
-            <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap gap-8 justify-center'>
+            <section className='sm:max-w-7xl sm:mx-auto sm:mt-7 sm:flex flex-wrap gap-8 justify-center'>
               {
                 applicationList.map((item, key) => {
                   return (
-                    <div key={key} className='bg-white rounded-lg p-8 flex gap-4 sm:hover:scale-105 transition-all w-1/2 flex-1 shadow-card'>
-                      <section className='shrink-0'>
+                    <div key={key} className='bg-white rounded-lg p-8 sm:flex gap-4 sm:hover:scale-105 transition-all sm:w-1/2 flex-1 shadow-card mb-3 sm:mb-0'>
+                      <section className='shrink-0 w-6 sm:w-auto mb-2 sm:mb-0'>
                         <Image src={contentIcon} alt='' width={48} height={48} />
                       </section>
                       <section>
-                        <div className='font-bold text-xl mb-2'>{item.title}</div>
+                        <div className='font-bold text-lg sm:text-xl mb-2'>{item.title}</div>
                         <div className='text-gray-500 text-sm font-light leading-6'>{item.text}</div>
                       </section>
                     </div>
                   )
                 })
               }
-              <section className='relative w-full mb-20  transition-all'>
-                <section>
+              <section className='relative w-full mb-20 sm:transition-all'>
+                <section className='hidden sm:block'>
                   <Image src={appImg} alt='' layout='responsive' />
                 </section>
-                <section className='absolute top-2 text-white text-center py-8 px-56'>
-                  <div className='mb-4 text-3xl'>
+                <section className='block sm:hidden'>
+                  <Image src={phoneAppImg} alt='' layout='responsive' />
+                </section>
+                <section className='absolute top-0 sm:top-2 text-white text-center py-4 sm:py-8 px-4 sm:px-56'>
+                  <div className='mb-4 sm:text-3xl'>
                     做企业高效的“止血棒”
                   </div>
-                  <div className='leading-7 font-light'>
+                  <div className='text-xs sm:text-sm leading-6 sm:leading-7 font-light'>
                     信息时代，计算机技术飞速发展，有组织、有目的的网络攻击形势愈加明显，近些年来企业成为了网络攻击的主要受害者。事实上一旦遭受攻击，企业往往会面临信息业务中断、系统宕机、网络瘫痪等重大风险，而螣龙安科提供的入侵应急响应服务（溯源、分析、处置、优化等）可有效遏制入侵态势，第一时间为企业止损。
                   </div>
                 </section>
-
               </section>
             </section>
           </section>
           <section id='value'>
             <Title title='服务内容' subTitle='Service Content' />
-            <div className='gap-4 mb-20'>
-              <section className='flex gap-6 items-center border-b pb-10 mb-20 w-full justify-center'>
-                <section className='w-1/2 px-6'>
-                  <h1 className='text-3xl mb-6'>分析入侵过程</h1>
+            <div className='gap-4 mb-20 mx-4 sm:mx-auto'>
+              <section className='sm:flex gap-6 items-center border-b pb-10 mb-6 sm:mb-20 w-full justify-center shadow-card sm:shadow-none rounded-lg sm:rounded-none p-4 sm:p-0'>
+                <section className='sm:w-1/2 sm:px-6'>
+                  <h1 className='text-lg sm:text-3xl mb-6'>分析入侵过程</h1>
                   <div className='flex items-start gap-3'>
-                    <section className='pt-1'>
+                    <section className='pt-1 hidden sm:block'>
                       <Image src={blueIcon} alt='' />
                     </section>
                     <div>
-                      <h2 className='text-xl font-normal mb-4'>主要类型</h2>
-                      <section>
+                      <h2 className='hidden sm:block text-xl font-normal mb-4'>主要类型</h2>
+                      <section className='flex flex-wrap gap-2'>
                         {
                           intrusionProcessList.map((item, key) => {
                             return (
                               <span
-                                key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
+                                key={key} className='shrink-0 border-blue-700 border-2 text-blue-700 font-light px-4 sm:py-1 rounded-2xl cursor-pointer' style={{
                                 backgroundColor: selectedIntrusionProcessItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
                                 color: selectedIntrusionProcessItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
                                 }}
@@ -277,8 +286,8 @@ export default function Response() {
                       <Image src={blueIcon} alt='' />
                     </section>
                     <div>
-                      <h2 className='text-xl font-normal'>{selectedIntrusionProcessItem.title}</h2>
-                      <section className='text-gray-500 font-light text-sm leading-6 h-14'>
+                      <h2 className='text-base sm:text-xl font-bold sm:font-normal'>{selectedIntrusionProcessItem.title}</h2>
+                      <section className='text-gray-500 font-light text-sm leading-6 sm:h-14'>
                         {selectedIntrusionProcessItem.text}
                       </section>
                     </div>
@@ -288,24 +297,21 @@ export default function Response() {
                   <Image src={contentImg1} alt='' />
                 </section>
               </section>
-              <section className='flex gap-6 items-center border-b mb-10 w-full justify-center'>
-                <section>
-                  <Image src={contentImg2} alt='' />
-                </section>
-                <section className='w-1/2 px-6'>
-                  <h1 className='text-3xl mb-6'>处置安全事件</h1>
+              <section className='sm:flex flex-row-reverse gap-6 items-center border-b mb-10 w-full justify-center shadow-card sm:shadow-none rounded-lg sm:rounded-none p-4 sm:p-0'>
+                <section className='sm:w-1/2 m:px-6'>
+                  <h1 className='text-lg sm:text-3xl mb-6'>处置安全事件</h1>
                   <div className='flex items-start gap-3'>
-                    <section className='pt-1 flex-shrink-0 w-6'>
+                    <section className='pt-1 flex-shrink-0 w-6 hidden sm:block'>
                       <Image src={blueIcon} alt='' />
                     </section>
                     <div>
-                      <h2 className='text-xl font-normal mb-4'>主要类型</h2>
-                      <section>
+                      <h2 className='text-xl font-normal mb-4 hidden sm:block'>主要类型</h2>
+                      <section className='flex flex-wrap gap-2'>
                         {
                           securityIncidentList.map((item, key) => {
                             return (
                               <span
-                                key={key} className='border-blue-700 border-2 text-blue-700 font-light px-4 py-1 rounded-2xl mr-3 cursor-pointer' style={{
+                                key={key} className='shrink-0 border-blue-700 border-2 text-blue-700 font-light px-4 sm:py-1 rounded-2xl cursor-pointer' style={{
                                 backgroundColor: selectedSecurityIncidentItem.button === item.button ? 'rgb(29 78 216)' : '#fff',
                                 color: selectedSecurityIncidentItem.button !== item.button ? 'rgb(29 78 216)' : '#fff',
                                 }}
@@ -324,18 +330,21 @@ export default function Response() {
                       <Image src={blueIcon} alt='' />
                     </section>
                     <div>
-                      <h2 className='text-xl font-normal'>{selectedSecurityIncidentItem.title}</h2>
+                      <h2 className='text-base sm:text-xl font-bold sm:font-normal'>{selectedSecurityIncidentItem.title}</h2>
                       <section className='text-gray-500 font-light text-sm leading-6 h-14'>
                         {selectedSecurityIncidentItem.text}
                       </section>
                     </div>
                   </div>
                 </section>
+                <section>
+                  <Image src={contentImg2} alt='' />
+                </section>
               </section>
             </div>
           </section>
         </section>
-        <section className='w-full bg-gray-100 sm:min-w-main-width py-14'>
+        <section className='w-full sm:bg-gray-100 sm:min-w-main-width sm:py-14'>
           <section id='process' className='mb-40 mt-4'>
             <Title title='服务流程' subTitle='Service Process' />
             <Progress list={progressList} />
