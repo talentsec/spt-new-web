@@ -246,7 +246,7 @@ export default function Code() {
           <section id='content'>
             <Title title='主要审计内容' subTitle='Main audit contents' />
             <AnimationWrapper>
-              <section className='sm:max-w-7xl sm:mx-auto mt-7 flex flex-wrap sm:gap-6 justify-center'>
+              <section className='sm:max-w-7xl mt-7 flex flex-wrap sm:gap-6 justify-center mx-4 sm:mx-auto'>
                 {
                   contentList.map((item, key) => {
                     return (

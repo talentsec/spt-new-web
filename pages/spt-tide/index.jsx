@@ -38,7 +38,7 @@ export default function Tide() {
                 <Button size='large' shape='round' ghost>立即咨询</Button>
               </Link>
             </div>
-            <div className='block sm:hidden mt-4'>
+            <div className='block sm:hidden mt-14'>
               <Link href='/spt-contact'>
                 <Button size='large' shape='round' type='primary'>立即咨询</Button>
               </Link>

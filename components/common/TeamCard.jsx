@@ -11,7 +11,7 @@ export default function TeamCard({ data, index }) {
   return (
     <motion.div
       style={{
-        scale
+        // scale
       }}
     >
       <div className='bg-slate-50 sm:bg-white sm:w-64 flex-grow-0 flex-shrink-0 rounded-lg hover:shadow-card mb-5 cursor-pointer'>

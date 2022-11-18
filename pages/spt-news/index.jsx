@@ -42,6 +42,7 @@ const newsList = [
     category: '比赛快报',
     img: img3,
     title: '2022安全创客汇复赛重庆站圆满落幕，「螣龙安科」晋级20强半决赛',
+    tag: '比赛快报',
     link: 'https://www.qianxin.com/chuangkehui/2022/news/details?id=5268',
     summary: '近日，2022安全创客汇复赛在重庆两江新区圆满结束，20家创新企业经过长达12小时的网安创业“拉力赛”，获得晋级席位，并将在2022北京网络安全大会期间进行最终对决。'
   },

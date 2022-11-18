@@ -6,13 +6,13 @@ import Link from 'next/link'
 
 export default function Footer () {
   return (
-    <section className='w-full sm:min-w-main-width relative'>
-      <div className='hidden sm:block'>
+    <section className='w-full sm:min-w-main-width relative hidden sm:block'>
+      <div className=''>
         <Image src={joinImg} alt='' layout='responsive' />
       </div>
-      <div className='block sm:hidden'>
+      {/* <div className='block sm:hidden'>
         <Image src={phoneImg} alt='' layout='responsive' />
-      </div>
+      </div> */}
       <section className='-mt-1 sm:mt-0 text-white absolute top-1/4 text-center w-full sm:text-3xl tracking-new-widest'>联系我们，为您的企业网络安全保驾护航</section>
       <section className='absolute top-1/2 pt-2 w-full flex justify-center'>
         <Link href='/spt-contact'>

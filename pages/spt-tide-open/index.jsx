@@ -53,7 +53,7 @@ export default function Tide() {
           <div className='absolute top-3/4 mt-8 mx-auto px-auto w-full justify-center gap-6 flex sm:hidden'>
             {/* <Button size='large' type='primary' onClick={() => location.href = 'https://lev.zone/'}>立即体验</Button> */}
             <Link href='/spt-contact'>
-              <Button size='large'>立即咨询</Button>
+              <Button size='large' shape='round'>立即咨询</Button>
             </Link>
           </div>
         </section>
@@ -74,6 +74,7 @@ export default function Tide() {
               </div>
             </AnimationWrapper>
           </section>
+          <section className='h-8 block sm:hidden' />
           <section>
             <Title title='对于使用者' subTitle='for users' />
             <div className='tracking-new-widest w-full text-center -translate-y-8 text-xs sm:text-lg px-8'>通过以下功能告别重复的服务属性工作，大幅度提高工作效率</div>

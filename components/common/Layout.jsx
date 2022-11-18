@@ -240,7 +240,11 @@ export default function Layout ({ children }) {
           <section>邮箱：contact@talentsec.cn</section>
           <section>联系地址：上海市闵行区东川路555号乙楼1层1001室</section>
           <section className='mb-1 font-din-bold'>联系电话：021-62241157</section>
-          <span><Button type='primary'>联系我们</Button></span>
+          <span>
+            <Link href='/spt-contact'>
+              <Button type='primary'>联系我们</Button>
+            </Link>
+          </span>
         </div>
         <div className='border-t sm:mx-auto border-slate-300  text-gray-400 text-xs font-light py-1 px-0 mt-7 w-full'>
           <span className='scale-75 text-xs inline-block text-start'>©2020 Serpurity Co.,Ltd All Rights Reserved.</span>

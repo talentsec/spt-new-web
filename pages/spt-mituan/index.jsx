@@ -32,7 +32,7 @@ export default function index() {
             <div className='text-center text-sm sm:text-xl sm:text-white w-4/5 mx-auto sm:leading-8 tracking-new-widest font-light'>谜团网络靶场平台是对实网靶场的有效补充与拓展，在螣龙安全大脑的极智赋能下，结合云平台、虚拟化、攻防技术等手段，打造现实网络系统的平行仿真系统，用于学习与培训、测试与验证、评估与演练。</div>
           </div>
           <div className='absolute top-3/4 mx-auto px-auto w-full flex justify-center pt-14 sm:p-0'>
-            <Button size='large' type='primary' onClick={() => location.href = 'https://mituan.zone'}>免费试用谜团靶场</Button>
+            <Button size='large' type='primary' shape='round' onClick={() => location.href = 'https://mituan.zone'}>免费试用谜团靶场</Button>
           </div>
         </section>
         <section className='sm:max-w-7xl sm:mx-auto mt-20 mx-4'>

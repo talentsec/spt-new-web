@@ -57,7 +57,7 @@ export default function Tide() {
           <div className='sm:min-w-main-width hidden sm:block'>
             <Image src={MainImg} alt='' layout='responsive' />
           </div>
-          <div className='sm:min-w-main-width block sm:hidden'>
+          <div className='sm:min-w-main-width block sm:hidden mb-6'>
             <Image src={phoneMain} alt='' layout='responsive' />
           </div>
           <div className='absolute top-1/4 text-center text-xl sm:text-5xl sm:text-white w-full'>潮汐·攻击面管理平台</div>
@@ -71,7 +71,7 @@ export default function Tide() {
                 <Button size='large' shape='round' ghost>立即咨询</Button>
               </Link>
             </div>
-            <div className='block sm:hidden mt-4'>
+            <div className='block sm:hidden mt-10'>
               <Link href='/spt-contact'>
                 <Button size='large' shape='round' type='primary'>立即咨询</Button>
               </Link>

@@ -141,7 +141,7 @@ export default function Contect() {
               <section className='hidden sm:flex justify-center'>
                 <Image src={logo} alt='' />
               </section>
-              <h1 className='text-center font-medium sm:font-bold sm:text-5xl text-lg  my-10'>让世界安全互联</h1>
+              <h1 className='text-center font-medium sm:font-bold sm:text-5xl text-2xl  my-10'>让世界安全互联</h1>
               <section className='leading-6 sm:leading-8 text-sm sm:text-xl text-center text-gray-500 w-4/5 mx-auto'>打造新一代安全生态，为客户安全保驾护航<span className='mx-2' /><br />打造优质的网络安全产品，赢得客户的持续信任和认可</section>
             </section>
           </motion.div>
@@ -181,7 +181,7 @@ export default function Contect() {
               <Image src={founderImg} alt='' />
             </section>
           </section>
-          <section className='bg-blue-700 -translate-y-2 relative'>
+          <section className='bg-blue-700 -translate-y-2 relative h-96 sm:h-auto'>
             {/* <Title title='发展历程' subTitle='Development History' /> */}
             <h1 className='text-xl sm:text-4xl text-center text-white font-normal py-9'>发展历程</h1>
 
@@ -201,9 +201,40 @@ export default function Contect() {
                 />
               </div>
             </section>
-            <section className='block sm:hidden justify-center pb-28 px-8 sm:px-20'>
+            <section className='hidden sm:flex absolute sm:top-56 top-48  justify-center w-full' onClick={() => console.log(333)}>
+              <div className='bg-white px-10 py-4 h-24 sm:h-32 rounded-xl shadow-card sm:w-4/5 flex items-center flex-wrap'>
+                {
+                  slideInfoList[selectedSlide].map((item, key) => {
+                    return (
+                      <div key={key} className='w-full flex-shrink-0'>
+                        <section key={key} className='text-base leading-6 '>
+                          {item}
+                        </section>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </section>
+
+            <section className='mt-24 flex sm:hidden justify-center w-full' onClick={() => console.log(333)}>
+              <div className='bg-white px-10  h-24 sm:h-32 rounded-xl shadow-card sm:w-4/5 flex items-center flex-wrap'>
+                {
+                  slideInfoList[selectedSlide].map((item, key) => {
+                    return (
+                      <div key={key} className='w-full flex-shrink-0'>
+                        <section key={key} className='text-base leading-6 '>
+                          {item}
+                        </section>
+                      </div>
+                    )
+                  })
+                }
+              </div>
+            </section>
+            <section className='-translate-y-44 block sm:hidden justify-center  px-8 sm:px-20 z-10'>
               <div
-                className='w-full overflow-auto h-32 pt-6 hidden-scroll-bar'
+                className='w-full overflow-auto h-44 pt-6 hidden-scroll-bar z-10'
                 style={{
                   'overflowY': 'hidden',
                   'overflowX': 'auto',
@@ -225,21 +256,6 @@ export default function Contect() {
                     marginLeft: '60px'
                   }}
                 />
-              </div>
-            </section>
-            <section className='absolute sm:top-56 top-48 flex justify-center w-full'>
-              <div className='bg-white px-10 py-4 h-24 sm:h-32 rounded-xl shadow-card sm:w-4/5 flex items-center flex-wrap'>
-                {
-                  slideInfoList[selectedSlide].map((item, key) => {
-                    return (
-                      <div key={key} className='w-full flex-shrink-0'>
-                        <section key={key} className='text-base leading-6 '>
-                          {item}
-                        </section>
-                      </div>
-                    )
-                  })
-                }
               </div>
             </section>
           </section>

@@ -90,7 +90,7 @@ export default function Home () {
           </motion.ul>
         </div>
       </section>
-      <div className='px-8 sm:px-0'>
+      <div className='px-4 sm:px-0'>
         {/* <section>
           <section className='sm:text-4xl sm:font-medium text-center'>腾龙安科产品&服务</section>
         </section> */}

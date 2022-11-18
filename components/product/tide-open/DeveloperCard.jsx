@@ -12,7 +12,7 @@ export default function DeveloperCard({ data }) {
   return (
     <div>
       <div className='p-6 sm:flex w-full mb-20 hidden'>
-        <section className='p-8 h-68 bg-blue-700 w-1/3 flex-shrink-0 text-white'>
+        <section className='p-8 h-68 bg-blue-700 w-1/3 flex-shrink-0 text-white hover:scale-105 transition-all'>
           <Image src={devIcon3} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             清晰的包管理系统
@@ -21,7 +21,7 @@ export default function DeveloperCard({ data }) {
             简单清晰的开发文件结构，我们以工具文件夹为单位直接将整个文件夹进行打包和封装，上传至潮汐开源平台。其他编写者可以按包为单位轻松地在自己的编排中调用任意用户所编写的开放式工具包
           </section>
         </section>
-        <section className='bg-white p-8 h-68 w-1/3 flex-shrink-0'>
+        <section className='bg-white p-8 h-68 w-1/3 flex-shrink-0  hover:scale-105 transition-all'>
           <Image src={devIcon2} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             自主的镜像管理系统
@@ -31,7 +31,7 @@ export default function DeveloperCard({ data }) {
             /编排/模组/应用，为您增效赋能，实现工作效率大幅提升
           </section>
         </section>
-        <section className='bg-black p-8 h-68 text-white w-1/3 flex-shrink-0'>
+        <section className='bg-black p-8 h-68 text-white w-1/3 flex-shrink-0  hover:scale-105 transition-all'>
           <Image src={devIcon1} alt='' />
           <section className='text-xl font-bold mt-7 mb-4'>
             一键关联Github
